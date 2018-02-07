@@ -25,16 +25,9 @@ namespace Isosceles_Triangle
             
             //        © © © ©
 
+            char copyright = '©';
 
-            string text1 = @"    ©   
-
-  ©   ©
-
- ©     ©
-
-©  ©  ©  ©";
-
-            Console.WriteLine(text1);
+            Console.WriteLine("      {0}      \n\n    {0}  {0}     \n\n  {0} {0} {0} {0}",copyright);
         }
     }
 }
