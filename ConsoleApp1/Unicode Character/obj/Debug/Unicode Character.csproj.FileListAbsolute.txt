@@ -1,0 +1,5 @@
+C:\Some C#\ConsoleApp1\Unicode Character\bin\Debug\Unicode Character.exe.config
+C:\Some C#\ConsoleApp1\Unicode Character\bin\Debug\Unicode Character.exe
+C:\Some C#\ConsoleApp1\Unicode Character\bin\Debug\Unicode Character.pdb
+C:\Some C#\ConsoleApp1\Unicode Character\obj\Debug\Unicode Character.exe
+C:\Some C#\ConsoleApp1\Unicode Character\obj\Debug\Unicode Character.pdb

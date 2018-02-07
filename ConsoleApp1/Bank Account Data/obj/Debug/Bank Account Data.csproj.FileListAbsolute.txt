@@ -1,0 +1,6 @@
+C:\Some C#\ConsoleApp1\Bank Account Data\bin\Debug\Bank Account Data.exe.config
+C:\Some C#\ConsoleApp1\Bank Account Data\bin\Debug\Bank Account Data.exe
+C:\Some C#\ConsoleApp1\Bank Account Data\bin\Debug\Bank Account Data.pdb
+C:\Some C#\ConsoleApp1\Bank Account Data\obj\Debug\Bank Account Data.csprojResolveAssemblyReference.cache
+C:\Some C#\ConsoleApp1\Bank Account Data\obj\Debug\Bank Account Data.exe
+C:\Some C#\ConsoleApp1\Bank Account Data\obj\Debug\Bank Account Data.pdb

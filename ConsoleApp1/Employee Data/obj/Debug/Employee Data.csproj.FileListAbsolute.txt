@@ -1,0 +1,6 @@
+C:\Some C#\ConsoleApp1\Employee Data\bin\Debug\Employee Data.exe.config
+C:\Some C#\ConsoleApp1\Employee Data\bin\Debug\Employee Data.exe
+C:\Some C#\ConsoleApp1\Employee Data\bin\Debug\Employee Data.pdb
+C:\Some C#\ConsoleApp1\Employee Data\obj\Debug\Employee Data.csprojResolveAssemblyReference.cache
+C:\Some C#\ConsoleApp1\Employee Data\obj\Debug\Employee Data.exe
+C:\Some C#\ConsoleApp1\Employee Data\obj\Debug\Employee Data.pdb
