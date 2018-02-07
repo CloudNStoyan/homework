@@ -1,5 +1,0 @@
-C:\Some C#\ConsoleApp1\Print the ASCII Table\bin\Debug\Print the ASCII Table.exe.config
-C:\Some C#\ConsoleApp1\Print the ASCII Table\bin\Debug\Print the ASCII Table.exe
-C:\Some C#\ConsoleApp1\Print the ASCII Table\bin\Debug\Print the ASCII Table.pdb
-C:\Some C#\ConsoleApp1\Print the ASCII Table\obj\Debug\Print the ASCII Table.exe
-C:\Some C#\ConsoleApp1\Print the ASCII Table\obj\Debug\Print the ASCII Table.pdb

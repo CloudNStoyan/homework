@@ -1,5 +1,0 @@
-C:\Some C#\ConsoleApp1\Comparing Floats\bin\Debug\Comparing Floats.exe.config
-C:\Some C#\ConsoleApp1\Comparing Floats\bin\Debug\Comparing Floats.exe
-C:\Some C#\ConsoleApp1\Comparing Floats\bin\Debug\Comparing Floats.pdb
-C:\Some C#\ConsoleApp1\Comparing Floats\obj\Debug\Comparing Floats.exe
-C:\Some C#\ConsoleApp1\Comparing Floats\obj\Debug\Comparing Floats.pdb

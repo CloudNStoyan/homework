@@ -1,5 +1,0 @@
-C:\Some C#\ConsoleApp1\Isosceles Triangle\bin\Debug\Isosceles Triangle.exe.config
-C:\Some C#\ConsoleApp1\Isosceles Triangle\bin\Debug\Isosceles Triangle.exe
-C:\Some C#\ConsoleApp1\Isosceles Triangle\bin\Debug\Isosceles Triangle.pdb
-C:\Some C#\ConsoleApp1\Isosceles Triangle\obj\Debug\Isosceles Triangle.exe
-C:\Some C#\ConsoleApp1\Isosceles Triangle\obj\Debug\Isosceles Triangle.pdb

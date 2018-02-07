@@ -1,5 +1,0 @@
-C:\Some C#\ConsoleApp1\Variable in Hexadecimal Format\bin\Debug\Variable in Hexadecimal Format.exe.config
-C:\Some C#\ConsoleApp1\Variable in Hexadecimal Format\bin\Debug\Variable in Hexadecimal Format.exe
-C:\Some C#\ConsoleApp1\Variable in Hexadecimal Format\bin\Debug\Variable in Hexadecimal Format.pdb
-C:\Some C#\ConsoleApp1\Variable in Hexadecimal Format\obj\Debug\Variable in Hexadecimal Format.exe
-C:\Some C#\ConsoleApp1\Variable in Hexadecimal Format\obj\Debug\Variable in Hexadecimal Format.pdb
