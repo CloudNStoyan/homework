@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingBitsOperation", "Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DivideBy7And5", "Divide by 7 and 5\DivideBy7And5.csproj", "{6479147D-F017-4BFD-9112-18D04D914F01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rectangles", "Rectangles\Rectangles.csproj", "{4AA2E5B4-52B7-4634-81D9-6894FD561462}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{6479147D-F017-4BFD-9112-18D04D914F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6479147D-F017-4BFD-9112-18D04D914F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6479147D-F017-4BFD-9112-18D04D914F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA2E5B4-52B7-4634-81D9-6894FD561462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA2E5B4-52B7-4634-81D9-6894FD561462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA2E5B4-52B7-4634-81D9-6894FD561462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA2E5B4-52B7-4634-81D9-6894FD561462}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
