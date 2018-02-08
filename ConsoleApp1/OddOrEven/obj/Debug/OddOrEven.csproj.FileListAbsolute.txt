@@ -1,6 +1,0 @@
-C:\Some C#\ConsoleApp1\OddOrEven\obj\Debug\OddOrEven.csprojResolveAssemblyReference.cache
-C:\Some C#\ConsoleApp1\OddOrEven\bin\Debug\OddOrEven.exe.config
-C:\Some C#\ConsoleApp1\OddOrEven\bin\Debug\OddOrEven.exe
-C:\Some C#\ConsoleApp1\OddOrEven\bin\Debug\OddOrEven.pdb
-C:\Some C#\ConsoleApp1\OddOrEven\obj\Debug\OddOrEven.exe
-C:\Some C#\ConsoleApp1\OddOrEven\obj\Debug\OddOrEven.pdb
