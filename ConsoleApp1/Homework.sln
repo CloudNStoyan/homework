@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparing Floats", "Compari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Print the ASCII Table", "Print the ASCII Table\Print the ASCII Table.csproj", "{985EF86E-4087-4A3D-B6A1-F2A65853D61E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddOrEven", "OddOrEven\OddOrEven.csproj", "{08981FCA-5433-4C39-BAF7-CC7017504888}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{985EF86E-4087-4A3D-B6A1-F2A65853D61E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{985EF86E-4087-4A3D-B6A1-F2A65853D61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{985EF86E-4087-4A3D-B6A1-F2A65853D61E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08981FCA-5433-4C39-BAF7-CC7017504888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08981FCA-5433-4C39-BAF7-CC7017504888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08981FCA-5433-4C39-BAF7-CC7017504888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08981FCA-5433-4C39-BAF7-CC7017504888}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
