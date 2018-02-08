@@ -13,16 +13,14 @@ namespace Divide_by_7_and_5
         {
             int input = int.Parse(Console.ReadLine());
 
-            int filter = (input / 7) % 2;
-            int filter2 = (input / 5) % 2;
-            if (filter == 0 && filter2 == 0)
+            if (input % 7 == 0 && input % 5 == 0)
             {
-                Console.WriteLine("true {0}",input);
-            }
-            else
+                Console.WriteLine("True {0}", input);
+            } else
             {
-                Console.WriteLine("false {0}", input);
+                Console.WriteLine("False {0}", input);
             }
+           
         }
     }
 }
