@@ -49,6 +49,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointInACircle", "PointInAC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeCheck", "PrimeCheck\PrimeCheck.csproj", "{3808ECFC-6480-43F1-9E76-1479F9FE5A8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trapezoids", "Trapezoids\Trapezoids.csproj", "{A1D3AA2F-1D51-4F0B-A464-9898391C2E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -147,6 +149,10 @@ Global
 		{3808ECFC-6480-43F1-9E76-1479F9FE5A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3808ECFC-6480-43F1-9E76-1479F9FE5A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3808ECFC-6480-43F1-9E76-1479F9FE5A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D3AA2F-1D51-4F0B-A464-9898391C2E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D3AA2F-1D51-4F0B-A464-9898391C2E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D3AA2F-1D51-4F0B-A464-9898391C2E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D3AA2F-1D51-4F0B-A464-9898391C2E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
