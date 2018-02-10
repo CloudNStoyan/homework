@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOf3Numbers", "SumOf3Numb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyInfo", "CompanyInfo\CompanyInfo.csproj", "{A484AE58-3B24-4872-9CC5-4135798B62FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Circle", "Circle\Circle.csproj", "{19D42DBC-C780-43D7-B8B7-5A7CA1BE3D01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +203,10 @@ Global
 		{A484AE58-3B24-4872-9CC5-4135798B62FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A484AE58-3B24-4872-9CC5-4135798B62FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A484AE58-3B24-4872-9CC5-4135798B62FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19D42DBC-C780-43D7-B8B7-5A7CA1BE3D01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19D42DBC-C780-43D7-B8B7-5A7CA1BE3D01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19D42DBC-C780-43D7-B8B7-5A7CA1BE3D01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19D42DBC-C780-43D7-B8B7-5A7CA1BE3D01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
