@@ -10,11 +10,23 @@ namespace SumOfNnumbers
     {
         static void Main(string[] args)
         {
-            int makeN = int.Parse(Console.ReadLine());
-            for (int i = 0; i < makeN + 1; i++)
+            int n = int.Parse(Console.ReadLine() ?? "0");
+
+            int[] arr = new int[n];
+
+            for (int i = 0; i < n; i++)
             {
-                
+                arr[i] = int.Parse(Console.ReadLine() ?? "0");
             }
+
+            int result = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                result += arr[i];
+            }
+
+            Console.WriteLine(result);
         }
     }
 }
