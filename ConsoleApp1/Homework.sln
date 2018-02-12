@@ -101,6 +101,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort3Numbers", "Sort3Number
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitAsWord", "DigitAsWord\DigitAsWord.csproj", "{2B2D2B89-E682-4BAD-948C-4DDA13DDF70E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntDoubleString", "IntDoubleString\IntDoubleString.csproj", "{D45AD706-F192-43A7-B577-CF0F39BE6CA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -303,6 +305,10 @@ Global
 		{2B2D2B89-E682-4BAD-948C-4DDA13DDF70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B2D2B89-E682-4BAD-948C-4DDA13DDF70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B2D2B89-E682-4BAD-948C-4DDA13DDF70E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45AD706-F192-43A7-B577-CF0F39BE6CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45AD706-F192-43A7-B577-CF0F39BE6CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45AD706-F192-43A7-B577-CF0F39BE6CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45AD706-F192-43A7-B577-CF0F39BE6CA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
