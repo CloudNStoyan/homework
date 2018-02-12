@@ -97,6 +97,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggestOf3", "BiggestOf3\Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiggestOf5", "BiggestOf5\BiggestOf5.csproj", "{516FAEAD-08C7-45A2-986E-5D8B8A54E4C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sort3Numbers", "Sort3Numbers\Sort3Numbers.csproj", "{1E95DCC8-8F7A-468E-9269-CFE0B3F2FA87}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -291,6 +293,10 @@ Global
 		{516FAEAD-08C7-45A2-986E-5D8B8A54E4C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{516FAEAD-08C7-45A2-986E-5D8B8A54E4C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{516FAEAD-08C7-45A2-986E-5D8B8A54E4C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E95DCC8-8F7A-468E-9269-CFE0B3F2FA87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E95DCC8-8F7A-468E-9269-CFE0B3F2FA87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E95DCC8-8F7A-468E-9269-CFE0B3F2FA87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E95DCC8-8F7A-468E-9269-CFE0B3F2FA87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
