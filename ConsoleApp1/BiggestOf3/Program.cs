@@ -14,13 +14,13 @@ namespace BiggestOf3
             double b = double.Parse(Console.ReadLine());
             double c = double.Parse(Console.ReadLine());
 
-            if (a > b && a > c)
+            if (a >= b && a >= c)
             {
                 Console.WriteLine(a);
-            } else if (b > a && b > c)
+            } else if (b >= a && b >= c)
             {
                 Console.WriteLine(b);
-            } else if (c > b && c > a)
+            } else if (c >= b && c >= a)
             {
                 Console.WriteLine(c);
             }
