@@ -23,8 +23,7 @@ namespace NotDivisibleNumbers
                     numbers += " " + i;
                 }
             }
-            Console.WriteLine(numbers
-                );
+            Console.WriteLine(numbers);
         }
     }
 }

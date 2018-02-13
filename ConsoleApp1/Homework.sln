@@ -105,6 +105,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntDoubleString", "IntDoubl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotDivisibleNumbers", "NotDivisibleNumbers\NotDivisibleNumbers.csproj", "{1577E04F-A936-4B89-A9F0-B0BBC14CFB6B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MMSA", "MMSA\MMSA.csproj", "{10B05F7A-86B9-4C2A-BF25-436B69D922D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -315,6 +317,10 @@ Global
 		{1577E04F-A936-4B89-A9F0-B0BBC14CFB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1577E04F-A936-4B89-A9F0-B0BBC14CFB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1577E04F-A936-4B89-A9F0-B0BBC14CFB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10B05F7A-86B9-4C2A-BF25-436B69D922D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10B05F7A-86B9-4C2A-BF25-436B69D922D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10B05F7A-86B9-4C2A-BF25-436B69D922D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10B05F7A-86B9-4C2A-BF25-436B69D922D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
