@@ -111,6 +111,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintADeck", "PrintADeck\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculate!", "Calculate!\Calculate!.csproj", "{55A81306-5F86-4BF6-B6F5-1386F277202E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculate Again", "Calculate Again\Calculate Again.csproj", "{167EC1BD-1000-474E-8611-00DC8F153FF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -333,6 +335,10 @@ Global
 		{55A81306-5F86-4BF6-B6F5-1386F277202E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55A81306-5F86-4BF6-B6F5-1386F277202E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55A81306-5F86-4BF6-B6F5-1386F277202E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167EC1BD-1000-474E-8611-00DC8F153FF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167EC1BD-1000-474E-8611-00DC8F153FF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167EC1BD-1000-474E-8611-00DC8F153FF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167EC1BD-1000-474E-8611-00DC8F153FF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
