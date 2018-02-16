@@ -10,6 +10,15 @@ namespace CatalanNumbers
     {
         static void Main(string[] args)
         {
+            //In combinatorics, the Catalan numbers are calculated by the following formula: 
+            //catalan-formula
+            //Write a program to calculate the Nth Catalan number by given N
+
+            int n = int.Parse(Console.ReadLine());
+
+            int Cn = 1 / (n + 1) * ((2 * n) / n);
+
+            Console.WriteLine(Cn);
         }
     }
 }
