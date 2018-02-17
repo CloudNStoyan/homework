@@ -16,9 +16,11 @@ namespace CatalanNumbers
 
             int n = int.Parse(Console.ReadLine());
 
-            int Cn = 1 / (n + 1) * ((2 * n) / n);
-
-            Console.WriteLine(Cn);
+            int Cn = (1 / (n + 1)) * ((n * n) / n);
+            int k = 0;
+            Console.WriteLine((n+k)*(n-k+1));
+            Console.WriteLine("{0:F5}",Cn);
         }
     }
 }
+    

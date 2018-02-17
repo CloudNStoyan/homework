@@ -119,6 +119,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalanNumbers", "CatalanNu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatrixOfNumbers", "MatrixOfNumbers\MatrixOfNumbers.csproj", "{8E7EFFAB-7D92-4385-8CC8-EF3BCE5AFE93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Railing0InN!", "Railing0InN!\Railing0InN!.csproj", "{62115137-6A32-4E2E-8871-E40F01183862}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -357,6 +359,10 @@ Global
 		{8E7EFFAB-7D92-4385-8CC8-EF3BCE5AFE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E7EFFAB-7D92-4385-8CC8-EF3BCE5AFE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E7EFFAB-7D92-4385-8CC8-EF3BCE5AFE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62115137-6A32-4E2E-8871-E40F01183862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62115137-6A32-4E2E-8871-E40F01183862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62115137-6A32-4E2E-8871-E40F01183862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62115137-6A32-4E2E-8871-E40F01183862}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
