@@ -14,7 +14,7 @@ namespace BinaryToDecimal
             //The input is entered as string. The output should be a variable of type long.
             //Do not use the built-in .NET functionality.
 
-            string input = "1010101010101011"; //Console.ReadLine();
+            string input = Console.ReadLine();
 
             //  4   8    16   32
             //1000 0000 1000 0000
