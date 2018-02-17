@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44137159-78A6-47D6-A3E6-F8B08C77FCE5}</ProjectGuid>
+    <ProjectGuid>{F85CF08A-7C22-44A6-8B68-8748609FABB4}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>BinaryToDecimal</RootNamespace>
     <AssemblyName>BinaryToDecimal</AssemblyName>
