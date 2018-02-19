@@ -32,7 +32,7 @@ namespace DecimalToHex
             }
             char[] charArray = hexNumber.ToCharArray();
             Array.Reverse(charArray);
-            Console.WriteLine(new string (charArray));
+            Console.WriteLine(new string(charArray));
         }   
     }
 }
