@@ -131,6 +131,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpiralMatrix", "SpiralMatri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalToHex", "DecimalToHex\DecimalToHex.csproj", "{7A8CB016-F09A-4B02-9AF6-8EDE65D592F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexToDecimal", "HexToDecimal\HexToDecimal.csproj", "{27CCA6A6-65EF-4D25-B27D-FA8D10196B25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllocateArray", "AllocateArray\AllocateArray.csproj", "{8DB5526B-E0B0-40C7-9B71-8019B2ACDDB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -393,6 +397,14 @@ Global
 		{7A8CB016-F09A-4B02-9AF6-8EDE65D592F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A8CB016-F09A-4B02-9AF6-8EDE65D592F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A8CB016-F09A-4B02-9AF6-8EDE65D592F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27CCA6A6-65EF-4D25-B27D-FA8D10196B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CCA6A6-65EF-4D25-B27D-FA8D10196B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CCA6A6-65EF-4D25-B27D-FA8D10196B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CCA6A6-65EF-4D25-B27D-FA8D10196B25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DB5526B-E0B0-40C7-9B71-8019B2ACDDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DB5526B-E0B0-40C7-9B71-8019B2ACDDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DB5526B-E0B0-40C7-9B71-8019B2ACDDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DB5526B-E0B0-40C7-9B71-8019B2ACDDB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
