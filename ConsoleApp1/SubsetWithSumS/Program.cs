@@ -16,17 +16,43 @@ namespace SubsetWithSumS
             Console.Write("N: ");
             int n = int.Parse(Console.ReadLine());
             int[] array = new int[n];
-            for (int i = 0; i < array.Length - 1; i++)
+            bool isFinded = false;
+            int result = 0;
+
+            for (int i = 0; i < array.Length; i++)
             {
                 array[i] = int.Parse(Console.ReadLine());
             }
-            if (array.Sum() < s)
+            int j = 0;
+            while (j < array.Length)
+            {
+                for (int i = 0; i < array.Length - 1; i++)
+                {
+                    //if (array[j] + array[i] == s && array[j] != array[i])
+                    //{
+                    //    isFinded = true;
+                    //}
+                    result += array[i] + array[j];
+                    if (result > s)
+                    {
+                        result = 0;
+                    } else if (result == s)
+                    {
+                        isFinded = true;
+                        break;
+                    }
+                    
+                }
+                if (isFinded == true)
+                {
+                    Console.WriteLine("Yes");
+                    break;
+                }
+                j++;
+            }
+            if (isFinded == false)
             {
                 Console.WriteLine("No");
-            }
-            else
-            {
-                Console.WriteLine("Yes");
             }
         }
     }
