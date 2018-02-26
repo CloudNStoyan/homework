@@ -32,12 +32,15 @@ namespace SubsetWithSumS
                     //{
                     //    isFinded = true;
                     //}
-                    result += array[i] + array[j];
+                    if (array[i] != array[j])
+                    {
+                        result += array[i] + array[j];
+                    }
                     if (result > s)
                     {
                         result = 0;
                     } else if (result == s)
-                    {
+                    {   
                         isFinded = true;
                         break;
                     }
