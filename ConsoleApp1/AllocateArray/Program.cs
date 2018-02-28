@@ -20,6 +20,6 @@ namespace AllocateArray
             {
                 Console.WriteLine(array[i] = i * 5);
             }
-        }
+        }   
     }
 }
