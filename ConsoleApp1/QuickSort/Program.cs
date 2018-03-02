@@ -21,18 +21,26 @@ namespace QuickSort
                 list.Add(array[i]);
             }
             list.Sort();
-            bool isNotFinded = true;
             int crash = 0;
             int wall = 0, temp = 0, times = 0,index = array.Length - 1;
             int pivot = array[index];
-            while (isNotFinded)
+            while (true)
             {
-                if (isNotFinded == false)
+                if (wall == array.Length)
+                {
+                    wall = 0;
+                    index = array.Length - 1;
+                }
+                if (array.SequenceEqual(list))
                 {
                     break;
                 }
                 for (int i = wall; i < array.Length - 1; i++)
                 {
+                    if (array.SequenceEqual(list))
+                    {
+                        break;
+                    }
                     if (array[i] < pivot)
                     {
                         temp = array[wall];
@@ -51,15 +59,8 @@ namespace QuickSort
                             pivot = array[index];
                             wall++;
                         }
-                    } else if (wall > (array.Length-1) || wall == (array.Length - 1)) //array.SequenceEqual(list)
-                    {
-                        
-                        isNotFinded = false;
-                        break;
                     }       
                 }
-                Console.WriteLine(array.Length - 1 + " A");
-                Console.WriteLine(wall);
             }
             foreach (int x in array)
             {
