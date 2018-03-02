@@ -169,6 +169,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort", "QuickSort\Quic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubsetKWithSumS", "SubsetKWithSumS\SubsetKWithSumS.csproj", "{053758CA-E097-4EEA-A544-1B519FE73E0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinationsOfSet", "CombinationsOfSet\CombinationsOfSet.csproj", "{384097BA-8AB7-48F8-AD0F-C617EA473E9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -507,6 +509,10 @@ Global
 		{053758CA-E097-4EEA-A544-1B519FE73E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{053758CA-E097-4EEA-A544-1B519FE73E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{053758CA-E097-4EEA-A544-1B519FE73E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{384097BA-8AB7-48F8-AD0F-C617EA473E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384097BA-8AB7-48F8-AD0F-C617EA473E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384097BA-8AB7-48F8-AD0F-C617EA473E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384097BA-8AB7-48F8-AD0F-C617EA473E9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

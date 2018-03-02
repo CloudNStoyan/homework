@@ -21,12 +21,11 @@ namespace QuickSort
                 list.Add(array[i]);
             }
             list.Sort();
-            int crash = 0;
             int wall = 0, temp = 0, times = 0,index = array.Length - 1;
             int pivot = array[index];
             while (true)
             {
-                if (wall == array.Length)
+                if (wall == array.Length - 1)
                 {
                     wall = 0;
                     index = array.Length - 1;
@@ -55,7 +54,7 @@ namespace QuickSort
                             temp = array[wall];
                             array[wall] = array[index];
                             array[index] = temp;
-                            index--;
+                            //index--;
                             pivot = array[index];
                             wall++;
                         }
@@ -64,8 +63,9 @@ namespace QuickSort
             }
             foreach (int x in array)
             {
-                Console.WriteLine(x);
+                Console.Write(x + " ");
             }
+            Console.WriteLine();
         }
     }
 }

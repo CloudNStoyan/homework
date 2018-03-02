@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,48 +12,33 @@ namespace MergeSort
         static void Main(string[] args)
         {
             //Write a program that sorts an array of integers using the Merge sort algorithm.
-            int n = int.Parse(Console.ReadLine());
-            int[] startArr = new int[n];
-            int[] manyArr = new int[n];
-            int[] firstSort = new int[n / 2];
-            int[] secondSort = new int [firstSort.Length / 2];
+            string numbers = Console.ReadLine();
+            var array = Array.ConvertAll(numbers.Split(' '), int.Parse);
+            int split = (array.Length - 1) / 2;
+            int j = split, temp = 0;
+            bool isNotFinded = true;
 
-            for (int i = 0; i < startArr.Length; i++)
+            while (isNotFinded)
             {
-                startArr[i] = int.Parse(Console.ReadLine());
-
-            }
-
-            for (int i = 0; i < firstSort.Length - 1; i+=2)
-            {
-                if (startArr[i + 1] > startArr[i])
+                for (int i = 0; i < array.Length - 1; i += 2)
                 {
-                    
-                }
-                else
-                {
-                    firstSort[i + 1] = startArr[i + 1];
-                    firstSort[i] = startArr[i];
+                    if (array[i] > array[i + 1])
+                    {
+                        temp = array[i + 1];
+                        array[i + 1] = array[i];
+                        array[i] = temp;
+                    }
+                    else
+                    {
+                        isNotFinded = false;
+                    }
                 }
             }
-            for (int i = 0; i < secondSort.Length - 1; i+= 2)
+            foreach (int i in array)
             {
-                if (firstSort[i + 1] > firstSort[i])
-                {
-                    secondSort[i + 1] = firstSort[i + 1];
-                    secondSort[i] = firstSort[i];
-                } else
-                {
-                    secondSort[i] = firstSort[i];
-                    secondSort[i + 1] = firstSort[i + 1];
-                }
+                Console.Write(i);
             }
-            Console.Clear();
-            foreach (int i in secondSort)
-            {
-                Console.WriteLine(i);
-            }
-            //dosent work not finished send help :C
+            Console.WriteLine();
         }
     }
 }
