@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
@@ -21,10 +22,15 @@ namespace QuickSort
                 list.Add(array[i]);
             }
             list.Sort();
-            int wall = 0, temp = 0, times = 0,index = array.Length - 1;
+            int wall = 0, temp = 0, times = 0,index = array.Length - 1,crash = 0;
             int pivot = array[index];
             while (true)
             {
+                crash++;
+                if (crash >= 100)
+                {
+                    break;
+                }
                 if (wall == array.Length - 1)
                 {
                     wall = 0;
@@ -54,7 +60,7 @@ namespace QuickSort
                             temp = array[wall];
                             array[wall] = array[index];
                             array[index] = temp;
-                            //index--;
+                            index--;
                             pivot = array[index];
                             wall++;
                         }
