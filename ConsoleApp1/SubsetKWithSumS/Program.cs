@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom.Compiler;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,30 +11,54 @@ namespace SubsetKWithSumS
     {
         static void Main(string[] args)
         {
-            //We are given an array of integers and a number S. Write a program to find if there exists a subset of the elements of the array that has a sum S.
-            Console.Write("How many elements K: ");
-            int k = int.Parse(Console.ReadLine());
-            Console.Write("How many numbers N: ");
-            int n = int.Parse(Console.ReadLine());
-            Console.Write("What sum S: ");
-            int s = int.Parse(Console.ReadLine());
-            int[] array = new int[n];
+            // Write a program that reads three integer numbers N, K and S and an array of N elements from the console.
+            // Find in the array a subset of K elements that have sum S or indicate about its absence.
+            int[] array = {2, 1, 2, 4, 3, 5, 2, 6}; // 1 2 5 6
+            int k = 4;
+            int sum = 14;
+            int result = 0;
+            int range;
+
             for (int i = 0; i < array.Length - 1; i++)
             {
-                array[i] = int.Parse(Console.ReadLine());
-            }
-
-            int j = 0;
-            while (j < array.Length)
-            {
-                for (int i = 0; i < array.Length - 1; i++)
+                if (k + i > array.Length - 1)
                 {
-                    if (array[j] + array[i] + array[i + 1] == s && array[j] != array[i] && array[j] != array[i+1])
+                    range = k;
+                }
+                else
+                {
+                    range = k + i;
+                }
+                if (result == sum)
+                {
+                    break;
+                }
+                for (int j = i; j < range; j++)
+                {
+                    result += array[j];
+                    if (result > sum)
                     {
-                        Console.WriteLine(array[j] + " " + array[i] + " " + array[i+1]);
+                        result = 0;
+                        break;
+                    }
+                    else if (result == sum)
+                    {
+                        break;
+                    }
+                    else if (j == (k + i) - 1)
+                    {
+                        result = 0;
                     }
                 }
-                j++;
+            }
+            Console.Clear();
+            if (result == sum)
+            {
+                Console.WriteLine("Yes");
+            }
+            else
+            {
+                Console.WriteLine("No");
             }
         }
     }
