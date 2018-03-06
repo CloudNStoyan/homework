@@ -173,6 +173,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinationsOfSet", "Combin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VariationsOfSet", "VariationsOfSet\VariationsOfSet.csproj", "{389556A7-4105-46E6-8295-670AD7DEFEA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PermutationsOfSet", "PermutationsOfSet\PermutationsOfSet.csproj", "{6477CC4E-61DB-4DA1-95B0-086A91A5BE8C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -519,6 +521,10 @@ Global
 		{389556A7-4105-46E6-8295-670AD7DEFEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{389556A7-4105-46E6-8295-670AD7DEFEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{389556A7-4105-46E6-8295-670AD7DEFEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6477CC4E-61DB-4DA1-95B0-086A91A5BE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6477CC4E-61DB-4DA1-95B0-086A91A5BE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6477CC4E-61DB-4DA1-95B0-086A91A5BE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6477CC4E-61DB-4DA1-95B0-086A91A5BE8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
