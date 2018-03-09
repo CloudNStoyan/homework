@@ -179,6 +179,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FillTheMatrix", "FillTheMat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximalSumOfMatrix", "MaximalSumOfMatrix\MaximalSumOfMatrix.csproj", "{AE4AD54C-3FC8-4E64-86A2-2ACBE721F276}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequenceInMatrix", "SequenceInMatrix\SequenceInMatrix.csproj", "{DAF3C540-EE41-4728-BCCA-90BC9341F13A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchInMatrix", "BinarySearchInMatrix\BinarySearchInMatrix.csproj", "{73236523-F6DC-4622-9511-8859F8FF4B63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -537,6 +541,14 @@ Global
 		{AE4AD54C-3FC8-4E64-86A2-2ACBE721F276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE4AD54C-3FC8-4E64-86A2-2ACBE721F276}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE4AD54C-3FC8-4E64-86A2-2ACBE721F276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF3C540-EE41-4728-BCCA-90BC9341F13A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF3C540-EE41-4728-BCCA-90BC9341F13A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF3C540-EE41-4728-BCCA-90BC9341F13A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF3C540-EE41-4728-BCCA-90BC9341F13A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73236523-F6DC-4622-9511-8859F8FF4B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73236523-F6DC-4622-9511-8859F8FF4B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73236523-F6DC-4622-9511-8859F8FF4B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73236523-F6DC-4622-9511-8859F8FF4B63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
