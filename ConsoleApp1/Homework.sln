@@ -183,6 +183,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequenceInMatrix", "Sequenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchInMatrix", "BinarySearchInMatrix\BinarySearchInMatrix.csproj", "{73236523-F6DC-4622-9511-8859F8FF4B63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sortByStringLength", "sortByStringLength\sortByStringLength.csproj", "{D6C228E7-AC1B-451D-B575-709C8EC7DB95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -549,6 +551,10 @@ Global
 		{73236523-F6DC-4622-9511-8859F8FF4B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73236523-F6DC-4622-9511-8859F8FF4B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73236523-F6DC-4622-9511-8859F8FF4B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6C228E7-AC1B-451D-B575-709C8EC7DB95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6C228E7-AC1B-451D-B575-709C8EC7DB95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6C228E7-AC1B-451D-B575-709C8EC7DB95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6C228E7-AC1B-451D-B575-709C8EC7DB95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
