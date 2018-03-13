@@ -193,6 +193,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SayHello", "SayHello\SayHel
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetLargestNumber", "GetLargestNumber\GetLargestNumber.csproj", "{77E4E6FF-3307-47EC-9492-F45E11F9B09F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnglishDigit", "EnglishDigit\EnglishDigit.csproj", "{1E405677-7EFE-4D13-88FA-A12CE8363D51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -579,6 +581,10 @@ Global
 		{77E4E6FF-3307-47EC-9492-F45E11F9B09F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77E4E6FF-3307-47EC-9492-F45E11F9B09F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77E4E6FF-3307-47EC-9492-F45E11F9B09F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E405677-7EFE-4D13-88FA-A12CE8363D51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E405677-7EFE-4D13-88FA-A12CE8363D51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E405677-7EFE-4D13-88FA-A12CE8363D51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E405677-7EFE-4D13-88FA-A12CE8363D51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
