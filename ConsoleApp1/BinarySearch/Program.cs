@@ -10,40 +10,18 @@ namespace BinarySearch
     {
         static void Main(string[] args)
         {
-            //Write a program that finds the index of given element X in a sorted listay of N integers by using the Binary search algorithm.
-            int n = int.Parse(Console.ReadLine());
-            int[] arr = new int[n];
-
-            for (int i = 0; i < arr.Length;i++)
+            int[] nums = {7,1,5,3,9};
+            
+            int k = int.Parse(Console.ReadLine());
+            Array.Sort(nums);
+            int index = Array.BinarySearch(nums, k);
+            if (index < 0)
             {
-                arr[i] = int.Parse(Console.ReadLine());
+                Console.WriteLine("There is no {0} number in the array!", k);
             }
-
-            int num = int.Parse(Console.ReadLine());
-
-            int low = 0, height = arr.Length - 1;
-
-            while (true)
+            else
             {
-                int middle = low + ((height - low) / 2);
-
-                int candidate = arr[middle];
-
-                if (candidate == num)
-                {
-                    Console.WriteLine(middle);
-                    break;
-                }
-
-                if (candidate > num)
-                {
-                    height = middle;
-                }
-
-                if (candidate < num)
-                {
-                    low = middle;
-                }
+                Console.WriteLine("There is {0} number in the sorted array at position {1}.",k,index);
             }
         }
     }
