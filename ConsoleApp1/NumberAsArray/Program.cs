@@ -8,6 +8,7 @@ namespace NumberAsArray
 {
     class Program
     {
+
         public static int reverse(int number)
         {
             string strNumber = number.ToString();
@@ -41,6 +42,8 @@ namespace NumberAsArray
         }
         static void Main(string[] args)
         {
+            //Write a method that adds two positive integer numbers represented as arrays of digits (each array element arr[i] contains a digit; the last digit is kept in arr[0]).
+            //Write a program that reads two arrays representing positive integers and outputs their sum.
             int[] arr = {8, 3, 3};
             int[] arr2 = {6, 2, 4, 2};
             Console.WriteLine(add(arr,arr2));
