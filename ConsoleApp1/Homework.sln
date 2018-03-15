@@ -219,6 +219,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegerCalculations", "Inte
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeCalculate", "TypeCalculate\TypeCalculate.csproj", "{20DD7B77-DB9E-425E-89CD-E97CA9E527E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecimalToBinaryNumSystem", "DecimalToBinaryNumSystem\DecimalToBinaryNumSystem.csproj", "{FA9B133B-10C4-4D61-B40E-D0E0D645912C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -657,6 +659,10 @@ Global
 		{20DD7B77-DB9E-425E-89CD-E97CA9E527E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20DD7B77-DB9E-425E-89CD-E97CA9E527E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20DD7B77-DB9E-425E-89CD-E97CA9E527E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA9B133B-10C4-4D61-B40E-D0E0D645912C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9B133B-10C4-4D61-B40E-D0E0D645912C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9B133B-10C4-4D61-B40E-D0E0D645912C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9B133B-10C4-4D61-B40E-D0E0D645912C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
