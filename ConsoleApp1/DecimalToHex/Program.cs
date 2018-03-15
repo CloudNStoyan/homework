@@ -8,17 +8,17 @@ namespace DecimalToHex
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Convert(decimal n)
         {
-            long num = long.Parse(Console.ReadLine());
-            long quot = num;
-            long reminder = num % 16;
+            
+            decimal quot = n;
+            decimal reminder = n % 16;
             string hexNumber = "";
 
             while (quot > 0)
             {
-                quot = num / 16;
-                reminder = num % 16;
+                quot = Math.Floor(n / 16);
+                reminder = n % 16;
                 if (reminder > 9)
                 {
                     reminder = reminder + 55;
@@ -28,11 +28,17 @@ namespace DecimalToHex
                 {
                     hexNumber = hexNumber + reminder;
                 }
-                num = quot;
+                n = quot;
             }
             char[] charArray = hexNumber.ToCharArray();
             Array.Reverse(charArray);
             Console.WriteLine(new string(charArray));
+        }
+        static void Main(string[] args)
+        {
+            //Write a program that converts a decimal number N to its hexadecimal representation.
+            int n = int.Parse(Console.ReadLine());
+            Convert(n);
         }   
     }
 }
