@@ -235,6 +235,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNumbers", "RandomNumb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DayOfWeek", "DayOfWeek\DayOfWeek.csproj", "{40AD265F-ADA1-4D4C-8940-0BD679571C91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumIntegers", "SumIntegers\SumIntegers.csproj", "{5A7D8567-20BC-4582-83EC-B79C7542F1D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -705,6 +707,10 @@ Global
 		{40AD265F-ADA1-4D4C-8940-0BD679571C91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40AD265F-ADA1-4D4C-8940-0BD679571C91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40AD265F-ADA1-4D4C-8940-0BD679571C91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A7D8567-20BC-4582-83EC-B79C7542F1D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A7D8567-20BC-4582-83EC-B79C7542F1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A7D8567-20BC-4582-83EC-B79C7542F1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A7D8567-20BC-4582-83EC-B79C7542F1D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
