@@ -8,7 +8,7 @@ namespace HexadecimalToBinary
     {
         static void Convert(string input)
         {
-            var map = new Dictionary<string, string>
+                var map = new Dictionary<string, string>
             {
                 {"0", "0000"},
                 {"1", "0001"},
