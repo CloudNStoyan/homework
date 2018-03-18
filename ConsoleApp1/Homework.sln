@@ -239,6 +239,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumIntegers", "SumIntegers\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryToHexadecimal", "BinaryToHexadecimal\BinaryToHexadecimal.csproj", "{6208480B-0B68-4376-A2ED-C3A1CE36DDE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSystemToAnyOther", "OneSystemToAnyOther\OneSystemToAnyOther.csproj", "{1C575DFC-909B-42C0-9C1E-D606BD34608F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -717,6 +719,10 @@ Global
 		{6208480B-0B68-4376-A2ED-C3A1CE36DDE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6208480B-0B68-4376-A2ED-C3A1CE36DDE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6208480B-0B68-4376-A2ED-C3A1CE36DDE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C575DFC-909B-42C0-9C1E-D606BD34608F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C575DFC-909B-42C0-9C1E-D606BD34608F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C575DFC-909B-42C0-9C1E-D606BD34608F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C575DFC-909B-42C0-9C1E-D606BD34608F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
