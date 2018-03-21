@@ -21,6 +21,8 @@ namespace LeapYear
         }
         static void Main(string[] args)
         {
+            //Write a program that reads a year from the console and checks whether it is a leap one.
+
             while (true)
             {
                 int year = int.Parse(Console.ReadLine());
