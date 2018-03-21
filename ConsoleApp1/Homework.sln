@@ -243,6 +243,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneSystemToAnyOther", "OneS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFloatingPoint", "BinaryFloatingPoint\BinaryFloatingPoint.csproj", "{0E7621D5-68AD-4150-AE81-1954E99F2A11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapYear", "LeapYear\LeapYear.csproj", "{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -729,6 +731,10 @@ Global
 		{0E7621D5-68AD-4150-AE81-1954E99F2A11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E7621D5-68AD-4150-AE81-1954E99F2A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E7621D5-68AD-4150-AE81-1954E99F2A11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
