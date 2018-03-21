@@ -245,6 +245,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryFloatingPoint", "Bina
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapYear", "LeapYear\LeapYear.csproj", "{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Workdays", "Workdays\Workdays.csproj", "{ADC88F4C-6CFF-4142-8D48-29BED80C0804}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -735,6 +737,10 @@ Global
 		{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6A51B3A-D046-4720-9B7C-D753FDB3AAC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADC88F4C-6CFF-4142-8D48-29BED80C0804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADC88F4C-6CFF-4142-8D48-29BED80C0804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADC88F4C-6CFF-4142-8D48-29BED80C0804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADC88F4C-6CFF-4142-8D48-29BED80C0804}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
