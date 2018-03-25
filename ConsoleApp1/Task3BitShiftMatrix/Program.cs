@@ -27,16 +27,13 @@ namespace Task3BitShiftMatrix
             
             int[,] matrix = new int[rows, cols];
             FillMatrix(matrix);
+            int sum = 0;
             foreach (int move in moves)
             {
                 int[] endPos = Coordinates(move, coef);
-                if (endPos[1] > currentPos[1])
-                {
-
-                }
-
+                Console.WriteLine(GetSumOfCells(endPos, matrix));
             }
-            PrintMatrix(matrix);
+            Console.WriteLine(sum);
         }
         static int[] Coordinates(int move, int coef)
         {
@@ -61,63 +58,6 @@ namespace Task3BitShiftMatrix
                 pow *= 2;
             }
         }
-
-        static void PrintMatrix(int[,] matrix)
-        {
-            for (int r = 0; r < matrix.GetLength(0); r++)
-            {
-                for (int c = 0; c < matrix.GetLength(1); c++)
-                {
-                    Console.Write("{0,4}",matrix[r,c] + " ");
-                }
-                Console.WriteLine();
-            }
-        }
-
-        static int NextPosition(int[] whereTo, int[,] matrix)
-        {
-            int result = 0;
-            //while (currentPos[0] != whereTo[0] && currentPos[1] != whereTo[1])
-
-            if (currentPos[1] > whereTo[1])
-            {
-                if (hasPassed())
-                {
-                    result += Right(matrix);
-                }
-                else
-                {
-                    currentPos[1]++;
-                }
-            }
-            else
-            {
-                if (hasPassed())
-                {
-                    result += Left(matrix);
-                }
-                else
-                {
-                    currentPos[1]--;
-                }
-            }
-
-            return result;
-
-        }
-
-        static int Left(int[,] matrix)
-        {
-            return 0;
-        }
-
-        static int Right(int[,] matrix)
-        {
-            
-            return matrix[currentPos[0], currentPos[1]+1];
-            currentPos[1]++;
-        }
-
         static bool hasPassed()
         {
             var passed = new Dictionary<string,int>
@@ -132,7 +72,49 @@ namespace Task3BitShiftMatrix
             else
             {
                 passed.Add(holderForPosition,0);
-                return true;
+                return true;    
+            }
+        }
+
+        static int GetSumOfCells(int[] to,int[,] matrix)
+        {
+            int result = 0;
+            while (currentPos[0] != to[0] && currentPos[1] != to[1])
+            {
+                if (to[1] > currentPos[1])
+                {
+                    currentPos[1]+= 1;
+                    Console.WriteLine(currentPos[1]);
+                    result += matrix[currentPos[0], currentPos[1]];
+                } else if (currentPos[1] > to[1])
+                {
+                    currentPos[1]-= 1;
+                    Console.WriteLine(currentPos[1]);
+                    result += matrix[currentPos[0], currentPos[1]];
+                } else if (to[0] > currentPos[0])
+                {
+                    currentPos[0]+= 1;
+                    Console.WriteLine(currentPos[0]);
+                    result += matrix[currentPos[0],currentPos[1]];
+                } else if (currentPos[0] > to[0])
+                {
+                    currentPos[0]-= 1;
+                    Console.WriteLine(currentPos[0]);
+                    result += matrix[currentPos[0], currentPos[1]];
+                }
+            }
+            return result;
+        }
+
+        static void PrintMatrix(int[,] matrix)
+        {
+            for (int r = 0; r < matrix.GetLength(0); r++)
+            {
+                for (int c = 0; c < matrix.GetLength(1); c++)
+                {
+                    Console.Write("{0,4}", matrix[r, c] + " ");
+                }
+                Console.WriteLine();
             }
         }
     }
