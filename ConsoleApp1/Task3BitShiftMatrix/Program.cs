@@ -11,6 +11,10 @@ namespace Task3BitShiftMatrix
     class Program
     {
         public static int[] currentPos = { 4, 0 };
+        public static Dictionary<string, int> passed = new Dictionary<string, int>
+        {
+
+        };
         static void Main(string[] args)
         {
             /*You are given rectangular matrix. The matrix is filled with numbers that are power of 2, as follows:
@@ -24,14 +28,13 @@ namespace Task3BitShiftMatrix
             int rows = int.Parse(Console.ReadLine() + "");
             int coef = (cols > rows) ? cols : rows;
             int[] moves = (Console.ReadLine() + "").Split(' ').Select(int.Parse).ToArray();
-            
             int[,] matrix = new int[rows, cols];
             FillMatrix(matrix);
-            int sum = 0;
+            int sum = 1;
             foreach (int move in moves)
             {
                 int[] endPos = Coordinates(move, coef);
-                Console.WriteLine(GetSumOfCells(endPos, matrix));
+                sum += GetSumOfCells(endPos, matrix);
             }
             Console.WriteLine(sum);
         }
@@ -58,49 +61,66 @@ namespace Task3BitShiftMatrix
                 pow *= 2;
             }
         }
-        static bool hasPassed()
-        {
-            var passed = new Dictionary<string,int>
-            {
-
-            };
-            string holderForPosition = currentPos[0] + " , " + currentPos[1];
-            if (passed.ContainsKey(holderForPosition))
-            {
-                return false;
-            }
-            else
-            {
-                passed.Add(holderForPosition,0);
-                return true;    
-            }
-        }
 
         static int GetSumOfCells(int[] to,int[,] matrix)
         {
-            int result = 0;
-            while (currentPos[0] != to[0] && currentPos[1] != to[1])
+                int result = 0;
+                while (currentPos[1] != to[1])
+                {
+                    if (to[1] > currentPos[1])
+                    {
+                        currentPos[1] += 1;
+                        string holder = currentPos[0] + "," + currentPos[1];
+                        if (passed.ContainsKey(holder))
+                        {
+                        }
+                        else
+                        {
+                            passed.Add(holder,0);
+                            result += matrix[currentPos[0], currentPos[1]];
+                        }
+                    } else if (currentPos[1] > to[1])
+                    {
+                        currentPos[1] -= 1;
+                        string holder = currentPos[0] + "," + currentPos[1];
+                        if (passed.ContainsKey(holder))
+                        {
+                        }
+                        else
+                        {
+                            passed.Add(holder, 0);
+                            result += matrix[currentPos[0], currentPos[1]];
+                        }
+                }
+                }
+
+            while (currentPos[0] != to[0])
             {
-                if (to[1] > currentPos[1])
+                if (to[0] > currentPos[0])
                 {
-                    currentPos[1]+= 1;
-                    Console.WriteLine(currentPos[1]);
-                    result += matrix[currentPos[0], currentPos[1]];
-                } else if (currentPos[1] > to[1])
+                    currentPos[0] += 1;
+                    string holder = currentPos[0] + "," + currentPos[1];
+                    if (passed.ContainsKey(holder))
+                    {
+                    }
+                    else
+                    {
+                        passed.Add(holder, 0);
+                        result += matrix[currentPos[0], currentPos[1]];
+                    }
+                }
+                else if (currentPos[0] > to[0])
                 {
-                    currentPos[1]-= 1;
-                    Console.WriteLine(currentPos[1]);
-                    result += matrix[currentPos[0], currentPos[1]];
-                } else if (to[0] > currentPos[0])
-                {
-                    currentPos[0]+= 1;
-                    Console.WriteLine(currentPos[0]);
-                    result += matrix[currentPos[0],currentPos[1]];
-                } else if (currentPos[0] > to[0])
-                {
-                    currentPos[0]-= 1;
-                    Console.WriteLine(currentPos[0]);
-                    result += matrix[currentPos[0], currentPos[1]];
+                    currentPos[0] -= 1;
+                    string holder = currentPos[0] + "," + currentPos[1];
+                    if (passed.ContainsKey(holder))
+                    {
+                    }
+                    else
+                    {
+                        passed.Add(holder, 0);
+                        result += matrix[currentPos[0], currentPos[1]];
+                    }
                 }
             }
             return result;

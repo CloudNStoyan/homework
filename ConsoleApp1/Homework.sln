@@ -259,6 +259,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3BitShiftMatrix", "Task
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString", "ReverseString\ReverseString.csproj", "{BBDB50B5-1406-4C3A-92F1-7A8494195B7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1BirdsAndFeathers", "Task1BirdsAndFeathers\Task1BirdsAndFeathers.csproj", "{AF28A51D-1868-427E-9527-1D0AFB47BFA3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -777,6 +779,10 @@ Global
 		{BBDB50B5-1406-4C3A-92F1-7A8494195B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBDB50B5-1406-4C3A-92F1-7A8494195B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBDB50B5-1406-4C3A-92F1-7A8494195B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF28A51D-1868-427E-9527-1D0AFB47BFA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF28A51D-1868-427E-9527-1D0AFB47BFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF28A51D-1868-427E-9527-1D0AFB47BFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF28A51D-1868-427E-9527-1D0AFB47BFA3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
