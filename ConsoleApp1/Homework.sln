@@ -261,6 +261,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString", "ReverseStr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1BirdsAndFeathers", "Task1BirdsAndFeathers\Task1BirdsAndFeathers.csproj", "{AF28A51D-1868-427E-9527-1D0AFB47BFA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2Buses", "Task2Buses\Task2Buses.csproj", "{3A0306D5-2782-4595-ACA7-DBF19080AC40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -783,6 +785,10 @@ Global
 		{AF28A51D-1868-427E-9527-1D0AFB47BFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF28A51D-1868-427E-9527-1D0AFB47BFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF28A51D-1868-427E-9527-1D0AFB47BFA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0306D5-2782-4595-ACA7-DBF19080AC40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0306D5-2782-4595-ACA7-DBF19080AC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0306D5-2782-4595-ACA7-DBF19080AC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0306D5-2782-4595-ACA7-DBF19080AC40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
