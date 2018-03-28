@@ -265,6 +265,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2Buses", "Task2Buses\Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3NumberOfPages", "Task3NumberOfPages\Task3NumberOfPages.csproj", "{7EAB64E3-7C16-4783-A924-DC2A81CAB75C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5BobiAvokadoto", "Task5BobiAvokadoto\Task5BobiAvokadoto.csproj", "{B91F6791-EDE6-4147-A85D-BB2D1A5BF596}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1MythicalNumbers", "Task1MythicalNumbers\Task1MythicalNumbers.csproj", "{A340B431-80EA-4431-990C-A898C018AE4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -795,6 +799,14 @@ Global
 		{7EAB64E3-7C16-4783-A924-DC2A81CAB75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EAB64E3-7C16-4783-A924-DC2A81CAB75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EAB64E3-7C16-4783-A924-DC2A81CAB75C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B91F6791-EDE6-4147-A85D-BB2D1A5BF596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91F6791-EDE6-4147-A85D-BB2D1A5BF596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91F6791-EDE6-4147-A85D-BB2D1A5BF596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91F6791-EDE6-4147-A85D-BB2D1A5BF596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A340B431-80EA-4431-990C-A898C018AE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A340B431-80EA-4431-990C-A898C018AE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A340B431-80EA-4431-990C-A898C018AE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A340B431-80EA-4431-990C-A898C018AE4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
