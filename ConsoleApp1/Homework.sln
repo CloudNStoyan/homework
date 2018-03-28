@@ -269,6 +269,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task5BobiAvokadoto", "Task5
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1MythicalNumbers", "Task1MythicalNumbers\Task1MythicalNumbers.csproj", "{A340B431-80EA-4431-990C-A898C018AE4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4MixingNumbers", "Task4MixingNumbers\Task4MixingNumbers.csproj", "{133B2734-ED17-4125-9A0D-1A5F46BC9DE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -807,6 +809,10 @@ Global
 		{A340B431-80EA-4431-990C-A898C018AE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A340B431-80EA-4431-990C-A898C018AE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A340B431-80EA-4431-990C-A898C018AE4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{133B2734-ED17-4125-9A0D-1A5F46BC9DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133B2734-ED17-4125-9A0D-1A5F46BC9DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133B2734-ED17-4125-9A0D-1A5F46BC9DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133B2734-ED17-4125-9A0D-1A5F46BC9DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
