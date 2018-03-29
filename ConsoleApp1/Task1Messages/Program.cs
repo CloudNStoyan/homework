@@ -121,6 +121,8 @@ namespace Task1Messages
              * ogi | 8
              * yan | 9
              */
+
+            //Your task is to calculate the result of the operation, by given two numbers in GeorgeTheGreat numeral system and an operator (subtraction or addition)
             var commands = new Dictionary<string,int>
             {
                 {"//", 0},

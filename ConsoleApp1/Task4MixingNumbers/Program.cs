@@ -10,6 +10,11 @@ namespace Task4MixingNumbers
     {
         static void Main(string[] args)
         {
+            //We have the following operations defined for two-digit numbers:
+            //Mixing: mixing ab and cd produces b * c
+            //Subtracting: I believe you know how to subtract numbers :)
+            //You have a sequence of N two-digit numbers. Your task is to mix and subtract each pair of adjacent numbers.
+
             string[] numbers = (Console.ReadLine() + "").Split(' ').ToArray();
             string firstLine = "";
             string secondLine = "";
@@ -22,7 +27,6 @@ namespace Task4MixingNumbers
                 firstLine += int.Parse(numbers[i][1].ToString()) * int.Parse(numbers[i + 1][0].ToString()) + " ";
                 secondLine += Math.Abs(int.Parse(numbers[i]) - int.Parse(numbers[i + 1])) + " ";
             }
-
             Console.WriteLine(firstLine);
             Console.WriteLine(secondLine);
         }
