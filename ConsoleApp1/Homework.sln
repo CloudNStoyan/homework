@@ -273,6 +273,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4MixingNumbers", "Task4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2JumpJump", "Task2JumpJump\Task2JumpJump.csproj", "{7A1E2C14-ACA3-4C3D-A8DB-C313022A4D7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3HiddenMessage", "Task3HiddenMessage\Task3HiddenMessage.csproj", "{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -819,6 +821,10 @@ Global
 		{7A1E2C14-ACA3-4C3D-A8DB-C313022A4D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A1E2C14-ACA3-4C3D-A8DB-C313022A4D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A1E2C14-ACA3-4C3D-A8DB-C313022A4D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
