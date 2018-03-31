@@ -275,6 +275,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2JumpJump", "Task2JumpJ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3HiddenMessage", "Task3HiddenMessage\Task3HiddenMessage.csproj", "{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorrectBrackets", "CorrectBrackets\CorrectBrackets.csproj", "{E3255A41-52E7-4F69-BFFA-B2C8AB23B80A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -825,6 +827,10 @@ Global
 		{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDA1501F-4D4B-4EFB-8B9C-38ADEE0E461C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3255A41-52E7-4F69-BFFA-B2C8AB23B80A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3255A41-52E7-4F69-BFFA-B2C8AB23B80A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3255A41-52E7-4F69-BFFA-B2C8AB23B80A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3255A41-52E7-4F69-BFFA-B2C8AB23B80A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
