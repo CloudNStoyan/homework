@@ -287,6 +287,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseTags", "ParseTags\Pars
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractSentences", "ExtractSentences\ExtractSentences.csproj", "{B7A8363A-1494-45B7-BF03-D9F4D8594B4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForbiddenWords", "ForbiddenWords\ForbiddenWords.csproj", "{2F1505E8-0FB4-4997-A258-6D6B1EE7FB92}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -861,6 +863,10 @@ Global
 		{B7A8363A-1494-45B7-BF03-D9F4D8594B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A8363A-1494-45B7-BF03-D9F4D8594B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A8363A-1494-45B7-BF03-D9F4D8594B4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F1505E8-0FB4-4997-A258-6D6B1EE7FB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F1505E8-0FB4-4997-A258-6D6B1EE7FB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F1505E8-0FB4-4997-A258-6D6B1EE7FB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F1505E8-0FB4-4997-A258-6D6B1EE7FB92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
