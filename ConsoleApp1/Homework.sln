@@ -311,6 +311,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindromes", "Palindromes\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LettersCount", "LettersCount\LettersCount.csproj", "{F83676A9-A688-4193-B75D-F632DC6FF8FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordsCount", "WordsCount\WordsCount.csproj", "{4F467E9A-53C1-498F-8BDE-C46941D69447}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -933,6 +935,10 @@ Global
 		{F83676A9-A688-4193-B75D-F632DC6FF8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F83676A9-A688-4193-B75D-F632DC6FF8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F83676A9-A688-4193-B75D-F632DC6FF8FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F467E9A-53C1-498F-8BDE-C46941D69447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F467E9A-53C1-498F-8BDE-C46941D69447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F467E9A-53C1-498F-8BDE-C46941D69447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F467E9A-53C1-498F-8BDE-C46941D69447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
