@@ -309,6 +309,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractEmails", "ExtractEma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Palindromes", "Palindromes\Palindromes.csproj", "{E84C68A4-A07D-4AF2-91EB-BFAC3FCF08A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LettersCount", "LettersCount\LettersCount.csproj", "{F83676A9-A688-4193-B75D-F632DC6FF8FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -927,6 +929,10 @@ Global
 		{E84C68A4-A07D-4AF2-91EB-BFAC3FCF08A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E84C68A4-A07D-4AF2-91EB-BFAC3FCF08A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E84C68A4-A07D-4AF2-91EB-BFAC3FCF08A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83676A9-A688-4193-B75D-F632DC6FF8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83676A9-A688-4193-B75D-F632DC6FF8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83676A9-A688-4193-B75D-F632DC6FF8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83676A9-A688-4193-B75D-F632DC6FF8FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
