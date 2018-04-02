@@ -305,6 +305,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateDifference", "DateDiffe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateInBulgarian", "DateInBulgarian\DateInBulgarian.csproj", "{C453A7F5-09F4-4E24-92C8-53D41A5853C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractEmails", "ExtractEmails\ExtractEmails.csproj", "{09FBE65C-8668-429C-806D-757F8E3E1451}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -915,6 +917,10 @@ Global
 		{C453A7F5-09F4-4E24-92C8-53D41A5853C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C453A7F5-09F4-4E24-92C8-53D41A5853C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C453A7F5-09F4-4E24-92C8-53D41A5853C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FBE65C-8668-429C-806D-757F8E3E1451}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FBE65C-8668-429C-806D-757F8E3E1451}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FBE65C-8668-429C-806D-757F8E3E1451}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FBE65C-8668-429C-806D-757F8E3E1451}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
