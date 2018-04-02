@@ -303,6 +303,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceTags", "ReplaceTags\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateDifference", "DateDifference\DateDifference.csproj", "{DD265A2B-F239-49ED-8F51-62E52AF0735E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateInBulgarian", "DateInBulgarian\DateInBulgarian.csproj", "{C453A7F5-09F4-4E24-92C8-53D41A5853C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -909,6 +911,10 @@ Global
 		{DD265A2B-F239-49ED-8F51-62E52AF0735E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD265A2B-F239-49ED-8F51-62E52AF0735E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD265A2B-F239-49ED-8F51-62E52AF0735E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C453A7F5-09F4-4E24-92C8-53D41A5853C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C453A7F5-09F4-4E24-92C8-53D41A5853C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C453A7F5-09F4-4E24-92C8-53D41A5853C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C453A7F5-09F4-4E24-92C8-53D41A5853C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
