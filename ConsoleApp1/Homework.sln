@@ -319,6 +319,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesfLetters", "SeriesfLe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderWords", "OrderWords\OrderWords.csproj", "{CA3AE763-ECF5-4D45-9B00-40D4FF3B7EBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextFromHTML", "ExtractTextFromHTML\ExtractTextFromHTML.csproj", "{8D2AAE93-C7BD-44C3-A76C-7AA3B010634D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -957,6 +959,10 @@ Global
 		{CA3AE763-ECF5-4D45-9B00-40D4FF3B7EBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA3AE763-ECF5-4D45-9B00-40D4FF3B7EBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA3AE763-ECF5-4D45-9B00-40D4FF3B7EBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D2AAE93-C7BD-44C3-A76C-7AA3B010634D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D2AAE93-C7BD-44C3-A76C-7AA3B010634D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D2AAE93-C7BD-44C3-A76C-7AA3B010634D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D2AAE93-C7BD-44C3-A76C-7AA3B010634D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
