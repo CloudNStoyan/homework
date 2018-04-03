@@ -11,6 +11,7 @@ namespace SeriesfLetters
     {
         static void Main(string[] args)
         {
+            //Write a program that reads a string from the console and replaces all series of consecutive identical letters with a single one.
             string text = Console.ReadLine();
 
             Console.WriteLine(Regex.Replace(text, @"(\w)\1+", "$1"));
