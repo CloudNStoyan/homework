@@ -327,6 +327,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareRoot", "SquareRoot\Sq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterNumbers", "EnterNumbers\EnterNumbers.csproj", "{7117F698-6BE1-4F13-BD76-EE9B68144325}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadFileContents", "ReadFileContents\ReadFileContents.csproj", "{546343B5-B529-4521-931B-180AEA5B011C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -981,6 +983,10 @@ Global
 		{7117F698-6BE1-4F13-BD76-EE9B68144325}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7117F698-6BE1-4F13-BD76-EE9B68144325}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7117F698-6BE1-4F13-BD76-EE9B68144325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{546343B5-B529-4521-931B-180AEA5B011C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{546343B5-B529-4521-931B-180AEA5B011C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{546343B5-B529-4521-931B-180AEA5B011C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{546343B5-B529-4521-931B-180AEA5B011C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
