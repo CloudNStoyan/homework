@@ -74,6 +74,7 @@ namespace ConcatenateTextFiles
                     try
                     {
                         stream.WriteLine(concatenatedText);
+                        fs.Flush();
                     }
                     catch (Exception e)
                     {
