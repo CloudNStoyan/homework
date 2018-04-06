@@ -351,6 +351,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtractTextFromXML", "Extra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrefixTest", "PrefixTest\PrefixTest.csproj", "{BFDF3E04-6CE7-4CAA-8007-78BF8F125635}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveWords", "RemoveWords\RemoveWords.csproj", "{BFB1656F-4E0F-4971-BAD5-3E47CE8F14C1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1053,6 +1055,10 @@ Global
 		{BFDF3E04-6CE7-4CAA-8007-78BF8F125635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFDF3E04-6CE7-4CAA-8007-78BF8F125635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFDF3E04-6CE7-4CAA-8007-78BF8F125635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFB1656F-4E0F-4971-BAD5-3E47CE8F14C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFB1656F-4E0F-4971-BAD5-3E47CE8F14C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFB1656F-4E0F-4971-BAD5-3E47CE8F14C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFB1656F-4E0F-4971-BAD5-3E47CE8F14C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
