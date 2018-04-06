@@ -345,6 +345,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceSubString", "Replace
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReplaceWholeWord", "ReplaceWholeWord\ReplaceWholeWord.csproj", "{678C0E88-63CF-4221-8149-ADC059F4285A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeleteOddLines", "DeleteOddLines\DeleteOddLines.csproj", "{8B91C304-2198-4AB6-A825-665794E2BE78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1035,6 +1037,10 @@ Global
 		{678C0E88-63CF-4221-8149-ADC059F4285A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{678C0E88-63CF-4221-8149-ADC059F4285A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{678C0E88-63CF-4221-8149-ADC059F4285A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B91C304-2198-4AB6-A825-665794E2BE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B91C304-2198-4AB6-A825-665794E2BE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B91C304-2198-4AB6-A825-665794E2BE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B91C304-2198-4AB6-A825-665794E2BE78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
