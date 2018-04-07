@@ -355,6 +355,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoveWords", "RemoveWords\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountWords", "CountWords\CountWords.csproj", "{36228502-E43B-46B7-8CEC-5B0C78D54264}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximalAreaSum", "MaximalAreaSum\MaximalAreaSum.csproj", "{52B8EBA5-9B8E-4640-88D1-3D860A88A465}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1065,6 +1067,10 @@ Global
 		{36228502-E43B-46B7-8CEC-5B0C78D54264}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36228502-E43B-46B7-8CEC-5B0C78D54264}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36228502-E43B-46B7-8CEC-5B0C78D54264}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B8EBA5-9B8E-4640-88D1-3D860A88A465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B8EBA5-9B8E-4640-88D1-3D860A88A465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B8EBA5-9B8E-4640-88D1-3D860A88A465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B8EBA5-9B8E-4640-88D1-3D860A88A465}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
