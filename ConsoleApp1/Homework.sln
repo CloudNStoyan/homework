@@ -365,6 +365,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompressString", "CompressS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcatVsAppend", "ConcatVsAppend\ConcatVsAppend.csproj", "{ACFBC331-A775-4FB0-AA69-17BAF7A18157}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountWithSplit", "CountWithSplit\CountWithSplit.csproj", "{DA325F2A-E15A-4BA4-99EE-915526BDDFAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1095,6 +1097,10 @@ Global
 		{ACFBC331-A775-4FB0-AA69-17BAF7A18157}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACFBC331-A775-4FB0-AA69-17BAF7A18157}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACFBC331-A775-4FB0-AA69-17BAF7A18157}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA325F2A-E15A-4BA4-99EE-915526BDDFAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA325F2A-E15A-4BA4-99EE-915526BDDFAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA325F2A-E15A-4BA4-99EE-915526BDDFAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA325F2A-E15A-4BA4-99EE-915526BDDFAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
