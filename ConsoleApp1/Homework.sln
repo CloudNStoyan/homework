@@ -363,6 +363,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComparingStrings", "Compari
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompressString", "CompressString\CompressString.csproj", "{ACABA32E-12B9-4E64-AC81-7ACC3BDB00B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcatVsAppend", "ConcatVsAppend\ConcatVsAppend.csproj", "{ACFBC331-A775-4FB0-AA69-17BAF7A18157}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1089,6 +1091,10 @@ Global
 		{ACABA32E-12B9-4E64-AC81-7ACC3BDB00B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACABA32E-12B9-4E64-AC81-7ACC3BDB00B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACABA32E-12B9-4E64-AC81-7ACC3BDB00B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACFBC331-A775-4FB0-AA69-17BAF7A18157}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACFBC331-A775-4FB0-AA69-17BAF7A18157}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACFBC331-A775-4FB0-AA69-17BAF7A18157}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACFBC331-A775-4FB0-AA69-17BAF7A18157}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
