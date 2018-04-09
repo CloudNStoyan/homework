@@ -373,6 +373,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParseMarkdownUpperLower", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanitizeText", "SanitizeText\SanitizeText.csproj", "{D4784B6E-8D12-4B42-BDD0-7E0B8C26A8B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearcingInStrings", "SearcingInStrings\SearcingInStrings.csproj", "{9F78CF88-14E4-4A76-959A-8B343ED7F642}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1119,6 +1121,10 @@ Global
 		{D4784B6E-8D12-4B42-BDD0-7E0B8C26A8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4784B6E-8D12-4B42-BDD0-7E0B8C26A8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4784B6E-8D12-4B42-BDD0-7E0B8C26A8B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F78CF88-14E4-4A76-959A-8B343ED7F642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F78CF88-14E4-4A76-959A-8B343ED7F642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F78CF88-14E4-4A76-959A-8B343ED7F642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F78CF88-14E4-4A76-959A-8B343ED7F642}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
