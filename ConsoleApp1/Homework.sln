@@ -375,6 +375,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SanitizeText", "SanitizeTex
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearcingInStrings", "SearcingInStrings\SearcingInStrings.csproj", "{9F78CF88-14E4-4A76-959A-8B343ED7F642}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodeAndDecrypt", "DecodeAndDecrypt\DecodeAndDecrypt.csproj", "{AB66F066-43FF-44E0-8CCE-0E868FD510F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1125,6 +1127,10 @@ Global
 		{9F78CF88-14E4-4A76-959A-8B343ED7F642}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F78CF88-14E4-4A76-959A-8B343ED7F642}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F78CF88-14E4-4A76-959A-8B343ED7F642}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB66F066-43FF-44E0-8CCE-0E868FD510F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB66F066-43FF-44E0-8CCE-0E868FD510F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB66F066-43FF-44E0-8CCE-0E868FD510F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB66F066-43FF-44E0-8CCE-0E868FD510F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
