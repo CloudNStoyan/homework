@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -10,37 +11,36 @@ namespace DecodeAndDecrypt
 {
     class Program
     {
-       private static Dictionary<char,int> CharToCode = new Dictionary<char, int>
+        private static Dictionary<char, int> CharToCode = new Dictionary<char, int>
         {
-            {'A' ,0},
-            {'B' ,1},
-            {'C' ,2},
-            {'D' ,3},
-            {'E' ,4},
-            {'F' ,5},
-            {'G' ,6},
-            {'H' ,7},
-            {'I' ,8},
-            {'J' ,9},
-            {'K' ,10},
-            {'L' ,11},
-            {'M' ,12},
-            {'N' ,13},
-            {'O' ,14},
-            {'P' ,15},
-            {'Q' ,16},
-            {'R' ,17},
-            {'S' ,18},
-            {'T' ,19},
-            {'U' ,20},
-            {'V' ,21},
-            {'W' ,22},
-            {'X' ,23},
-            {'Y' ,24},
-            {'Z' ,25}
+            {'A', 0},
+            {'B', 1},
+            {'C', 2},
+            {'D', 3},
+            {'E', 4},
+            {'F', 5},
+            {'G', 6},
+            {'H', 7},
+            {'I', 8},
+            {'J', 9},
+            {'K', 10},
+            {'L', 11},
+            {'M', 12},
+            {'N', 13},
+            {'O', 14},
+            {'P', 15},
+            {'Q', 16},
+            {'R', 17},
+            {'S', 18},
+            {'T', 19},
+            {'U', 20},
+            {'V', 21},
+            {'W', 22},
+            {'X', 23},
+            {'Y', 24},
+            {'Z', 25}
         };
-
-        private static Dictionary<int,char> CodeToChar = new Dictionary<int, char>
+        private static Dictionary<int, char> CodeToChar = new Dictionary<int, char>
         {
             {0,'A'},
             {1,'B'},
@@ -69,20 +69,131 @@ namespace DecodeAndDecrypt
             {24,'Y'},
             {25,'Z'}
         };
-        static void Main(string[] args)
+
+        static string GetCypher(string encrypted)
         {
-            string input = Console.ReadLine();
-
-            string decoded = Decoding(input);
-           
-           string cypher = GetCypher(decoded);
-           string message = GetMessage(decoded, cypher.Length);
-
-            Console.WriteLine(Decrypt(decoded,cypher));
-            Console.WriteLine(cypher);
-            Console.WriteLine(message);
+            var output = new StringBuilder();
+            string[] numbers = Regex.Split(encrypted, @"\D+");
+            int cypherLength = int.Parse(numbers[numbers.Length - 1]);
+            int startIndex = encrypted.Length - cypherLength - numbers[numbers.Length - 1].Length;
+            string cypher = encrypted.Substring(startIndex, cypherLength);
+            output.Append(cypher);
+            return output.ToString();
         }
 
+        static string GetMessage(string encrypted, int length)
+        {
+            var output = new StringBuilder();
+            for (int i = 0; i < encrypted.Length - length - 1; i++)
+            {
+                if (!char.IsDigit(encrypted[i]))
+                {
+                    output.Append(encrypted[i]);
+                }
+            }
+
+            return output.ToString();
+        }
+
+        static void Main(string[] args)
+        {
+            string input = Decode(Console.ReadLine());
+            Console.WriteLine(input);
+            string cypher = GetCypher(input);
+            string message = GetMessage(input, cypher.Length);
+            Console.WriteLine(Decrypt(message,cypher));
+            Console.WriteLine(message + " | " + cypher);
+        }
+
+
+        static string Encode(string text)
+        {
+            var builder = new StringBuilder();
+            int count = 1;
+            char holder = ' ';
+            for (int i = 1; i < text.Length; i++)
+            {
+                if (text[i - 1] == text[i])
+                {
+                    count++;
+                    holder = text[i];
+                }
+                else
+                {
+                    if (count > 2)
+                    {
+                        builder.Append(holder + "" + count);
+                    }
+                    else
+                    {
+                        builder.Append(text[i - 1]);
+                    }
+                    count = 1;
+                }
+
+                if (i == text.Length - 1 && count > 2)
+                {
+                    builder.Append(holder + "" + count);
+                }
+                else if (i == text.Length - 1 && count == 2)
+                {
+                    builder.Append(text[i] + "" + text[i]);
+                }
+                else if (i == text.Length - 1)
+                {
+                    builder.Append(text[i]);
+                }
+            }
+            return builder.ToString();
+        }
+
+
+        static string Decode(string text)
+        {
+            string[] numbers = Regex.Split(text, @"\D+");
+            var holder = new StringBuilder();
+            for (int i = 0; i < text.Length - numbers[numbers.Length - 1].Length; i++)
+            {
+                holder.Append(text[i]);
+            }
+            
+            text = holder.ToString();
+
+            var builder = new StringBuilder();
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (char.IsDigit(text[i]))
+                {
+                    int j = i;
+                    string number = "";
+                    while (char.IsDigit(text[j]))
+                    {
+                        if (j >= text.Length)
+                        {
+                            break;
+                        }
+
+                        number += text[j];
+                        j++;
+                    }
+
+                    char c = builder[builder.Length - 1];
+                    builder.Remove(builder.Length - 1, 1);
+                    int times = (number != "") ? int.Parse(number) : 0;
+                    for (int k = 0; k < times; k++)
+                    {
+                        builder.Append(c);
+                    }
+                }
+                else
+                {
+                    builder.Append(text[i]);
+                }
+            }
+
+            builder.Append(numbers[numbers.Length - 1]);
+            return builder.ToString();
+        }
 
         static string Encrypt(string message, string cypher)
         {
@@ -92,7 +203,7 @@ namespace DecodeAndDecrypt
 
                 for (int i = 0; i <= message.Length - cypher.Length; i++)
                 {
-                    
+
                     cypher += cypher[i];
                 }
 
@@ -114,7 +225,7 @@ namespace DecodeAndDecrypt
                     int cyph = CharToCode[cypher[i]];
                     Console.WriteLine($"| {mess} , {cyph} : {mess ^ cyph}|");
 
-                    char symbol = (char) ((mess ^ cyph) + 65);
+                    char symbol = (char)((mess ^ cyph) + 65);
                     output.Append(symbol);
                 }
 
@@ -125,7 +236,7 @@ namespace DecodeAndDecrypt
                     int cyph = CharToCode[cypher[i]];
                     Console.WriteLine($"| {mess} , {cyph} : {mess ^ cyph}|");
 
-                    char symbol = (char) ((mess ^ cyph) + 65);
+                    char symbol = (char)((mess ^ cyph) + 65);
                     output[j] = symbol;
                     j++;
                 }
@@ -134,8 +245,7 @@ namespace DecodeAndDecrypt
 
             return output.ToString();
         }
-
-        static string Decrypt(string encrypted,string cypher)
+        static string Decrypt(string encrypted, string cypher)
         {
             var output = new StringBuilder();
 
@@ -154,7 +264,7 @@ namespace DecodeAndDecrypt
                     }
                 }
 
-                cypher += extendedCypher.ToString();    
+                cypher += extendedCypher.ToString();
 
                 for (int i = 0; i < encrypted.Length; i++)
                 {
@@ -165,7 +275,7 @@ namespace DecodeAndDecrypt
                     output.Append(symbol);
                 }
             }
-            else
+            else if (cypher.Length < encrypted.Length)
             {
                 for (int i = 0; i < encrypted.Length; i++)
                 {
@@ -189,92 +299,18 @@ namespace DecodeAndDecrypt
                     j++;
                 }
             }
-
-            return output.ToString();
-        }
-        
-        static string Encoding(string decrypted)
-        {
-            var encoded = new StringBuilder();
-            int count = 1;
-            for (int i = 1; i < decrypted.Length; i++)
+            else
             {
-                if (i + 1 < decrypted.Length && decrypted[i] == decrypted[i + 1])
+                for (int i = 0; i < cypher.Length; i++)
                 {
-                    count++;
-                }
-                else
-                {
-                    if (count > 1)
-                    {
-                        encoded.Append(decrypted[i] + "" + count);
-                    }
-                    else
-                    {
-                        encoded.Append(decrypted[i]);
-                    }
-                    count = 1;
+                    int mess = CharToCode[encrypted[i]];
+                    int cyph = CharToCode[cypher[i]];
+
+                    char symbol = (char)((mess ^ cyph) + 65);
+                    output.Append(symbol);
                 }
             }
-
-            return encoded.ToString();
-        }
-
-        static string Decoding(string encoded)
-        {
-            var decoded = new StringBuilder();
-            for (int i = 0; i < encoded.Length; i++)
-            {
-                if (char.IsDigit(encoded[i]))
-                {
-                    int j = i;
-                    string number = encoded[i].ToString();
-                    while (char.IsDigit(encoded[j]))
-                    {
-                        if (!(j + 1 < encoded.Length))
-                        {
-                            break;
-                        }
-                        number += encoded[j];
-                        j++;
-                    }
-
-                    int length = number != "" ? int.Parse(number) : 0;
-                    for (int k = 0; k < length; k++)
-                    {
-                        number += encoded[i - 1];
-                    }
-
-                    decoded.Append(number);
-                }
-                else
-                {
-                    decoded.Append(encoded[i]);
-                }
-            }
-
-            return decoded.ToString();
-        }
-
-        static string GetCypher(string encrypted)
-        {
-            var output = new StringBuilder();
-            string[] numbers = Regex.Split(encrypted, @"\D+");
-            int cypherLength = int.Parse(numbers[numbers.Length - 1]);
-            int startIndex = encrypted.Length - cypherLength - numbers[numbers.Length - 1].Length;
-            string cypher = encrypted.Substring(startIndex, cypherLength);
-            output.Append(cypher);
             return output.ToString();
         }
-
-        static string GetMessage(string encrypted, int cypherLength)
-        {
-            var output = new StringBuilder();
-            int length = encrypted.Length - cypherLength - cypherLength.ToString().Length;
-            string message = encrypted.Substring(0, length);
-            output.Append(message);
-            return output.ToString();
-        }
-
     }
 }
