@@ -377,6 +377,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearcingInStrings", "Searci
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodeAndDecrypt", "DecodeAndDecrypt\DecodeAndDecrypt.csproj", "{AB66F066-43FF-44E0-8CCE-0E868FD510F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartesianCoordinateSystem", "CartesianCoordinateSystem\CartesianCoordinateSystem.csproj", "{BFC06DFF-170E-4602-90EC-15765895C397}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1131,6 +1133,10 @@ Global
 		{AB66F066-43FF-44E0-8CCE-0E868FD510F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB66F066-43FF-44E0-8CCE-0E868FD510F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB66F066-43FF-44E0-8CCE-0E868FD510F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC06DFF-170E-4602-90EC-15765895C397}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC06DFF-170E-4602-90EC-15765895C397}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC06DFF-170E-4602-90EC-15765895C397}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC06DFF-170E-4602-90EC-15765895C397}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
