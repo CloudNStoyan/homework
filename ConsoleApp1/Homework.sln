@@ -379,6 +379,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecodeAndDecrypt", "DecodeA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartesianCoordinateSystem", "CartesianCoordinateSystem\CartesianCoordinateSystem.csproj", "{BFC06DFF-170E-4602-90EC-15765895C397}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestRoad", "ForestRoad\ForestRoad.csproj", "{382043DD-692D-4A77-B643-D329C73E7A61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1137,6 +1139,10 @@ Global
 		{BFC06DFF-170E-4602-90EC-15765895C397}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFC06DFF-170E-4602-90EC-15765895C397}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFC06DFF-170E-4602-90EC-15765895C397}.Release|Any CPU.Build.0 = Release|Any CPU
+		{382043DD-692D-4A77-B643-D329C73E7A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{382043DD-692D-4A77-B643-D329C73E7A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{382043DD-692D-4A77-B643-D329C73E7A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{382043DD-692D-4A77-B643-D329C73E7A61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
