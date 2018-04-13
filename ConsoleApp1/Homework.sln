@@ -383,6 +383,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForestRoad", "ForestRoad\Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryDigitsCount", "BinaryDigitsCount\BinaryDigitsCount.csproj", "{120A41BD-8B43-4DD5-AB6C-187FDA121250}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathExpression", "MathExpression\MathExpression.csproj", "{BED2EDD7-8B93-4BD0-A566-91DBEDF6BBB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1149,6 +1151,10 @@ Global
 		{120A41BD-8B43-4DD5-AB6C-187FDA121250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{120A41BD-8B43-4DD5-AB6C-187FDA121250}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{120A41BD-8B43-4DD5-AB6C-187FDA121250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED2EDD7-8B93-4BD0-A566-91DBEDF6BBB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED2EDD7-8B93-4BD0-A566-91DBEDF6BBB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED2EDD7-8B93-4BD0-A566-91DBEDF6BBB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED2EDD7-8B93-4BD0-A566-91DBEDF6BBB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
