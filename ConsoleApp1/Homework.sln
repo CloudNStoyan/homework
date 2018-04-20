@@ -407,6 +407,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstrologicalDigits", "Astro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SandGlass", "SandGlass\SandGlass.csproj", "{7EA6DA5E-4F1D-4360-8EB4-B1DB688F9794}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissCat", "MissCat\MissCat.csproj", "{EA11D1F2-7FEB-404F-A98C-B08ABFF429E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1221,6 +1223,10 @@ Global
 		{7EA6DA5E-4F1D-4360-8EB4-B1DB688F9794}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EA6DA5E-4F1D-4360-8EB4-B1DB688F9794}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EA6DA5E-4F1D-4360-8EB4-B1DB688F9794}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA11D1F2-7FEB-404F-A98C-B08ABFF429E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA11D1F2-7FEB-404F-A98C-B08ABFF429E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA11D1F2-7FEB-404F-A98C-B08ABFF429E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA11D1F2-7FEB-404F-A98C-B08ABFF429E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
