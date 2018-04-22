@@ -411,6 +411,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissCat", "MissCat\MissCat.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeAllLoveBits", "WeAllLoveBits\WeAllLoveBits.csproj", "{7EA4F40E-AD8D-48D6-B129-DDCC227E7810}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubsetSums", "SubsetSums\SubsetSums.csproj", "{E03BAF8F-6680-4596-8478-295526A4E00A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DancingBits", "DancingBits\DancingBits.csproj", "{0CD7B7E2-CAFA-44B8-81B8-9FB2286AC2B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1233,6 +1237,14 @@ Global
 		{7EA4F40E-AD8D-48D6-B129-DDCC227E7810}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EA4F40E-AD8D-48D6-B129-DDCC227E7810}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EA4F40E-AD8D-48D6-B129-DDCC227E7810}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E03BAF8F-6680-4596-8478-295526A4E00A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E03BAF8F-6680-4596-8478-295526A4E00A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E03BAF8F-6680-4596-8478-295526A4E00A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E03BAF8F-6680-4596-8478-295526A4E00A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD7B7E2-CAFA-44B8-81B8-9FB2286AC2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD7B7E2-CAFA-44B8-81B8-9FB2286AC2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD7B7E2-CAFA-44B8-81B8-9FB2286AC2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD7B7E2-CAFA-44B8-81B8-9FB2286AC2B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
