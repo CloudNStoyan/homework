@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,7 +34,7 @@ namespace Events
                     case "AddEvent":
                         AddEvent(processed.ToString());
                         break;
-                    case "DeleteEvent":
+                    case "DeleteEvents":
                         DeleteEvent(processed.ToString());
                         break;
                     case "ListEvents":
@@ -44,13 +45,14 @@ namespace Events
                         break;
                 }
             }
-
+            Console.Clear();
             Console.WriteLine(output.ToString().Trim());
         }
 
         static void AddEvent(string input)
         {
             events.Add(input);
+            events.Sort();
             output.AppendLine("Event added");
         }
 
@@ -71,7 +73,6 @@ namespace Events
                     break;
                 }
             }
-
             output.AppendLine((howMany > 0) ? $"{howMany + 1} events deleted" : "No events found");
         }
 
@@ -79,7 +80,7 @@ namespace Events
         {
             for (int i = 0; i < events.Count; i++)
             {
-                if (events[i].Contains(title))
+                if (events[i].ToLower().Contains(title.ToLower()))
                 {
                     events.RemoveAt(i);
                     return true;
@@ -91,18 +92,47 @@ namespace Events
 
         static void ListEvents(string date, int count)
         {
-            int index = 0;
+            var convertedEvents = new List<DateTime>();
             for (int i = 0; i < events.Count; i++)
             {
-                //2012-01-21T20:00:00 
                 var dateTime = GetTime(events[i]);
-                Console.WriteLine(dateTime);
+                convertedEvents.Add(dateTime);
 
-                string line = events[i];
-                if (line.Contains(date))
+            }
+            
+            DateTime fileDate = GetTime(date), closestDate = new DateTime();
+            var theDates = convertedEvents;
+            long min = long.MaxValue;
+
+            foreach (DateTime theDate in theDates)
+                if (Math.Abs(theDate.Ticks - fileDate.Ticks) < min)
+                {
+                    min = Math.Abs(theDate.Ticks - fileDate.Ticks);
+                    closestDate = theDate;
+                }
+
+            string findDate = GetString(closestDate);
+            int index = -1;
+            for (int i = 0; i < events.Count; i++)
+            {
+                if (events[i].Contains(findDate))
                 {
                     index = i;
                     break;
+                }
+            }
+
+            if (index < 0 && index + 1 >= events.Count)
+            {
+                output.AppendLine("No events found");
+            }
+            else
+            {
+
+                for (int i = 0; i < count && index + 1 < events.Count; i++)
+                {
+                    output.AppendLine(events[index]);
+                    index++;
                 }
             }
         }
@@ -121,6 +151,24 @@ namespace Events
             int second = int.Parse(hhMMss.Split(':')[2]);
 
             return new DateTime(year,month,day,hour,minute,second);
+        }
+
+        static string GetString(DateTime date)
+        {
+            var build = new StringBuilder();
+            string year = date.Year + "";
+            string month = date.Month + "";
+            string day = date.Day + "";
+            string hour = date.Hour + "";
+            string minute = date.Minute + "";
+            string second = date.Second + "";
+            build.Append(year + "-");
+            build.Append((month.Length > 1 ? month : "0" + month) + "-");
+            build.Append((day.Length > 1 ? day : "0" + day) + "T");
+            build.Append((hour.Length > 1 ? hour : "0" + hour) + ":");
+            build.Append((minute.Length > 1 ? minute : "0" + minute) + ":");
+            build.Append(second.Length > 1 ? second : "0" + second);
+            return build.ToString();
         }
 
         static void Print(List<string> list)
