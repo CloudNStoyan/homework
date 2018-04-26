@@ -103,16 +103,19 @@ namespace MostCommon
                 }
             }
 
+            Console.Clear();
             PrintMostCommonFirstName(fNames);
             PrintMostCommonLastName(lNames);
             PrintMostCommonBirthDay(birthDays);
             PrintMostCommonColorEye(eyeColors);
             PrintMostCommonHairColor(hairColors);
             PrintMostCommonHeight(heights);
+            
         }
 
         static void PrintMostCommonFirstName(Dictionary<string, int> fNameDictionary)
         {
+            var bestOnes = new List<string>();
             int mostUsed = 0;
             string outputMostUsedName = "";
             foreach (var i in fNameDictionary)
@@ -122,12 +125,23 @@ namespace MostCommon
                     mostUsed = i.Value;
                     outputMostUsedName = i.Key;
                 }
+                else if (i.Value == mostUsed)
+                {
+                    bestOnes.Add(i.Key);
+                }
+                if (bestOnes.Count == 0)
+                {
+                    bestOnes.Add(outputMostUsedName);
+                }
             }
-            Console.WriteLine(outputMostUsedName);
+            bestOnes.Sort();
+            Console.WriteLine(bestOnes.Count > 2 ? bestOnes[0].Trim() : outputMostUsedName.Trim());
+
         }
 
         static void PrintMostCommonLastName(Dictionary<string, int> lNameDictionary)
         {
+            var bestOnes = new List<string>();
             int mostUsed = 0;
             string outputMostUsedName = "";
             foreach (var i in lNameDictionary)
@@ -137,14 +151,25 @@ namespace MostCommon
                     mostUsed = i.Value;
                     outputMostUsedName = i.Key;
                 }
+                else if (i.Value == mostUsed)
+                {
+                    bestOnes.Add(i.Key);
+                }
+                if (bestOnes.Count == 0)
+                {
+                    bestOnes.Add(outputMostUsedName);
+                }
             }
-            Console.WriteLine(outputMostUsedName);
+            bestOnes.Sort();
+            Console.WriteLine(bestOnes.Count > 2 ? bestOnes[0].Trim() : outputMostUsedName.Trim());
         }
 
         static void PrintMostCommonBirthDay(Dictionary<int, int> birtDayDictionary)
         {
+            var bestOnes = new List<int>();
             int mostUsed = 0;
             int outputMostUsedBirthDay = 0;
+
             foreach (var i in birtDayDictionary)
             {
                 if (i.Value > mostUsed)
@@ -153,13 +178,33 @@ namespace MostCommon
                     outputMostUsedBirthDay = i.Key;
                 }
             }
-            Console.WriteLine(outputMostUsedBirthDay);
+            foreach (var i in birtDayDictionary)
+            {
+                if (i.Value > mostUsed)
+                {
+                    mostUsed = i.Value;
+                    outputMostUsedBirthDay = i.Key;
+                }else if (i.Value == mostUsed)
+                {
+                    if (bestOnes.Count == 0)
+                    {
+                        bestOnes.Add(outputMostUsedBirthDay);
+                    }
+                    bestOnes.Add(i.Key);
+                }
+
+                
+            }
+
+            bestOnes.Sort();
+            Console.WriteLine(bestOnes.Count > 2 ? bestOnes[bestOnes.Count - 1] : outputMostUsedBirthDay);
         }
 
         static void PrintMostCommonColorEye(Dictionary<string, int> colorEyeDictionary)
         {
             int mostUsed = 0;
             string outputMostUsedEyeColor = "";
+            var bestOnes = new List<string>();
             foreach (var i in colorEyeDictionary)
             {
                 if (i.Value > mostUsed)
@@ -167,12 +212,23 @@ namespace MostCommon
                     mostUsed = i.Value;
                     outputMostUsedEyeColor = i.Key;
                 }
+                else if (i.Value == mostUsed)
+                {
+                    bestOnes.Add(i.Key);
+                }
+                if (bestOnes.Count == 0)
+                {
+                    bestOnes.Add(outputMostUsedEyeColor);
+                }
             }
-            Console.WriteLine(outputMostUsedEyeColor);
+
+            bestOnes.Sort();
+            Console.WriteLine(bestOnes[0].Trim());
         }
 
         static void PrintMostCommonHairColor(Dictionary<string, int> colorHairDictionary)
         {
+            var bestOnes = new List<string>();
             int mostUsed = 0;
             string outputMostUsedHairColor = "";
             foreach (var i in colorHairDictionary)
@@ -181,13 +237,23 @@ namespace MostCommon
                 {
                     mostUsed = i.Value;
                     outputMostUsedHairColor = i.Key;
+                } else if (i.Value == mostUsed)
+                {
+                    bestOnes.Add(i.Key);
+                }
+
+                if (bestOnes.Count == 0)
+                {
+                    bestOnes.Add(outputMostUsedHairColor);
                 }
             }
-            Console.WriteLine(outputMostUsedHairColor);
+            bestOnes.Sort();
+            Console.WriteLine(bestOnes.Count > 2 ? bestOnes[0].Trim() : outputMostUsedHairColor.Trim());
         }
 
         static void PrintMostCommonHeight(Dictionary<int, int> heightsDictionary)
         {
+            var bestOnes = new List<int>();
             int mostUsed = 0;
             int outputMostUsedHeight = 0;
             foreach (var i in heightsDictionary)
@@ -198,7 +264,24 @@ namespace MostCommon
                     outputMostUsedHeight = i.Key;
                 }
             }
-            Console.WriteLine(outputMostUsedHeight);
+
+            foreach (var i in heightsDictionary)
+            {
+                if (i.Value > mostUsed)
+                {
+                    mostUsed = i.Value;
+                    outputMostUsedHeight = i.Key;
+                } else if (i.Value == mostUsed)
+                {
+                    if (bestOnes.Count == 0)
+                    {
+                        bestOnes.Add(outputMostUsedHeight);
+                    }
+                    bestOnes.Add(i.Key);
+                }
+            }
+            bestOnes.Sort();
+            Console.WriteLine(bestOnes.Count > 2 ? bestOnes[0] : outputMostUsedHeight);
         }
     }
 }
