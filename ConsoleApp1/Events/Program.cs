@@ -52,7 +52,6 @@ namespace Events
         static void AddEvent(string input)
         {
             events.Add(input);
-            events.Sort();
             output.AppendLine("Event added");
         }
 
@@ -122,17 +121,25 @@ namespace Events
                 }
             }
 
-            if (index < 0 && index + 1 >= events.Count)
+            var eve = events;
+
+            if (index < 0 || index + 1 >= events.Count)
             {
                 output.AppendLine("No events found");
             }
             else
             {
-
-                for (int i = 0; i < count && index + 1 < events.Count; i++)
+                var listedEvents = new List<string>();
+                for (int i = 0; i < count && index < events.Count; i++)
                 {
-                    output.AppendLine(events[index]);
+                    listedEvents.Add(events[index]);
                     index++;
+                }
+
+                var sortedEvents = listedEvents.OrderBy(x => x.Split('|')[0]).ThenBy(x => x.Split('|')[1]).ThenBy(x => x.Split('|')[2]);
+                foreach (string listedEvent in sortedEvents)
+                {
+                    output.AppendLine(listedEvent);
                 }
             }
         }
