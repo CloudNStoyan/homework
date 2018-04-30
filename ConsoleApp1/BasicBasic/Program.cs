@@ -10,6 +10,7 @@ namespace BasicBasic
     class Program
     {
         static int v, w, x, y, z;
+        static Dictionary<int,string> code = new Dictionary<int, string>();
 
         static void Main(string[] args)
         {
@@ -30,11 +31,39 @@ namespace BasicBasic
 
                 regex = new Regex(Regex.Escape(lineNumber.ToString()));
                 line = regex.Replace(line, "", 1).Trim();
+                code.Add(lineNumber,line);
 
-                if (line.Contains("IF"))
+                GiveCommand(line);
+            }
+        }
+
+        static void GiveCommand(string line)
+        {
+            if (line.Contains("IF"))
+            {
+                Run("IF",line);
+            } else if (line.Contains("+"))
+            {
+                Run("ADD", line);
+            } else if (line.Contains("-"))
+            {
+                if (line.Split('=')[1].Split('-')[0] == "")
                 {
-                    
+                    Run("ASSIGN",line);
                 }
+                else
+                {
+                    Run("EXTRACT",line);
+                }
+            } else if (line.Contains("GOTO"))
+            {
+                Run("GOTO",line);
+            } else if (line.Contains("CLS"))
+            {
+                Run("CLS",line);
+            } else if (line.Contains("PRINT"))
+            {
+                Run("PRINT", line);
             }
         }
 
@@ -52,16 +81,16 @@ namespace BasicBasic
                     Extract(line);
                     break;
                 case "ASSIGN":
-
+                    Assign(line);
                     break;
                 case "GOTO":
-
+                    Goto(line);
                     break;
                 case "CLS":
                     Console.Clear();
                     break;
                 case "PRINT":
-
+                    Print(line);
                     break;
             }
         }
@@ -107,11 +136,19 @@ namespace BasicBasic
         static void Assign(string line)
         {
             char variable = line.Split('=')[0][0];
+            int number = int.Parse(line.Split('=')[1]);
+            SetValueTo(number,variable);
+        }
 
-            if (line.Contains('-') || line.Contains('+'))
-            {
-                
-            }
+        static void Goto(string line)
+        {
+            int index = int.Parse(line.Split(new[] {"GOTO"}, StringSplitOptions.None)[1].Trim());
+            Console.WriteLine(code[index]);
+        }
+
+        static void Print(string line)
+        {
+            Console.WriteLine(line.Split(new[] { "PRINT" }, StringSplitOptions.None)[1].Trim());
         }
 
         static bool Condition(string condition)
