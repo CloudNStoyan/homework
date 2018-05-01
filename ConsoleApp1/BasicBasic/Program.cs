@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace BasicBasic
     {
         static int v, w, x, y, z;
         static Dictionary<int,string> code = new Dictionary<int, string>();
+        static StringBuilder output = new StringBuilder();
 
         static void Main(string[] args)
         {
@@ -22,10 +24,24 @@ namespace BasicBasic
                 line = regex.Replace(line, " ");
                 if (line == "RUN")
                 {
+                    Console.WriteLine(output.ToString().Trim());
                     break;
                 }
-                //2111111111 
-                //2147483647
+
+                if (line.Split(' ')[1] == "STOP")
+                {
+                    while (true)
+                    {
+                        line = Console.ReadLine();
+                        if (line == "RUN")
+                        {
+                            Console.WriteLine(output.ToString().Trim());
+                            break;
+                        }
+                    }
+
+                    break;
+                }
 
                 int lineNumber = int.Parse(Regex.Match(line, @"\d+").Value);
 
@@ -55,6 +71,9 @@ namespace BasicBasic
                 {
                     Run("EXTRACT",line);
                 }
+            } else if (line.Contains("="))
+            {
+                Run("ASSIGN",line);
             } else if (line.Contains("GOTO"))
             {
                 Run("GOTO",line);
@@ -87,7 +106,7 @@ namespace BasicBasic
                     Goto(line);
                     break;
                 case "CLS":
-                    Console.Clear();
+                    output.Clear();
                     break;
                 case "PRINT":
                     Print(line);
@@ -105,7 +124,7 @@ namespace BasicBasic
 
             if (Condition(condition))
             {
-
+                GiveCommand(cmd);
             }
         }
 
@@ -113,19 +132,21 @@ namespace BasicBasic
         {
             char variable = line.Split('=')[0][0];
 
-            string aHold = line.Split('=')[1].Split('+')[0];
-            string bHold = line.Split('=')[1].Split('+')[1];
+            string aHold = line.Split('=')[1].Split('+')[0].Trim();
+            string bHold = line.Split('=')[1].Split('+')[1].Trim();
 
             int a = IsDigitsOnly(aHold) ? int.Parse(aHold) : GetVariableValue(aHold[0]);
             int b = IsDigitsOnly(bHold) ? int.Parse(bHold) : GetVariableValue(bHold[0]);
+
+            SetValueTo((a + b),variable);
         }
 
         static void Extract(string line)
         {
             char variable = line.Split('=')[0][0];
 
-            string aHold = line.Split('=')[1].Split('-')[0];
-            string bHold = line.Split('=')[1].Split('-')[1];
+            string aHold = line.Split('=')[1].Split('-')[0].Trim();
+            string bHold = line.Split('=')[1].Split('-')[1].Trim();
 
             int a = IsDigitsOnly(aHold) ? int.Parse(aHold) : GetVariableValue(aHold[0]);
             int b = IsDigitsOnly(bHold) ? int.Parse(bHold) : GetVariableValue(bHold[0]);
@@ -135,20 +156,49 @@ namespace BasicBasic
 
         static void Assign(string line)
         {
-            char variable = line.Split('=')[0][0];
-            int number = int.Parse(line.Split('=')[1]);
+            char variable = line.Split('=')[0].Trim()[0];
+            int number = int.Parse(line.Split('=')[1].Trim());
             SetValueTo(number,variable);
         }
 
         static void Goto(string line)
         {
-            int index = int.Parse(line.Split(new[] {"GOTO"}, StringSplitOptions.None)[1].Trim());
-            Console.WriteLine(code[index]);
+            int index = int.Parse(line.Split(new[] { "GOTO" }, StringSplitOptions.None)[1].Trim());
+            var keyList = code.Keys.ToList();
+            var valueList = code.Values.ToList();
+            int from = keyList.IndexOf(index);
+            for (int i = from; i < keyList.Count; i++)
+            {
+                GiveCommand(valueList[i]);
+            }
         }
 
         static void Print(string line)
         {
-            Console.WriteLine(line.Split(new[] { "PRINT" }, StringSplitOptions.None)[1].Trim());
+            string message = line.Split(new[] {"PRINT"}, StringSplitOptions.None)[1].Trim();
+            string outputValue = "";
+            switch (message)
+            {
+                case "V":
+                    outputValue = GetVariableValue('V').ToString();
+                    break;
+                case "W":
+                    outputValue = GetVariableValue('W').ToString();
+                    break;
+                case "X":
+                    outputValue = GetVariableValue('X').ToString();
+                    break;
+                case "Y":
+                    outputValue = GetVariableValue('Y').ToString();
+                    break;
+                case "Z":
+                    outputValue = GetVariableValue('Z').ToString();
+                    break;
+                default:
+                    break;
+            }
+
+            output.AppendLine(outputValue);
         }
 
         static bool Condition(string condition)
@@ -156,6 +206,8 @@ namespace BasicBasic
             if (condition.Contains('>'))
             {
                 var numbers = condition.Split('>');
+                numbers[0] = numbers[0].Trim();
+                numbers[1] = numbers[1].Trim();
                 int a = IsDigitsOnly(numbers[0]) ? int.Parse(numbers[0]) : GetVariableValue(numbers[0][0]);
                 int b = IsDigitsOnly(numbers[1]) ? int.Parse(numbers[1]) : GetVariableValue(numbers[1][0]);
 
@@ -164,6 +216,8 @@ namespace BasicBasic
             if (condition.Contains('<'))
             {
                 var numbers = condition.Split('<');
+                numbers[0] = numbers[0].Trim();
+                numbers[1] = numbers[1].Trim();
                 int a = IsDigitsOnly(numbers[0]) ? int.Parse(numbers[0]) : GetVariableValue(numbers[0][0]);
                 int b = IsDigitsOnly(numbers[1]) ? int.Parse(numbers[1]) : GetVariableValue(numbers[1][0]);
 
@@ -172,6 +226,8 @@ namespace BasicBasic
             else
             {
                 var numbers = condition.Split('=');
+                numbers[0] = numbers[0].Trim();
+                numbers[1] = numbers[1].Trim();
                 int a = IsDigitsOnly(numbers[0]) ? int.Parse(numbers[0]) : GetVariableValue(numbers[0][0]);
                 int b = IsDigitsOnly(numbers[1]) ? int.Parse(numbers[1]) : GetVariableValue(numbers[1][0]);
 
@@ -236,48 +292,3 @@ namespace BasicBasic
         }
     }
 }
-
-
-/*for (int i = 0; i < line.Length; i++)
-                {
-                    char operation = line[i];
-                    if (operation == '=')
-                    {
-                        char variable = line[i - 1];
-                        var tempNumHolder = new StringBuilder();
-                        if (line.Contains('+') || line.Contains('-'))
-                        {
-                            if (line.Split('=')[1].Split('-')[0] == "")
-                            {
-                                for (int j = i + 1; j < line.Length; j++)
-                                {
-                                    tempNumHolder.Append(line[j]);
-                                }
-                                
-                                int n = int.Parse(tempNumHolder.ToString());
-                                SetValueTo(n, variable);
-                            }
-                            else if (line.Contains('-'))
-                            {
-                                Extract(line,i);
-                                break;
-                            }
-                            else if (line.Contains('+'))
-                            {
-                                Add(line,i);
-                                break;
-                            }
-                        }
-                        else
-                        {
-                            for (int j = i + 1; j < line.Length; j++)
-                            {
-                                tempNumHolder.Append(line[j]);
-                            }
-
-                            int n = int.Parse(tempNumHolder.ToString());
-                            SetValueTo(n, variable);
-                        }
-                    }
-                }
-*/
