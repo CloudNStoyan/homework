@@ -22,74 +22,36 @@ namespace PHPVariables
                 lines.Add(line);
             }
 
-            var cleanedCode = ClearComments(lines);
-            Print(cleanedCode);
-            var variables = GetVars(cleanedCode);
-            variables.Sort();
+            var cleanCode = Clean(lines);
+            cleanCode = cleanCode.Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
+            var output = Trim(GetVars(cleanCode)).Distinct().ToList();
+            output.Sort((Comparison<String>)(
+                (String left, String right) => {
+                    return String.CompareOrdinal(left, right);
+                }
+            ));
             Console.Clear();
-            Console.WriteLine(variables.Count);
-            Print(variables);
+            Console.WriteLine(output.Count);
+            Print(output);
         }
 
+        static List<string> Trim(List<string> list)
+        {
+            var returnList = new List<string>();
+            foreach (string s in list)
+            {
+                returnList.Add(s.Trim());
+            }
+
+            return returnList;
+        }
+            
         static void Print(List<string> withoutComments)
         {
             foreach (string s in withoutComments)
             {
                 Console.WriteLine(s);
             }
-        }
-
-        static List<string> ClearComments(List<string> lines)
-        {
-            var withoutComments = new List<string>();
-            var output = new List<string>();
-            bool isNotComment = true;
-
-            for (int i = 0; i < lines.Count; i++)
-            {
-                var build = new StringBuilder();
-                string line = lines[i];
-                string tempIndex = "";
-                bool sameLine = false;
-
-                for (int j = 0; j < line.Length;j++)
-                {
-                    if ((j + 1 < line.Length && line[j] == '/' && line[j + 1] == '/') || (j + 1 < line.Length && line[j] == '/' && line[j + 1] == '*'))
-                    {
-                        isNotComment = false;
-                    }
-
-                    if (isNotComment)
-                    {
-                        build.Append(line[j]);
-                    }
-
-                    if ((j - 1 >= 0 && line[j] == '/' && line[j - 1] == '*'))
-                    {
-                        isNotComment = true;
-                    }
-                }
-                withoutComments.Add(build.ToString());
-                
-            }
-
-            for (int i = 0; i < withoutComments.Count; i++)
-            {
-                string line = withoutComments[i];
-                for (int j = 0; j < line.Length; j++)
-                {
-                    char before = GetBeforeChar(line, j);
-                    if (line[j] == '"' && before == '=')
-                    {
-                        int startIndex = line.IndexOf('"');
-                        int length = line.IndexOf('"', startIndex + 1) - startIndex;
-                        line = line.Remove(startIndex, length);
-                    }
-                }
-                output.Add(line);
-            }
-
-            return output;
         }
 
         static char GetBeforeChar(string line,int index)
@@ -110,38 +72,155 @@ namespace PHPVariables
         
         static List<string> GetVars(List<string> lines)
         {
-            var variables = new List<string>();
-            for (int i = 0; i < lines.Count; i++)
+            var returnList = new List<string>();
+            for (int lineIndex = 0; lineIndex < lines.Count; lineIndex++)
             {
-                string line = lines[i];
-                bool inVar = false;
-
-                var variable = new StringBuilder();
-                for (int j = 0; j < line.Length; j++)
+                string line = lines[lineIndex];
+                for (int i = 0; i < line.Length; i++)
                 {
-                    char c = line[j];
-                    if (inVar && !char.IsLetter(c) && !char.IsDigit(c))
+                    if (line[i] == '$')
                     {
-                        variables.Add(variable.ToString());
-                        variable.Clear();
-                        inVar = false;
+                        var build = new StringBuilder();
+                        for (int j = i + 1; j < line.Length; j++)
+                        {
+                            if (!LetterCheck(line[j]))
+                            {
+                                i = j;
+                                break;
+                            }
 
-                    }
-
-                    if (inVar)
-                    {
-                        variable.Append(line[j]);
-                    }
-
-                    if (line[j] == '$')
-                    {
-                        inVar = true;
+                            build.Append(line[j]);
+                        }
+                        returnList.Add(build.ToString());
                     }
                 }
             }
 
-            return variables;
+            return returnList;
         }
 
+        static bool LetterCheck(char c)
+        {
+            string charList = '"' + @"!#$%&'()*+`-.,/:;<>=?[]/\^{}|~";
+            foreach (char c1 in charList)
+            {
+                if (c1 == c)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        static List<string> Clean(List<string> list)
+        {
+            var process1 = RemoveMultipleLineComments(list);
+            var process2 = RemoveBetween(process1);
+            var finished = RemoveAfter(process2);
+            return finished;
+        }
+
+
+        static List<string> RemoveBetween(List<string> lines)
+        {
+            var returnList = new List<string>();
+            for (int lineI = 0; lineI < lines.Count; lineI++)
+            {
+                string line = lines[lineI];
+                var output = new StringBuilder();
+                bool inTag = false;
+                for (int i = 0; i < line.Length; i++)
+                {
+                    if (line[i] == '"' && GetBeforeChar(line,i) == '=')
+                    {
+                        inTag = true;
+
+                        int startIndex = line.IndexOf('"', i);
+                        int length = line.IndexOf('"', startIndex + 1) - startIndex;
+
+                        string temp = line.Substring(startIndex, length + 1);
+                        if (!temp.Contains(@"\"))
+                        {
+                            inTag = false;
+                        }
+                    }
+
+                    if (!inTag)
+                    {
+                        output.Append(line[i]);
+                    }
+
+                    if (i + 1 < line.Length && line[i + 1] == '"')
+                    {
+                        inTag = false;
+                    }
+                }
+                returnList.Add(output.ToString());
+            }
+
+            return returnList;
+        }
+
+        static List<string> RemoveAfter(List<string> lines)
+        {
+            var returnList = new List<string>();
+            for (int lineI = 0; lineI < lines.Count; lineI++)
+            {
+                string line = lines[lineI];
+                var output = new StringBuilder();
+                for (int i = 0; i < line.Length; i++)
+                {
+                    if (i + 1 < line.Length && line[i] == '/' && line[i + 1] == '/')
+                    {
+                        break;
+                    }
+
+                    if (i + 1 < line.Length && line[i] == '#')
+                    {
+                        break;
+                    }
+
+                    output.Append(line[i]);
+                }
+                returnList.Add(output.ToString());
+            }
+
+            return returnList;
+        }
+
+        static List<string> RemoveMultipleLineComments(List<string> lines)
+        {
+            var returnlist = new List<string>();
+            bool inComment = false;
+
+            for (int linesIndex = 0; linesIndex < lines.Count; linesIndex++)
+            {
+                string line = lines[linesIndex];
+                var build = new StringBuilder();
+
+                for (int lineIndex = 0; lineIndex < line.Length; lineIndex++)
+                {
+                    if (lineIndex + 1 < line.Length && line[lineIndex] == '/' && line[lineIndex + 1] == '*')
+                    {
+                        inComment = true;
+                    }
+
+                    if (!inComment)
+                    {
+                        build.Append(line[lineIndex]);
+                    }
+
+                    if (lineIndex - 1 >= 0 && line[lineIndex] == '/' && line[lineIndex - 1] == '*')
+                    {
+                        inComment = false;
+                    }
+                }
+
+                returnlist.Add(build.ToString());
+            }
+
+            return returnlist;
+        }
     }
 }
