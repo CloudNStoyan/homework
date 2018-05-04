@@ -36,7 +36,7 @@ namespace Employees
             }
 
             var sortedDict = output.OrderByDescending(r => r.Value)
-                .ThenBy(r => r.Key.Split(' ')[1]);
+                .ThenBy(r => r.Key.Split(' ')[1]).ThenBy(r => r.Key.Split(' ')[0]);
             Console.Clear();
 
             foreach (var pair in sortedDict)
