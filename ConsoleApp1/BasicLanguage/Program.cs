@@ -11,6 +11,8 @@ namespace BasicLanguage
 
         static List<string> list = new List<string>();
         static List<string> commands;
+        static StringBuilder output = new StringBuilder();
+        private static int i;
 
         static void Main(string[] args)
         {
@@ -29,15 +31,57 @@ namespace BasicLanguage
                 list.Add(input);
             }
 
-            commands = CleanWhiteSpaces(list).Split(';').ToList();
+            commands = CleanWhiteSpaces(list).Split(';').Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
 
-            Run();
+            for (i = 0; i < commands.Count; i++)
+            {
+                RunCommands(commands[i]);
+            }
 
+            Console.WriteLine(output.ToString());
         }
 
-        static void Run()
+        static void RunCommands(string command)
         {
-            Print(commands[0]);
+            if (command.Split('(')[0] == "PRINT")
+            {
+                Print(command);
+            }
+            else
+            {
+                Loop(command);
+            }
+        }
+
+        static void Loop(string command)
+        {
+            var str = command.Split(')').Where(s => !string.IsNullOrWhiteSpace(s)).ToList();
+            //str[j].Split('(')[1]
+            int times = 1;
+            for (int j = 0; j < str.Count; j++)
+            {
+                if (str[j].StartsWith("PRINT"))
+                {
+                    for (int k = 0; k < times; k++)
+                    {
+                        output.Append(str[j].Split('(')[1]);
+                    }
+                    break;
+                }
+
+                string innerStr = str[j].Split('(')[1];
+                if (innerStr.Contains(','))
+                {
+                    int a = int.Parse(innerStr.Split(',')[0]);
+                    int b = int.Parse(innerStr.Split(',')[1]);
+
+                    times *= (b - a) + 1;
+                }
+                else
+                {
+                    times *= int.Parse(innerStr);
+                }
+            }
         }
 
         static void Print(string command)
@@ -45,7 +89,7 @@ namespace BasicLanguage
             string message = command.Split('(')[1];
             message = message.Remove(message.Length - 1, 1);
 
-            Console.WriteLine(message);
+            output.Append(message);
         }
 
         static string CleanWhiteSpaces(List<string> text)
@@ -59,7 +103,7 @@ namespace BasicLanguage
 
                 for (int i = 0; i < line.Length; i++)
                 {
-                    if (line[i] == '(')
+                    if (line[i] == '(' && build[build.Length - 1] == 'T')
                     {
                         inTag = true;
                     }
