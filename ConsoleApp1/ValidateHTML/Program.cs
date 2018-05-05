@@ -8,39 +8,44 @@ namespace ValidateHTML
 {
     class Program
     {
+        static List<string> HtmlTags = new List<string>();
+        static StringBuilder output = new StringBuilder();
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine() + "");
-            string[] lines = new string[n];
-            for (int i = 0; i < lines.Length; i++)
-            {
-                lines[i] = Console.ReadLine();
-                string line = lines[i];
-                for (int j = 0; j < line.Length; j++)
-                {
-                    if (line[j] == '<')
-                    {
+            
+            int nTimes = int.Parse(Console.ReadLine() + "");
 
-                    }
+            for (int i = 0; i < nTimes; i++)
+            {
+                HtmlTags.Add(Console.ReadLine());
+            }
+
+
+            foreach (string htmlTag in HtmlTags)
+            {
+                if (Validate(htmlTag))
+                {
+                    Console.WriteLine("VALID");
+                }
+                else
+                {
+                    Console.WriteLine("INVALID");
                 }
             }
         }
 
 
-        static bool Closed(string line, int index)
+        static bool Validate(string html)
         {
-            var tag = new StringBuilder();
-            for (int i = index; i < line.Length; i++)
+            string[] tags = html.Split('>');
+
+            for (int i = 0; i < tags.Length; i++)
             {
-                if (line[i] == '>')
-                {
-                    break;
-                }
-                tag.Append(line[i]);
+
             }
 
-            Console.WriteLine(tag);
             return true;
         }
     }
+    
 }
