@@ -427,6 +427,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHPVariables", "PHPVariable
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicLanguage", "BasicLanguage\BasicLanguage.csproj", "{BC3850D2-14C8-4C27-99E4-45B8538BC3EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phonebook", "Phonebook\Phonebook.csproj", "{154EB43C-C84F-45FE-8AC1-5B35A2B9A09A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1281,8 +1283,15 @@ Global
 		{BC3850D2-14C8-4C27-99E4-45B8538BC3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC3850D2-14C8-4C27-99E4-45B8538BC3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC3850D2-14C8-4C27-99E4-45B8538BC3EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{154EB43C-C84F-45FE-8AC1-5B35A2B9A09A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154EB43C-C84F-45FE-8AC1-5B35A2B9A09A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154EB43C-C84F-45FE-8AC1-5B35A2B9A09A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154EB43C-C84F-45FE-8AC1-5B35A2B9A09A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7119528F-CA43-4A01-94C9-69BFE7789874}
 	EndGlobalSection
 EndGlobal
