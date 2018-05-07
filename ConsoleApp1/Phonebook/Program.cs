@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -10,15 +11,17 @@ namespace Phonebook
     class Program
     {
         static StringBuilder _output = new StringBuilder();
-        static List<string> _phones = new List<string>();
+        static Dictionary<string,string> _phoneDictionary = new Dictionary<string, string>();
 
         static void Main(string[] args)
         {
             while (true)
             {
                 string line = Console.ReadLine();
+
                 if (line == "End")
                 {
+                    Console.Clear();
                     Console.WriteLine(_output);
                     break;
                 }
@@ -32,14 +35,10 @@ namespace Phonebook
                         AddPhone(innerText);
                         break;
                     case "ChangePhone":
-                        string oldNum = innerText.Split(',')[0];
-                        string newNum = innerText.Split(',')[1];
-                        ChangePhone(oldNum,newNum);
+                        ChangePhone(innerText);
                         break;
                     case "List":
-                        int start = int.Parse(innerText.Split(',')[0]);
-                        int count = int.Parse(innerText.Split(',')[1]);
-                        List(start,count);
+                        List(innerText);
                         break;
                     default:
 
@@ -49,79 +48,120 @@ namespace Phonebook
             }
         }
 
-        static void AddPhone(string number)
+        static void AddPhone(string input)
         {
-            if (_phones.Any(s => s.ToLower().Contains(number.Split(',')[0].ToLower())))
-            {
-                int index = _phones.FindIndex(x => x.ToLower().StartsWith(number.Split(',')[0].ToLower()));
-                string numbers = number.Split(',').Skip(1).Take(number.Split(',').Length - 1).ToString();
-                Console.WriteLine(numbers);
-                _phones[index] += ", " + number.Split('d');
-                _output.AppendLine("Phone entry merged");
-            }
-            else
-            {
-                Console.WriteLine(number.Split(',')[0]);
-                _phones.Add(number);
-                _output.AppendLine("Phone entry created");
-            }
-            _phones.OrderBy(s => s.Split(',')[0].ToLower());
-        }
+            var inputWords = input.Split(',');
+            string name = inputWords[0];
+            var numbers = _phoneDictionary.ContainsKey(name.ToLower()) ? _phoneDictionary[name.ToLower()].Split(':')[1].Split(',').ToList() : new List<string>();
 
-        static void ChangePhone(string oldNumber, string newNumber)
-        {
-            int howMany = 0;
-            for (int i = 0; i < _phones.Count; i++)
+
+            if (!_phoneDictionary.ContainsKey(name.ToLower()))
             {
-                if (_phones[i].Contains(oldNumber))
+
+                var build = new StringBuilder();
+
+                build.Append('[' + name + ": ");
+
+                for (int i = 1; i < inputWords.Length; i++)
                 {
-                    howMany++;
-                    _phones[i] = _phones[i].Replace(oldNumber, newNumber);
-                }
-            }
+                    string numberRaw = inputWords[i];
+                    string myNum = new String(numberRaw.Where(Char.IsDigit).ToArray());
+                    var regex = new Regex(Regex.Escape("0"));
+                    myNum = regex.Replace(myNum, "359", 1);
+                    myNum = "+" + myNum;
 
-            _output.AppendLine(howMany + " numbers changed");
-        }
-
-        static void List(int start, int count)
-        {
-            var build = new StringBuilder();
-
-            for (int i = start; i < count; i++)
-            {
-                string rawText = _phones[i];
-                var formatText = new StringBuilder();
-                formatText.Append("[" + rawText.Split(',')[0] + ": ");
-                for (int j = 1; j < rawText.Split(',').Length; j++)
-                {
-                    string numberRaw = rawText.Split(',')[j];
-                    string number = Regex.Match(numberRaw, @"\d+").Value;
-                    if (number.StartsWith("0"))
+                    if (i > 1)
                     {
-                        var regex = new Regex(Regex.Escape("0"));
-                        number = regex.Replace(number, "+359", 1);
-                    }
-
-                    if (j == 1)
-                    {
-                        formatText.Append(number);
+                        build.Append(", " + myNum);
                     }
                     else
                     {
-                        formatText.Append(", " + number);
+                        build.Append(myNum);
                     }
-
                 }
 
-                build.Append(formatText);   
-                if (i + 1 >= count)
+                numbers.Add(build.ToString());
+                numbers = CleanEmpty(numbers);
+                numbers.Sort();
+
+                string nums = CombineList(numbers, ", ");
+                _phoneDictionary.Add(name.ToLower(), nums);
+
+                _output.AppendLine("Phone entry created");
+            }
+            else
+            {
+                for (int i = 1; i < inputWords.Length; i++)
                 {
-                    build.Append(']');
+                    string numberRaw = inputWords[i];
+                    string myNum = new String(numberRaw.Where(Char.IsDigit).ToArray());
+                    var regex = new Regex(Regex.Escape("0"));
+                    myNum = regex.Replace(myNum, "359", 1);
+                    myNum = "+" + myNum;
+                    if (!_phoneDictionary[name.ToLower()].Contains(myNum))
+                    {
+                        numbers.Add(myNum);
+                    }
                 }
 
+                numbers = CleanEmpty(numbers);
+                numbers.Sort();
+                string nums = CombineList(numbers, ", ");
+                _phoneDictionary[name.ToLower()] = _phoneDictionary[name.ToLower()].Split(':')[0] + ": " + nums;
+
+                _output.AppendLine("Phone entry merged");
+            }
+        }
+
+        static void ChangePhone(string input)
+        {
+            int howMany = 0;
+
+            var regex = new Regex(Regex.Escape("0"));
+
+            string oldNum = new String(input.Split(',')[0].Where(Char.IsDigit).ToArray());
+            oldNum = regex.Replace(oldNum, "359", 1);
+            oldNum = "+" + oldNum;
+
+            string newNum = new String(input.Split(',')[1].Where(Char.IsDigit).ToArray());
+            newNum = regex.Replace(newNum, "359", 1);
+            newNum = "+" + newNum;
+
+            var keys = _phoneDictionary.Keys.ToList();
+            var values = _phoneDictionary.Values.ToList();
+
+            for (int i = 0; i < keys.Count; i++)
+            {
+                if (values[i].Contains(oldNum) && !values[i].Contains(newNum))
+                {
+                    _phoneDictionary[keys[i]] = _phoneDictionary[keys[i]].Replace(oldNum, newNum);
+                    howMany++;
+                }
+            }
+            
+
+            _output.AppendLine(howMany + " numbers changed");
+
+        }
+
+        static void List(string input)
+        {
+            var phonebook = _phoneDictionary.Keys.ToList();
+            phonebook.Sort();
+
+            int start = int.Parse(input.Split(',')[0]);
+            int count = int.Parse(input.Split(',')[1]);
+
+            if (start < 0 || start + count > phonebook.Count)
+            {
+                _output.AppendLine("Invalid range");
+                return;
             }
 
-            _output.AppendLine(build.ToString());
+            for (int i = start; i < start + count; i++)
+            {
+                _output.AppendLine(_phoneDictionary[phonebook[i]].Remove(_phoneDictionary[phonebook[i]].Length - 2) + "]");
+            }
         }
 
         static string GetTag(string text)
@@ -164,5 +204,42 @@ namespace Phonebook
             return build.ToString();
         }
 
+        static string CombineList(List<string> list, string between)
+        {
+            var build = new StringBuilder();
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                build.Append(list[i] + between);
+            }
+
+            return build.ToString();
+        }
+
+        static List<string> CleanEmpty(List<string> list)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == "" || list[i] == " " || list[i] == String.Empty)
+                {
+                    list.RemoveAt(i);
+                }
+                else
+                {
+                    list[i] = list[i].Trim();
+                }
+            }
+
+            return list.Distinct().ToList();
+        }
+
+        static List<string> Sort(List<string> list)
+        {
+            for (int i = 0; i < 1; i++)
+            {
+                
+            }
+            return new List<string>();
+        }
     }
 }
