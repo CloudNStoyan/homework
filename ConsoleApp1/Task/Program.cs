@@ -25,7 +25,8 @@ namespace Task
                 {
                     case "New":
                         int number = int.Parse(line.Split(' ')[1]);
-                        string task = line.Split(new string[] { number.ToString() }, StringSplitOptions.None)[1].Trim();
+                        string task = GetRestOf(line, number + "");
+                        Console.WriteLine(task);
                         Add(number,task);
                         break;
                     case "Solve":
@@ -33,7 +34,8 @@ namespace Task
                         break;
                 }
             }
-            Console.Clear();
+
+            Console.WriteLine("---------");
             Console.WriteLine(output.ToString().Trim());
         }
 
@@ -93,15 +95,34 @@ namespace Task
                 {
                     sortedTasks.Add(tasks[i]);
                 }
+
                 sortedTasks.Sort();
-                return tasks.IndexOf(sortedTasks[sortedTasks.Count - 1]);
+                return tasks.IndexOf(sortedTasks[0]);
             }
+        }
+
+        static string GetRestOf(string text, string word)
+        {
+            int startIndex = text.IndexOf(word) + 1;
+            int length = text.Length - startIndex;
+            return text.Substring(startIndex, length).Trim();
         }
 
         static void Delete(int index)
         {
             tasks.RemoveAt(index);
             complexity.RemoveAt(index);
+        }
+
+        static int GetLexicValue(string text)
+        {
+            int sum = 0;
+            for (int i = 0; i < text.Length; i++)
+            {
+                sum += text[i];
+            }
+
+            return sum;
         }
     }
 }
