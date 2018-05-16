@@ -447,6 +447,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task", "Task\Task.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretLanguage", "SecretLanguage\SecretLanguage.csproj", "{707C86CE-EB42-4969-8C51-5C734946D6C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking", "Cooking\Cooking.csproj", "{C276AB73-FBCF-4F27-A0A4-4A898804FC60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximalPath", "MaximalPath\MaximalPath.csproj", "{237CBD29-89F4-452D-8060-F8D455CCA88C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1341,6 +1345,14 @@ Global
 		{707C86CE-EB42-4969-8C51-5C734946D6C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{707C86CE-EB42-4969-8C51-5C734946D6C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{707C86CE-EB42-4969-8C51-5C734946D6C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C276AB73-FBCF-4F27-A0A4-4A898804FC60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C276AB73-FBCF-4F27-A0A4-4A898804FC60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C276AB73-FBCF-4F27-A0A4-4A898804FC60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C276AB73-FBCF-4F27-A0A4-4A898804FC60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237CBD29-89F4-452D-8060-F8D455CCA88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237CBD29-89F4-452D-8060-F8D455CCA88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237CBD29-89F4-452D-8060-F8D455CCA88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237CBD29-89F4-452D-8060-F8D455CCA88C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
