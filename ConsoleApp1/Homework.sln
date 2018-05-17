@@ -451,6 +451,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cooking", "Cooking\Cooking.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaximalPath", "MaximalPath\MaximalPath.csproj", "{237CBD29-89F4-452D-8060-F8D455CCA88C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReachN", "ReachN\ReachN.csproj", "{D24CDB78-8AA0-4490-B97A-640B86065148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightmareOnCodeStreet", "NightmareOnCodeStreet\NightmareOnCodeStreet.csproj", "{A304EB44-E90B-46BB-9EFA-3AABFE680C63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1353,6 +1357,14 @@ Global
 		{237CBD29-89F4-452D-8060-F8D455CCA88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{237CBD29-89F4-452D-8060-F8D455CCA88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{237CBD29-89F4-452D-8060-F8D455CCA88C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24CDB78-8AA0-4490-B97A-640B86065148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24CDB78-8AA0-4490-B97A-640B86065148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24CDB78-8AA0-4490-B97A-640B86065148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24CDB78-8AA0-4490-B97A-640B86065148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A304EB44-E90B-46BB-9EFA-3AABFE680C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A304EB44-E90B-46BB-9EFA-3AABFE680C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A304EB44-E90B-46BB-9EFA-3AABFE680C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A304EB44-E90B-46BB-9EFA-3AABFE680C63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
