@@ -455,6 +455,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReachN", "ReachN\ReachN.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NightmareOnCodeStreet", "NightmareOnCodeStreet\NightmareOnCodeStreet.csproj", "{A304EB44-E90B-46BB-9EFA-3AABFE680C63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigmanation", "Enigmanation\Enigmanation.csproj", "{732A47AD-A822-4C30-AECB-1B17BDAB89F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnesAndZeros", "OnesAndZeros\OnesAndZeros.csproj", "{0C80465E-C2C5-4ACC-8848-5A3BF5078078}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1365,6 +1369,14 @@ Global
 		{A304EB44-E90B-46BB-9EFA-3AABFE680C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A304EB44-E90B-46BB-9EFA-3AABFE680C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A304EB44-E90B-46BB-9EFA-3AABFE680C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{732A47AD-A822-4C30-AECB-1B17BDAB89F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{732A47AD-A822-4C30-AECB-1B17BDAB89F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{732A47AD-A822-4C30-AECB-1B17BDAB89F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{732A47AD-A822-4C30-AECB-1B17BDAB89F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C80465E-C2C5-4ACC-8848-5A3BF5078078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C80465E-C2C5-4ACC-8848-5A3BF5078078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C80465E-C2C5-4ACC-8848-5A3BF5078078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C80465E-C2C5-4ACC-8848-5A3BF5078078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
