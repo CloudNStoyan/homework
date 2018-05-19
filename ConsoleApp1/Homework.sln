@@ -459,6 +459,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enigmanation", "Enigmanatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnesAndZeros", "OnesAndZeros\OnesAndZeros.csproj", "{0C80465E-C2C5-4ACC-8848-5A3BF5078078}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryFemaleGPS", "AngryFemaleGPS\AngryFemaleGPS.csproj", "{8487F186-E2B2-4754-B9CC-9C955FF41835}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1377,6 +1379,10 @@ Global
 		{0C80465E-C2C5-4ACC-8848-5A3BF5078078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C80465E-C2C5-4ACC-8848-5A3BF5078078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C80465E-C2C5-4ACC-8848-5A3BF5078078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8487F186-E2B2-4754-B9CC-9C955FF41835}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8487F186-E2B2-4754-B9CC-9C955FF41835}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8487F186-E2B2-4754-B9CC-9C955FF41835}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8487F186-E2B2-4754-B9CC-9C955FF41835}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
