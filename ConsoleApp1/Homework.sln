@@ -461,6 +461,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnesAndZeros", "OnesAndZero
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngryFemaleGPS", "AngryFemaleGPS\AngryFemaleGPS.csproj", "{8487F186-E2B2-4754-B9CC-9C955FF41835}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeVendingMachine", "CoffeeVendingMachine\CoffeeVendingMachine.csproj", "{3DE056F2-BCA2-41F2-B79F-CF1B3C9D6110}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1383,6 +1385,10 @@ Global
 		{8487F186-E2B2-4754-B9CC-9C955FF41835}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8487F186-E2B2-4754-B9CC-9C955FF41835}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8487F186-E2B2-4754-B9CC-9C955FF41835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE056F2-BCA2-41F2-B79F-CF1B3C9D6110}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE056F2-BCA2-41F2-B79F-CF1B3C9D6110}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE056F2-BCA2-41F2-B79F-CF1B3C9D6110}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE056F2-BCA2-41F2-B79F-CF1B3C9D6110}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
