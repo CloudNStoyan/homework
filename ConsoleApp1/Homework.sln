@@ -465,6 +465,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeVendingMachine", "Cof
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrunkenNumbers", "DrunkenNumbers\DrunkenNumbers.csproj", "{BB11D5C8-BF44-48AC-BF36-9BA7265ED268}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Garden", "Garden\Garden.csproj", "{D4D0951B-149B-4A10-BFE1-982C7144720F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1395,6 +1397,10 @@ Global
 		{BB11D5C8-BF44-48AC-BF36-9BA7265ED268}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB11D5C8-BF44-48AC-BF36-9BA7265ED268}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB11D5C8-BF44-48AC-BF36-9BA7265ED268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D0951B-149B-4A10-BFE1-982C7144720F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D0951B-149B-4A10-BFE1-982C7144720F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D0951B-149B-4A10-BFE1-982C7144720F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D0951B-149B-4A10-BFE1-982C7144720F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
