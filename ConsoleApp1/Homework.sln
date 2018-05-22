@@ -473,6 +473,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_6_9", "3_6_9\3_6_9.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheHorror", "TheHorror\TheHorror.csproj", "{3238296D-7A10-4516-8B91-A8CB13CD23CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiamondTrolls", "DiamondTrolls\DiamondTrolls.csproj", "{5BE781D3-A4B5-45A2-A3A6-0B05BB653A39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiverseCommunication", "MultiverseCommunication\MultiverseCommunication.csproj", "{5A443F91-48E9-414E-B91D-98A4C64CAFDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1419,6 +1423,14 @@ Global
 		{3238296D-7A10-4516-8B91-A8CB13CD23CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3238296D-7A10-4516-8B91-A8CB13CD23CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3238296D-7A10-4516-8B91-A8CB13CD23CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BE781D3-A4B5-45A2-A3A6-0B05BB653A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BE781D3-A4B5-45A2-A3A6-0B05BB653A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BE781D3-A4B5-45A2-A3A6-0B05BB653A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BE781D3-A4B5-45A2-A3A6-0B05BB653A39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A443F91-48E9-414E-B91D-98A4C64CAFDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A443F91-48E9-414E-B91D-98A4C64CAFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A443F91-48E9-414E-B91D-98A4C64CAFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A443F91-48E9-414E-B91D-98A4C64CAFDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
