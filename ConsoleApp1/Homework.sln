@@ -471,6 +471,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardWars", "CardWars\CardWa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3_6_9", "3_6_9\3_6_9.csproj", "{32811882-78D8-460C-8EA3-1759F3C31B57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheHorror", "TheHorror\TheHorror.csproj", "{3238296D-7A10-4516-8B91-A8CB13CD23CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1413,6 +1415,10 @@ Global
 		{32811882-78D8-460C-8EA3-1759F3C31B57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32811882-78D8-460C-8EA3-1759F3C31B57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32811882-78D8-460C-8EA3-1759F3C31B57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3238296D-7A10-4516-8B91-A8CB13CD23CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3238296D-7A10-4516-8B91-A8CB13CD23CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3238296D-7A10-4516-8B91-A8CB13CD23CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3238296D-7A10-4516-8B91-A8CB13CD23CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
