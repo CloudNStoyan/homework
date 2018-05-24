@@ -481,6 +481,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicWords", "MagicWords\Ma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zerg", "Zerg\Zerg.csproj", "{E922D424-B286-4412-A2D4-CC3197904A4C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeNumbers", "ThreeNumbers\ThreeNumbers.csproj", "{2C962956-1F7C-4A8C-BA99-DEF6CE416558}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1443,6 +1445,10 @@ Global
 		{E922D424-B286-4412-A2D4-CC3197904A4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E922D424-B286-4412-A2D4-CC3197904A4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E922D424-B286-4412-A2D4-CC3197904A4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C962956-1F7C-4A8C-BA99-DEF6CE416558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C962956-1F7C-4A8C-BA99-DEF6CE416558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C962956-1F7C-4A8C-BA99-DEF6CE416558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C962956-1F7C-4A8C-BA99-DEF6CE416558}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
