@@ -483,7 +483,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zerg", "Zerg\Zerg.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeNumbers", "ThreeNumbers\ThreeNumbers.csproj", "{2C962956-1F7C-4A8C-BA99-DEF6CE416558}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{D2B25A64-F3D7-41C0-A270-46C4A2590C09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{D2B25A64-F3D7-41C0-A270-46C4A2590C09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{0B596DBF-6745-4DB3-8B67-300081611195}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1455,6 +1457,10 @@ Global
 		{D2B25A64-F3D7-41C0-A270-46C4A2590C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2B25A64-F3D7-41C0-A270-46C4A2590C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2B25A64-F3D7-41C0-A270-46C4A2590C09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B596DBF-6745-4DB3-8B67-300081611195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B596DBF-6745-4DB3-8B67-300081611195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B596DBF-6745-4DB3-8B67-300081611195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B596DBF-6745-4DB3-8B67-300081611195}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
