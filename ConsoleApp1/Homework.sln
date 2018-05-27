@@ -485,7 +485,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeNumbers", "ThreeNumber
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{D2B25A64-F3D7-41C0-A270-46C4A2590C09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{0B596DBF-6745-4DB3-8B67-300081611195}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication2", "ConsoleApplication2\ConsoleApplication2.csproj", "{0B596DBF-6745-4DB3-8B67-300081611195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SumOfEvenDivisors", "SumOfEvenDivisors\SumOfEvenDivisors.csproj", "{CE491C40-CA63-46CD-9BE2-D0AD16DC8B49}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1461,6 +1463,10 @@ Global
 		{0B596DBF-6745-4DB3-8B67-300081611195}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B596DBF-6745-4DB3-8B67-300081611195}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B596DBF-6745-4DB3-8B67-300081611195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE491C40-CA63-46CD-9BE2-D0AD16DC8B49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE491C40-CA63-46CD-9BE2-D0AD16DC8B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE491C40-CA63-46CD-9BE2-D0AD16DC8B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE491C40-CA63-46CD-9BE2-D0AD16DC8B49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
