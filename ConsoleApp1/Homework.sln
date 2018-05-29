@@ -489,7 +489,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApplication2", "Cons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOfEvenDivisors", "SumOfEvenDivisors\SumOfEvenDivisors.csproj", "{CE491C40-CA63-46CD-9BE2-D0AD16DC8B49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decrypt", "Decrypt\Decrypt.csproj", "{F42781D2-1D68-415F-A555-E36BD464A6AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decrypt", "Decrypt\Decrypt.csproj", "{F42781D2-1D68-415F-A555-E36BD464A6AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IncreasingAbsoluteDifferences", "IncreasingAbsoluteDifferences\IncreasingAbsoluteDifferences.csproj", "{BED1A4AC-CAC9-4BBE-ABA0-D4DFEE578D00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1473,6 +1475,10 @@ Global
 		{F42781D2-1D68-415F-A555-E36BD464A6AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F42781D2-1D68-415F-A555-E36BD464A6AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F42781D2-1D68-415F-A555-E36BD464A6AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BED1A4AC-CAC9-4BBE-ABA0-D4DFEE578D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BED1A4AC-CAC9-4BBE-ABA0-D4DFEE578D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BED1A4AC-CAC9-4BBE-ABA0-D4DFEE578D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BED1A4AC-CAC9-4BBE-ABA0-D4DFEE578D00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
