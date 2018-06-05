@@ -499,7 +499,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RelevanceIndex", "Relevance
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SearchInBits", "SearchInBits\SearchInBits.csproj", "{1422E1EE-F7A9-4407-B7B7-F11C476D3B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindBits", "FindBits\FindBits.csproj", "{4EEAEEC4-D295-4FFD-8EFB-543ED4FFF3B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindBits", "FindBits\FindBits.csproj", "{4EEAEEC4-D295-4FFD-8EFB-543ED4FFF3B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClassesPart1", "DefiningClassesPart1\DefiningClassesPart1.csproj", "{8D11AA87-0D51-478D-B583-D900B9CE40A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1503,6 +1505,10 @@ Global
 		{4EEAEEC4-D295-4FFD-8EFB-543ED4FFF3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EEAEEC4-D295-4FFD-8EFB-543ED4FFF3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EEAEEC4-D295-4FFD-8EFB-543ED4FFF3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D11AA87-0D51-478D-B583-D900B9CE40A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D11AA87-0D51-478D-B583-D900B9CE40A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D11AA87-0D51-478D-B583-D900B9CE40A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D11AA87-0D51-478D-B583-D900B9CE40A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
