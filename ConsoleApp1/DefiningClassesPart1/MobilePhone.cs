@@ -6,16 +6,11 @@ namespace DefiningClassesPart1
 {
     class MobilePhone
     {
-        /*
-         *model, manufacturer, price, owner, battery characteristics (model, hours idle and hours talk) and display characteristics (size and number of colors).
-         *
-         */
-
         public string model;
         public string manufacturer;
         public double price;
         public string owner;
-        //Battery
+
         public string modelOfBattery;
         public int hoursIdle;
         public int hoursTalk;
@@ -23,5 +18,10 @@ namespace DefiningClassesPart1
         public int numberOfCalors;
 
 
+        public override string ToString()
+        {
+            return
+                $"Model: {model}\nManufacturer: {manufacturer}\nPrice: {price}\nOwner: {owner}\n//Battery\nModel: {modelOfBattery}\nHours idle: {hoursIdle}\nHours talk: {hoursTalk}\nSize: {size}\nColors: {numberOfCalors}";
+        }
     }
 }

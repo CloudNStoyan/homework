@@ -4,9 +4,10 @@ namespace DefiningClassesPart1
 {
     class Program
     {
-        private static MobilePhone myPhone = new MobilePhone();
         static void Main(string[] args)
         {
+            var myPhone = new MobilePhone();
+
             myPhone.owner = "Stoyan";
             myPhone.hoursIdle = 3;
             myPhone.hoursTalk = 2;
@@ -17,7 +18,8 @@ namespace DefiningClassesPart1
             myPhone.model = "Galaxy S5";
             myPhone.price = 929.99;
 
-            Console.WriteLine(myPhone.owner);
+
+            Console.WriteLine(myPhone.ToString());
         }
     }
 }
