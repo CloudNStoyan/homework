@@ -7,14 +7,17 @@ namespace DefiningClassesPart1
     class GSM
     {
 
-        class Baterry
+        public class Baterry
         {
-
+            public string modelOfBattery;
+            public int hoursIdle;
+            public int hoursTalk;
         }
 
-        class Display
+        public class Display
         {
-
+            public double size;
+            public int numberOfCalors;
         }
     }
 }

@@ -7,19 +7,18 @@ namespace DefiningClassesPart1
         static void Main(string[] args)
         {
             var myPhone = new MobilePhone();
+            var myBattery = new GSM.Baterry();
+            var myDisplay = new GSM.Display();
 
             myPhone.owner = "Stoyan";
-            myPhone.hoursIdle = 3;
-            myPhone.hoursTalk = 2;
+            myBattery.hoursIdle = 3;
+            myBattery.hoursTalk = 2;
             myPhone.manufacturer = "Stoyan CO";
-            myPhone.modelOfBattery = "PS22287";
-            myPhone.numberOfCalors = 2;
-            myPhone.size = 166;
+            myBattery.modelOfBattery = "PS22287";
+            myDisplay.numberOfCalors = 2;
+            myDisplay.size = 166;
             myPhone.model = "Galaxy S5";
             myPhone.price = 929.99;
-
-
-            Console.WriteLine(myPhone.ToString());
         }
     }
 }
