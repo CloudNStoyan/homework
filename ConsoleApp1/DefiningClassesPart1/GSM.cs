@@ -16,12 +16,20 @@ namespace DefiningClassesPart1
             public string BatteryModel = null;
             public int HoursIdle = 0;
             public int HoursTalk = 0;
+            public BatteryType Type = BatteryType.LiIon;
+            public enum BatteryType
+            {
+                LiIon,
+                NiMH,
+                NiCd
+            }
 
-            public Baterry(string batteryModel, int hoursIdle, int hoursTalk)
+            public Baterry(string batteryModel, int hoursIdle, int hoursTalk, BatteryType type)
             {
                 BatteryModel = batteryModel;
                 HoursIdle = hoursIdle;
                 HoursTalk = hoursTalk;
+                Type = type;
             }
         }
 
@@ -40,7 +48,7 @@ namespace DefiningClassesPart1
         public GSM(string model,string manufacturer)
         {
             Model = model;
-            Manufacturer = manufacturer;
+            Manufacturer = manufacturer;    
         }
 
         public GSM(string model, string manufacturer, int price, string owner, string batteryModel,
@@ -53,6 +61,8 @@ namespace DefiningClassesPart1
             var battery = new Baterry(batteryModel,batteryHoursIdle,batteryHoursTalk);
             var display = new Display(displaySize,displayNumberOfColors);
         }
+
+        
 
     }
 }
