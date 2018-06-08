@@ -6,7 +6,7 @@ namespace DefiningClassesPart1
     {
         static void Main(string[] args)
         {
-            var myPhone = new MobilePhone();
+            var myPhone = new GSM();
             var myBattery = new GSM.Baterry();
             var myDisplay = new GSM.Display();
 
@@ -14,7 +14,6 @@ namespace DefiningClassesPart1
             myBattery.hoursIdle = 3;
             myBattery.hoursTalk = 2;
             myPhone.manufacturer = "Stoyan CO";
-            myBattery.modelOfBattery = "PS22287";
             myDisplay.numberOfCalors = 2;
             myDisplay.size = 166;
             myPhone.model = "Galaxy S5";
