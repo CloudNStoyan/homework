@@ -64,7 +64,6 @@ namespace DefiningClassesPart1
         NiCd
     }
 
-
     public class GSM
     {
         public string Model = null;
@@ -74,7 +73,9 @@ namespace DefiningClassesPart1
         public double Price = 0;
 
         public string Owner = null;
-        
+
+        public static GSM IPhone4S = new GSM("Iphone4S","Apple",1499,"Stoyan",100,50,BatteryType.NiMH,1260,2);
+
         public GSM(string model,string manufacturer)
         {
             Model = model;
