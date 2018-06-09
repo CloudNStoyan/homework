@@ -99,15 +99,37 @@ namespace DefiningClassesPart1
             this.Display = new Display(displaySize,displayNumberOfColors);
         }
 
-
         public string Print()
         {
-            return $"{Model}\n{Manufacturer}\n{Price}\n{Owner}\n{Display.GetSize}\n{Display.GetNumberOfColors}\n{Battery.GetHoursIdle}\n{Battery.GetHoursTalk}\n{Battery.GetType}";
+            return $"Model:{Model}\nManufacturer:{Manufacturer}\nPrice:{Price}$\nOwner:{Owner}\nDisplay Size:{Display.GetSize}\nDisplay Number of colors:{Display.GetNumberOfColors}\nHours idle:{Battery.GetHoursIdle}\nHours talk:{Battery.GetHoursTalk}\nBattery type:{Battery.GetType}";
         }
 
         public override string ToString()
         {
             return Print();
+        }
+    }
+
+    public class GSMTest
+    {
+        public GSMTest()
+        {
+
+        }
+
+        public void Test()
+        {
+            GSM[] Phones = new GSM[3];
+            Phones[0] = new GSM("Safari", "Antilop", 20, "Kapitan Skrutz", 3, 5, BatteryType.LiIon, 480, 1);
+            Phones[1] = new GSM("GalaxyJ5", "Samsung", 300, "Stoyan", 80, 24, BatteryType.LiIon, 1600, 3);
+            Phones[2] = new GSM("Note8", "Samsung", 700, "Atanas", 120, 53, BatteryType.NiMH, 2120, 4);
+            foreach (GSM phone in Phones)
+            {
+                Console.WriteLine(phone.ToString());
+                Console.WriteLine();
+            }
+
+            Console.WriteLine(GSM.IPhone4S.ToString());
         }
     }
 }
