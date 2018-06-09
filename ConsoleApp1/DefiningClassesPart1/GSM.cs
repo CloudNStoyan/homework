@@ -66,6 +66,8 @@ namespace DefiningClassesPart1
 
     public class GSM
     {
+        public List<Call> CallHistory = new List<Call>();
+
         public string Model = null;
 
         public string Manufacturer = null;
@@ -107,6 +109,49 @@ namespace DefiningClassesPart1
         public override string ToString()
         {
             return Print();
+        }
+
+        public void AddCall(string date, string time, string number, int duration)
+        {
+            CallHistory.Add(new Call(date,time,number,duration));
+            Console.WriteLine("Call created!");
+        }
+
+        public void DelCall(string date, string time, string number, int duration)
+        {
+            for (int i = 0; i < CallHistory.Count; i++)
+            {
+                if (CallHistory[i].GetCall() == $"{date},{time},{number},{duration}")
+                {
+                    string callInfo = CallHistory[i].GetCall();
+                    CallHistory.RemoveAt(i);
+                    Console.WriteLine($"Call: {callInfo} is deleted!");
+                    return;
+                }
+            }
+
+            Console.WriteLine("No call was found!");
+        }
+    }
+
+    public class Call
+    {
+        private string Date;
+        private string Time;
+        private string Number;
+        private int Duration;
+
+        public Call(string date, string time, string number, int duration)
+        {
+            Date = date;
+            Time = time;
+            Number = number;
+            Duration = duration;
+        }
+
+        public string GetCall()
+        {
+            return $"{Date},{Time},{Number},{Duration}";
         }
     }
 
