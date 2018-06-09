@@ -133,15 +133,43 @@ namespace DefiningClassesPart1
             Console.WriteLine("No call was found!");
         }
 
-        public void PriceOfCalls(int price)
+        public void DelCall(Call call)
         {
-            int wholeDuration = 0;
+            if (CallHistory.Contains(call))
+            {
+                string callInfo = call.GetCall();
+                CallHistory.Remove(call);
+                Console.WriteLine($"Call: {callInfo} is deleted!");
+            }
+            else
+            {
+                Console.WriteLine("No call was found!");
+            }
+        }
+
+        public void ClearCallHistory()
+        {
+            CallHistory = new List<Call>();
+            Console.WriteLine("CallHistory cleared!");
+        }
+
+        public void PrintCallHistory()
+        {
+            foreach (Call call in CallHistory)
+            {
+                Console.WriteLine(call.GetCall());
+            }
+        }
+
+        public void PriceOfCalls(double price)
+        {
+            double wholeDuration = 0;
             for (int i = 0; i < CallHistory.Count; i++)
             {
                 wholeDuration += int.Parse(CallHistory[i].GetCall().Split(',')[3]);
             }
 
-            Console.WriteLine((int)Math.Ceiling(((double)wholeDuration) / 60) * price);
+            Console.WriteLine((Math.Ceiling(wholeDuration / 60) * price) + "$");
         }
     }
 
@@ -173,7 +201,7 @@ namespace DefiningClassesPart1
 
         }
 
-        public void Test()
+        public void Start()
         {
             GSM[] Phones = new GSM[3];
             Phones[0] = new GSM("Safari", "Antilop", 20, "Kapitan Skrutz", 3, 5, BatteryType.LiIon, 480, 1);
@@ -186,6 +214,47 @@ namespace DefiningClassesPart1
             }
 
             Console.WriteLine(GSM.IPhone4S.ToString());
+        }
+    }
+
+    public class GSMCallHistoryTest
+    {
+        public GSMCallHistoryTest()
+        {
+
+        }
+
+        public void Start()
+        {
+            GSM phone = new GSM("GalaxyJ5", "Samsung", 300, "Stoyan", 80, 24, BatteryType.LiIon, 1600, 3);
+            phone.AddCall("29.05","12:13","0888015508",167);
+            phone.AddCall("29.05","13:25","0888015508",305);
+            phone.AddCall("30.05","06:03","290501515",12);
+
+            foreach (Call call in phone.CallHistory)
+            {
+                Console.WriteLine(call.GetCall());
+            }
+
+            phone.PriceOfCalls(0.37);
+
+            int longestCall = 0;
+            int longestCallIndex = 0;
+            for (int i = 0; i < phone.CallHistory.Count; i++)
+            {
+                int callDuration = int.Parse(phone.CallHistory[i].GetCall().Split(',')[3]);
+                if (callDuration > longestCall)
+                {
+                    longestCall = callDuration;
+                    longestCallIndex = i;
+                }
+            }
+
+            phone.DelCall(phone.CallHistory[longestCallIndex]);
+
+            phone.PriceOfCalls(0.37);
+            phone.PrintCallHistory();
+            phone.ClearCallHistory();
         }
     }
 }
