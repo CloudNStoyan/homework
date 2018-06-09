@@ -132,6 +132,17 @@ namespace DefiningClassesPart1
 
             Console.WriteLine("No call was found!");
         }
+
+        public void PriceOfCalls(int price)
+        {
+            int wholeDuration = 0;
+            for (int i = 0; i < CallHistory.Count; i++)
+            {
+                wholeDuration += int.Parse(CallHistory[i].GetCall().Split(',')[3]);
+            }
+
+            Console.WriteLine((int)Math.Ceiling(((double)wholeDuration) / 60) * price);
+        }
     }
 
     public class Call
