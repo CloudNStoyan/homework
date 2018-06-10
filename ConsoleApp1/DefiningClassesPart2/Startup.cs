@@ -45,16 +45,22 @@ namespace DefiningClassesPart2
         }
     }
 
+    public class Path
+    {
+        private Point3D[] Points3D;
+        public Path(params Point3D[] points)
+        {
+            Points3D = points;
+        }
+    }
+
     class Startup
     {
         static void Main(string[] args)
         {
             Point3D myFirstPont = new Point3D(1,2,1);
             Point3D mySecondPoint = new Point3D(-1,-2,-1);
-
-            int distance = CalculateDifference.Point3D(myFirstPont, mySecondPoint);
-
-            Console.WriteLine(distance);
+            Point3D myThirdPoint = new Point3D(0,1,0);
 
         }
     }
