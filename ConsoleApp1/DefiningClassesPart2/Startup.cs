@@ -8,9 +8,11 @@ namespace DefiningClassesPart2
 {
     public struct Point3D
     {
-        private static int X;
-        private static int Y;
-        private static int Z;
+        private int X;
+        private int Y;
+        private int Z;
+
+        private static readonly Point3D O = new Point3D(0,0,0);
 
         public Point3D(int x,int y,int z)
         {
@@ -23,13 +25,22 @@ namespace DefiningClassesPart2
         {
             return $"{X},{Y},{Z}";
         }
+
+        public static Point3D ReturnO()
+        {
+            return O;
+        }
     }
 
     class Startup
     {
         static void Main(string[] args)
         {
-            Point3D myPoint3D = new Point3D(1,2,3);
+            Point3D myPont = new Point3D(1,2,1);
+
+            Console.WriteLine(myPont);
+            Console.WriteLine(Point3D.ReturnO());
+
         }
     }
 }
