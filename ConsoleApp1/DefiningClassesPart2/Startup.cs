@@ -127,15 +127,12 @@ namespace DefiningClassesPart2
     {
         static void Main(string[] args)
         {
-            Point3D myFirstPont = new Point3D(1,2,1);
-            Point3D mySecondPoint = new Point3D(-1,-2,-1);
-            Point3D myThirdPoint = new Point3D(0,1,0);
+            GenericList<int> myGenericList = new GenericList<int>(2);
+            
+            myGenericList.Add(3); // 2
+            myGenericList.Add(2); // 3
 
-
-            Path myPath = new Path(myFirstPont,mySecondPoint,myThirdPoint);
-
-            var myLoadedPath = PathStorage.Load("Path-06-10-17-48-56");
-            Console.WriteLine(myLoadedPath);
+            Console.WriteLine(myGenericList[2]);
         }
     }
 }
