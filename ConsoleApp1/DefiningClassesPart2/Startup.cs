@@ -8,9 +8,9 @@ namespace DefiningClassesPart2
 {
     public struct Point3D
     {
-        private int X;
-        private int Y;
-        private int Z;
+        public int X;
+        public int Y;
+        public int Z;
 
         private static readonly Point3D O = new Point3D(0,0,0);
 
@@ -32,14 +32,29 @@ namespace DefiningClassesPart2
         }
     }
 
+    public static class CalculateDifference
+    {
+        public static int Point3D(Point3D firstPoint3D, Point3D secondPoint3D)
+        {
+            int pointX = Math.Abs(firstPoint3D.X - secondPoint3D.X);
+            int pointY = Math.Abs(firstPoint3D.Y - secondPoint3D.Y);
+            int pointZ = Math.Abs(firstPoint3D.Z - secondPoint3D.Z);
+
+
+            return pointX + pointY + pointZ;
+        }
+    }
+
     class Startup
     {
         static void Main(string[] args)
         {
-            Point3D myPont = new Point3D(1,2,1);
+            Point3D myFirstPont = new Point3D(1,2,1);
+            Point3D mySecondPoint = new Point3D(-1,-2,-1);
 
-            Console.WriteLine(myPont);
-            Console.WriteLine(Point3D.ReturnO());
+            int distance = CalculateDifference.Point3D(myFirstPont, mySecondPoint);
+
+            Console.WriteLine(distance);
 
         }
     }
