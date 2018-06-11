@@ -127,12 +127,17 @@ namespace DefiningClassesPart2
     {
         static void Main(string[] args)
         {
-            GenericList<int> myGenericList = new GenericList<int>(2);
-            
-            myGenericList.Add(3); // 2
-            myGenericList.Add(2); // 3
+            GenericList<int> myGenericList = new GenericList<int>();
 
-            Console.WriteLine(myGenericList[2]);
+            for (int i = 0; i < 100; i++)
+            {
+                if (i == 99)
+                {
+                    Console.WriteLine();
+                }
+                myGenericList.Add(i);
+            }
+
         }
     }
 }

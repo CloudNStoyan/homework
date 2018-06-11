@@ -25,6 +25,12 @@ namespace DefiningClassesPart2
             Count = capacity;
         }
 
+        public GenericList()
+        {
+            elements = new T[InitialCapacity];
+            Count = 0;
+        }
+
         public T this[int index]
         {
             get
@@ -54,6 +60,7 @@ namespace DefiningClassesPart2
         public void Add(T item)
         {
             elements[Count++] = item;
+            CheckCapacity();
         }
 
         public void RemoveAt(int index)
@@ -71,6 +78,20 @@ namespace DefiningClassesPart2
 
             elements = tempArr;
             Count--;
+        }
+
+        private void CheckCapacity()
+        {
+            if (Count == elements.Length)
+            {
+                T[] tempArr = new T[Count * 2];
+                for (int i = 0; i < elements.Length; i++)
+                {
+                    tempArr[i] = elements[i];
+                }
+
+                elements = tempArr;
+            }
         }
 
         public void Clear()
