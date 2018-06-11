@@ -80,6 +80,27 @@ namespace DefiningClassesPart2
             Count--;
         }
 
+        public T[] ToArray()
+        {
+            T[] tempArr = new T[Count];
+            for (int i = 0; i < Count; i++)
+            {
+                tempArr[i] = elements[i];
+            }
+
+            return tempArr;
+        }
+
+        public T Max()
+        {
+            return this.ToArray().Max();
+        }
+
+        public T Min()
+        {
+            return this.ToArray().Min();
+        }
+
         private void CheckCapacity()
         {
             if (Count == elements.Length)
