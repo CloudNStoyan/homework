@@ -489,6 +489,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DefiningClassesPart1", "Def
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClassesPart2", "DefiningClassesPart2\DefiningClassesPart2.csproj", "{01CC8569-99A6-45E2-B325-83172061729C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "Extensions\ExtensionMethods.csproj", "{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1467,6 +1469,10 @@ Global
 		{01CC8569-99A6-45E2-B325-83172061729C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01CC8569-99A6-45E2-B325-83172061729C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01CC8569-99A6-45E2-B325-83172061729C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
