@@ -127,6 +127,7 @@ namespace DefiningClassesPart2
     {
         static void Main(string[] args)
         {
+           var myMatrix = new GenericMatrix<int>();
 
         }
     }

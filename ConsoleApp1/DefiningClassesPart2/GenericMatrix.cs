@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -55,6 +56,12 @@ namespace DefiningClassesPart2
 
         public static GenericMatrix<T> operator +(GenericMatrix<T> firstGenericMatrix,GenericMatrix<T> secondGenericMatrix)
         {
+            if (firstGenericMatrix.CurrentCapacityRow != secondGenericMatrix.CurrentCapacityRow ||
+                firstGenericMatrix.CurrentCapacityCol != secondGenericMatrix.CurrentCapacityCol)
+            {
+                throw new Exception("The GenericMatrix aren't equal sized!");
+            }
+
             var firstMatrix = firstGenericMatrix.ToMatrix();
             var secondMatrix = secondGenericMatrix.ToMatrix();
 
@@ -64,7 +71,10 @@ namespace DefiningClassesPart2
             {
                 for (int j = 0; j < firstMatrix.GetLength(1); j++)
                 {
-                    //Some more work
+                    dynamic a = firstMatrix[i, j];
+                    dynamic b = secondMatrix[i, j];
+
+                    resultMatrix[i, j] = a + b;
                 }
             }
 
@@ -72,5 +82,103 @@ namespace DefiningClassesPart2
 
             return resultGenericMatrix;
         }
+
+        public static GenericMatrix<T> operator -(GenericMatrix<T> firstGenericMatrix, GenericMatrix<T> secondGenericMatrix)
+        {
+            if (firstGenericMatrix.CurrentCapacityRow != secondGenericMatrix.CurrentCapacityRow ||
+                firstGenericMatrix.CurrentCapacityCol != secondGenericMatrix.CurrentCapacityCol)
+            {
+                throw new Exception("The GenericMatrix aren't equal sized!");
+            }
+
+            var firstMatrix = firstGenericMatrix.ToMatrix();
+            var secondMatrix = secondGenericMatrix.ToMatrix();
+
+            var resultMatrix = new T[firstMatrix.GetLength(0), firstMatrix.GetLength(1)];
+
+            for (int i = 0; i < firstMatrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < firstMatrix.GetLength(1); j++)
+                {
+                    dynamic a = firstMatrix[i, j];
+                    dynamic b = secondMatrix[i, j];
+
+                    resultMatrix[i, j] = a - b;
+                }
+            }
+
+            var resultGenericMatrix = new GenericMatrix<T>(resultMatrix);
+
+            return resultGenericMatrix;
+        }
+
+        public static GenericMatrix<T> operator *(GenericMatrix<T> firstGenericMatrix, GenericMatrix<T> secondGenericMatrix)
+        {
+            if (firstGenericMatrix.CurrentCapacityRow != secondGenericMatrix.CurrentCapacityRow ||
+                firstGenericMatrix.CurrentCapacityCol != secondGenericMatrix.CurrentCapacityCol)
+            {
+                throw new Exception("The GenericMatrix aren't equal sized!");
+            }
+
+            var firstMatrix = firstGenericMatrix.ToMatrix();
+            var secondMatrix = secondGenericMatrix.ToMatrix();
+
+            var resultMatrix = new T[firstMatrix.GetLength(0), firstMatrix.GetLength(1)];
+
+            for (int i = 0; i < firstMatrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < firstMatrix.GetLength(1); j++)
+                {
+                    dynamic a = firstMatrix[i, j];
+                    dynamic b = secondMatrix[i, j];
+
+                    resultMatrix[i, j] = a * b;
+                }
+            }
+
+            var resultGenericMatrix = new GenericMatrix<T>(resultMatrix);
+
+            return resultGenericMatrix;
+        }
+
+        public static bool operator true(GenericMatrix<T> genericMatrix)
+        {
+            T[,] matrix = genericMatrix.ToMatrix();
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    dynamic a = matrix[i, j];
+                    if (a == 0)
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        public static bool operator false(GenericMatrix<T> genericMatrix)
+        {
+            T[,] matrix = genericMatrix.ToMatrix();
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    dynamic a = matrix[i, j];
+                    if (a == 0)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
     }
+
+
+
 }
