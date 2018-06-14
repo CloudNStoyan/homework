@@ -72,25 +72,35 @@ namespace Extensions
             {
                 get { return $"{FirstName} {LastName}"; }
             }
+
+            public string Mail
+            {
+                get { return Email; }
+            }
         }
 
 
         static void Main(string[] args)
         {
-            Student Stoyan = new Student("Stoyan","Rex",29,"+39514141","slowness.bg","Stuff",4);
-            Student Kaloqn = new Student("Kaloqn", "Erwicht", 31, "+39514141", "slowness.bg", "Stuff", 2);
-            Student Jordan = new Student("Jordan", "Esnicht", 229, "+39514141", "slowness.bg", "Stuff", 3);
-            Student Pesho = new Student("Pesho", "Grung", 4432, "+39514141", "slowness.bg", "Stuff", 2);
-            Student Tosho = new Student("Tosho", "Bulev", 25, "+39514141", "slowness.bg", "Stuff", 1);
+            Student Stoyan = new Student("Stoyan","Rex",29,"+39514141","slowness@abv.bg","Stuff",4);
+            Student Kaloqn = new Student("Kaloqn", "Erwicht", 31, "+39514141", "sasdasdasda@gmail.bg", "Stuff", 2);
+            Student Jordan = new Student("Jordan", "Esnicht", 229, "+39514141", "erw@abv.bg", "Stuff", 3);
+            Student Pesho = new Student("Pesho", "Grung", 4432, "+39514141", "nww@cmd.eu", "Stuff", 2);
+            Student Tosho = new Student("Tosho", "Bulev", 25, "+39514141", "sle@abv.bg", "Stuff", 1);
 
             var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
 
-            List<Student> myStudents = FromGroup(MyStudents, 2);
+            List<Student> myStudents = ExtractByMail(MyStudents,"abv.bg");
 
             foreach (var myStudent in myStudents)
             {
                 Console.WriteLine(myStudent.Name);
             }
+        }
+
+        static List<Student> ExtractByMail(Student[] arr,string mail)
+        {
+            return arr.Where(student => student.Mail.EndsWith(mail)).ToList();
         }
 
         static List<Student> FromGroup(Student[] arr, int gn)
