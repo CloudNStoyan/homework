@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Extensions
 {
-    public static class Extensions
+    public static class ExtensionStringBuild
     {
         public static StringBuilder Substring(this StringBuilder builder,int index,int length)
         {
@@ -14,6 +14,8 @@ namespace Extensions
             text = text.Substring(index, length);
 
             return new StringBuilder(text);
+
+            
         }
     }
 }
