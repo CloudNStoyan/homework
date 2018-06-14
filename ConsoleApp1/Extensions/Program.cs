@@ -44,10 +44,12 @@ namespace Extensions
 
         static void Main(string[] args)
         {
-            var StudentOne = new Student("Stoyan","Kolev",10);
+            var StudentOne = new Student("Ahmed","Bolev",10);
             var StudentTwo = new Student("Ahmed","Ahmedov",20);
 
             var arrOfStudents = new Student[] {StudentOne, StudentTwo};
+
+            var arr2 = OrderStudents(arrOfStudents);
 
         }
 
@@ -59,6 +61,11 @@ namespace Extensions
         static string[] AgeRange(Student[] arr)
         {
             return arr.Where(student => student.Age >= 18 && student.Age <= 24).Select(student => $"{student.Name} {student.FamilyName}").ToArray();
+        }
+
+        static Student[] OrderStudents(Student[] arr)
+        {
+            return arr.OrderByDescending(student => student.Name).ThenByDescending(student => student.FamilyName).ToArray();
         }
         
     }
