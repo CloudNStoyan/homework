@@ -11,16 +11,16 @@ namespace Extensions
 {
     class Program
     {
-        class Student
+        class SomeStudent
         {
             private string FirstName;
-            private string SecondName;
+            private string LastName;
             private int StudentAge;
 
-            public Student(string fName, string sName, int age)
+            public SomeStudent(string fName, string sName, int age)
             {
                 FirstName = fName;
-                SecondName = sName;
+                LastName = sName;
                 StudentAge = age;
             }
 
@@ -31,7 +31,7 @@ namespace Extensions
 
             public string FamilyName
             {
-                get { return SecondName; }
+                get { return LastName; }
             }
 
             public int Age
@@ -41,10 +41,61 @@ namespace Extensions
 
         }
 
+        class Student
+        {
+            private string FirstName;
+            private string LastName;
+            private int FN;
+            private string Tel;
+            private string Email;
+            private string Marks;
+            private int GroupNumber;
+
+            public Student(string fName, string lName, int fn, string tel, string email, string marks, int groupNumber)
+            {
+                FirstName = fName;
+                LastName = lName;
+                FN = fn;
+                Tel = tel;
+                Email = email;
+                Marks = marks;
+                GroupNumber = groupNumber;
+            }
+
+            public int GroupNum
+            {
+                get { return GroupNumber; }
+
+            }
+
+            public string Name
+            {
+                get { return $"{FirstName} {LastName}"; }
+            }
+        }
+
 
         static void Main(string[] args)
         {
+            Student Stoyan = new Student("Stoyan","Rex",29,"+39514141","slowness.bg","Stuff",4);
+            Student Kaloqn = new Student("Kaloqn", "Erwicht", 31, "+39514141", "slowness.bg", "Stuff", 2);
+            Student Jordan = new Student("Jordan", "Esnicht", 229, "+39514141", "slowness.bg", "Stuff", 3);
+            Student Pesho = new Student("Pesho", "Grung", 4432, "+39514141", "slowness.bg", "Stuff", 2);
+            Student Tosho = new Student("Tosho", "Bulev", 25, "+39514141", "slowness.bg", "Stuff", 1);
 
+            var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
+
+            List<Student> myStudents = FromGroup(MyStudents, 2);
+
+            foreach (var myStudent in myStudents)
+            {
+                Console.WriteLine(myStudent.Name);
+            }
+        }
+
+        static List<Student> FromGroup(Student[] arr, int gn)
+        {
+            return arr.Where(student => student.GroupNum == gn).ToList();
         }
 
         static string[] FirstBeforeLast(string[] arr)
@@ -52,12 +103,12 @@ namespace Extensions
             return arr.Where(name => string.Compare(name.Split(' ')[0], name.Split(' ')[1]) > 0).OrderBy(name => name).ToArray();
         }
 
-        static string[] AgeRange(Student[] arr)
+        static string[] AgeRange(SomeStudent[] arr)
         {
             return arr.Where(student => student.Age >= 18 && student.Age <= 24).Select(student => $"{student.Name} {student.FamilyName}").ToArray();
         }
 
-        static Student[] OrderStudents(Student[] arr)
+        static SomeStudent[] OrderSomeStudents(SomeStudent[] arr)
         {
             return arr.OrderByDescending(student => student.Name).ThenByDescending(student => student.FamilyName).ToArray();
         }
@@ -67,5 +118,6 @@ namespace Extensions
             return numbers.Where(number => number % 7 == 0 && number % 3 == 0).ToArray();
         }
         
+
     }
 }
