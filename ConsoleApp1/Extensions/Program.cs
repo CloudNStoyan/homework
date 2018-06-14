@@ -11,24 +11,12 @@ namespace Extensions
     {
         static void Main(string[] args)
         {
-            var build = new StringBuilder();
 
-            build.Append("az sum dobur");
+        }
 
-
-            IEnumerable<int> result = from value in Enumerable.Range(0, 3) select value;
-            IEnumerable<int> sResult = from value in Enumerable.Range(0, 3) select value;
-
-            int a = result.TheSum();
-            var b = result.Product(sResult);
-
-            foreach (var o in b)
-            {
-                Console.WriteLine(o);
-            }
-
-
-
+        static string[] FirstBeforeLast(string[] arr)
+        {
+            return arr.Where(name => string.Compare(name.Split(' ')[0], name.Split(' ')[1]) > 0).OrderBy(name => name).ToArray();
         }
     }
 }
