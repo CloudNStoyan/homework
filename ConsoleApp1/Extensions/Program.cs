@@ -44,12 +44,6 @@ namespace Extensions
 
         static void Main(string[] args)
         {
-            var StudentOne = new Student("Ahmed","Bolev",10);
-            var StudentTwo = new Student("Ahmed","Ahmedov",20);
-
-            var arrOfStudents = new Student[] {StudentOne, StudentTwo};
-
-            var arr2 = OrderStudents(arrOfStudents);
 
         }
 
@@ -66,6 +60,11 @@ namespace Extensions
         static Student[] OrderStudents(Student[] arr)
         {
             return arr.OrderByDescending(student => student.Name).ThenByDescending(student => student.FamilyName).ToArray();
+        }
+
+        static int[] DivisibleBy7And3(int[] numbers)
+        {
+            return numbers.Where(number => number % 7 == 0 && number % 3 == 0).ToArray();
         }
         
     }
