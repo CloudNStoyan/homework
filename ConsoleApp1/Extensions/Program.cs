@@ -78,6 +78,11 @@ namespace Extensions
             {
                 get { return Email; }
             }
+
+            public string PhoneNumber
+            {
+                get { return Tel; }
+            }
         }
 
         delegate void TimerPredicate(string text);
@@ -85,16 +90,19 @@ namespace Extensions
 
         static void Main(string[] args)
         {
-            //Student Stoyan = new Student("Stoyan","Rex",29,"+39514141","slowness@abv.bg","Stuff",4);
-            //Student Kaloqn = new Student("Kaloqn", "Erwicht", 31, "+39514141", "sasdasdasda@gmail.bg", "Stuff", 2);
-            //Student Pesho = new Student("Pesho", "Grung", 4432, "+39514141", "nww@cmd.eu", "Stuff", 2);
-            //Student Jordan = new Student("Jordan", "Esnicht", 229, "+39514141", "erw@abv.bg", "Stuff", 3);
-            //Student Tosho = new Student("Tosho", "Bulev", 25, "+39514141", "sle@abv.bg", "Stuff", 1);
+            Student Stoyan = new Student("Stoyan","Rex",29,"+35924141","slowness@abv.bg","Stuff",4);
+            Student Kaloqn = new Student("Kaloqn", "Erwicht", 31, "+35944141", "sasdasdasda@gmail.bg", "Stuff", 2);
+            Student Pesho = new Student("Pesho", "Grung", 4432, "+35984141", "nww@cmd.eu", "Stuff", 2);
+            Student Jordan = new Student("Jordan", "Esnicht", 229, "0214141", "erw@abv.bg", "Stuff", 3);
+            Student Tosho = new Student("Tosho", "Bulev", 25, "+35914141", "sle@abv.bg", "Stuff", 1);
 
-            //var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
+            var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
 
-            SetInterval(1,PrintString);
-            Console.ReadLine();
+            var arr2 = ExtractByPhone(MyStudents, "2");
+            foreach (var student in arr2)
+            {
+                Console.WriteLine(student.Name);
+            }
         }
 
 
@@ -117,7 +125,15 @@ namespace Extensions
             Console.WriteLine(text);
         }
 
-    static List<Student> ExtractByMail(Student[] arr,string mail)
+
+
+        static List<Student> ExtractByPhone(Student[] arr, string cityCode)
+        {
+            return arr.Where(student => student.PhoneNumber.StartsWith($"+359{cityCode}") || student.PhoneNumber.StartsWith($"0{cityCode}"))
+                .ToList();
+        }
+
+        static List<Student> ExtractByMail(Student[] arr,string mail)
         {
             return arr.Where(student => student.Mail.EndsWith(mail)).ToList();
         }
