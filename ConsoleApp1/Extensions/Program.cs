@@ -99,13 +99,18 @@ namespace Extensions
             var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
 
             var arr2 = ExtractByPhone(MyStudents, "2");
-            foreach (var student in arr2)
-            {
-                Console.WriteLine(student.Name);
-            }
+
+            var allStrs = new string[] {"Edin", "Dvaaaaaaaa", "O", "Cheteri"};
+            Console.WriteLine(GetLargest(allStrs));
         }
 
 
+
+        static string GetLargest(string[] arr)
+        {
+            arr = arr.OrderByDescending(s => s.Length).ToArray();
+            return arr[0];
+        }
 
         static void SetInterval(int second, TimerPredicate predicate)
         {
