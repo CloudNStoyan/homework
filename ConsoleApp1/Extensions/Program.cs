@@ -6,6 +6,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace Extensions
 {
@@ -24,7 +25,7 @@ namespace Extensions
                 StudentAge = age;
             }
 
-            public string Name 
+            public string Name
             {
                 get { return FirstName; }
             }
@@ -79,26 +80,44 @@ namespace Extensions
             }
         }
 
+        delegate void TimerPredicate(string text);
+
 
         static void Main(string[] args)
         {
-            Student Stoyan = new Student("Stoyan","Rex",29,"+39514141","slowness@abv.bg","Stuff",4);
-            Student Kaloqn = new Student("Kaloqn", "Erwicht", 31, "+39514141", "sasdasdasda@gmail.bg", "Stuff", 2);
-            Student Jordan = new Student("Jordan", "Esnicht", 229, "+39514141", "erw@abv.bg", "Stuff", 3);
-            Student Pesho = new Student("Pesho", "Grung", 4432, "+39514141", "nww@cmd.eu", "Stuff", 2);
-            Student Tosho = new Student("Tosho", "Bulev", 25, "+39514141", "sle@abv.bg", "Stuff", 1);
+            //Student Stoyan = new Student("Stoyan","Rex",29,"+39514141","slowness@abv.bg","Stuff",4);
+            //Student Kaloqn = new Student("Kaloqn", "Erwicht", 31, "+39514141", "sasdasdasda@gmail.bg", "Stuff", 2);
+            //Student Pesho = new Student("Pesho", "Grung", 4432, "+39514141", "nww@cmd.eu", "Stuff", 2);
+            //Student Jordan = new Student("Jordan", "Esnicht", 229, "+39514141", "erw@abv.bg", "Stuff", 3);
+            //Student Tosho = new Student("Tosho", "Bulev", 25, "+39514141", "sle@abv.bg", "Stuff", 1);
 
-            var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
+            //var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
 
-            List<Student> myStudents = ExtractByMail(MyStudents,"abv.bg");
-
-            foreach (var myStudent in myStudents)
-            {
-                Console.WriteLine(myStudent.Name);
-            }
+            SetInterval(1,PrintString);
+            Console.ReadLine();
         }
 
-        static List<Student> ExtractByMail(Student[] arr,string mail)
+
+
+        static void SetInterval(int second, TimerPredicate predicate)
+        {
+            Timer timer = new Timer(second * 1000);
+            timer.AutoReset = true;
+            timer.Elapsed += (sender, e) => EventHandler(sender, e,predicate);
+            timer.Start();
+        }
+
+        static void EventHandler(Object source, ElapsedEventArgs e, TimerPredicate predicate)
+        {
+            predicate("Das Vas Eine");
+        }
+
+        static void PrintString(string text)
+        {
+            Console.WriteLine(text);
+        }
+
+    static List<Student> ExtractByMail(Student[] arr,string mail)
         {
             return arr.Where(student => student.Mail.EndsWith(mail)).ToList();
         }
