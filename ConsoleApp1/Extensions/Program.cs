@@ -70,8 +70,16 @@ namespace Extensions
             var arr = ExtractMarks(MyStudents);
 
 
-            Console.WriteLine(ExtractGroups(MyStudents));
+            GroupedByGroupNumber(3,MyStudents);
 
+        }
+
+        static void GroupedByGroupNumber(int groupNum, Student[] arr)
+        {
+            var arr2 = arr.Where(student => student.GroupNumber.GroupNumber == groupNum)
+                .Select(student => $"{student.FirstName} {student.LastName}").ToArray();
+
+            Console.WriteLine(String.Join(", ",arr2));
         }
 
         static string ExtractGroups(Student[] arr)
