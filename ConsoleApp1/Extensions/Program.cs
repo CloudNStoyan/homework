@@ -33,7 +33,14 @@ namespace Extensions
             public string Tel { get; private set; }
             public string Email { get; private set; }
             public List<int> Marks { get; private set; }
-            public int GroupNumber { get; private set; }
+            public Group GroupNumber { get; private set; }
+
+            private Dictionary<int, Group> Groups = new Dictionary<int, Group>()
+            {
+                {1, new Group(1,"Art")},
+                {2, new Group(2,"Math")},
+                {3, new Group(3, "Web")}
+            };
 
             public Student(string fName, string lName, int fn, string tel, string email, List<int> marks, int groupNumber)
             {
@@ -43,7 +50,7 @@ namespace Extensions
                 Tel = tel;
                 Email = email;
                 Marks = marks;
-                GroupNumber = groupNumber;
+                GroupNumber = Groups[groupNumber];
             }
         }
 
@@ -52,7 +59,7 @@ namespace Extensions
 
         static void Main(string[] args)
         {
-            Student Stoyan = new Student("Stoyan","Rex",294306,"+35924141","slowness@abv.bg",new List<int>(){2,4,5},4);
+            Student Stoyan = new Student("Stoyan","Rex",294306,"+35924141","slowness@abv.bg",new List<int>(){ 2 ,4 ,5 },2);
             Student Kaloqn = new Student("Kaloqn", "Erwicht", 294306, "+35944141", "sasdasdasda@gmail.bg", new List<int>() { 6, 4, 5 }, 2);
             Student Tosho = new Student("Tosho", "Bulev", 294316, "+35914141", "sle@abv.bg", new List<int>() { 2, 3, 3,6 }, 1);
             Student Pesho = new Student("Pesho", "Grung", 294352, "+35984141", "nww@cmd.eu", new List<int>() { 2, 6, 5 }, 2);
@@ -63,6 +70,15 @@ namespace Extensions
             var arr = ExtractMarks(MyStudents);
 
 
+            Console.WriteLine(ExtractGroups(MyStudents));
+
+        }
+
+        static string ExtractGroups(Student[] arr)
+        {
+            var arr2 = arr.Where(student => student.GroupNumber.DepartmentName == "Math")
+                .Select(student => $"{student.FirstName} {student.LastName}").ToArray();
+            return string.Join(", ",arr2);
         }
 
         static dynamic[] ExtractByMarks(Student[] arr)
@@ -124,7 +140,7 @@ namespace Extensions
 
         static List<Student> FromGroup(Student[] arr, int gn)
         {
-            return arr.Where(student => student.GroupNumber == gn).ToList();
+            return arr.Where(student => student.GroupNumber.GroupNumber == gn).ToList();
         }
 
         static string[] FirstBeforeLast(string[] arr)
