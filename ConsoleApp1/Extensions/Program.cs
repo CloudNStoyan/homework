@@ -59,18 +59,20 @@ namespace Extensions
 
         static void Main(string[] args)
         {
-            Student Stoyan = new Student("Stoyan","Rex",294306,"+35924141","slowness@abv.bg",new List<int>(){ 2 ,4 ,5 },2);
+            Student Stoyan = new Student("Stoyan","Rex",294306,"+35924141","slowness@abv.bg",new List<int>(){ 2 ,2 ,5 },2);
             Student Kaloqn = new Student("Kaloqn", "Erwicht", 294306, "+35944141", "sasdasdasda@gmail.bg", new List<int>() { 6, 4, 5 }, 2);
-            Student Tosho = new Student("Tosho", "Bulev", 294316, "+35914141", "sle@abv.bg", new List<int>() { 2, 3, 3,6 }, 1);
+            Student Tosho = new Student("Tosho", "Bulev", 294316, "+35914141", "sle@abv.bg", new List<int>() { 2, 2, 3,6 }, 1);
             Student Pesho = new Student("Pesho", "Grung", 294352, "+35984141", "nww@cmd.eu", new List<int>() { 2, 6, 5 }, 2);
             Student Jordan = new Student("Jordan", "Esnicht", 293305, "0214141", "erw@abv.bg", new List<int>() { 2, 5, 5 }, 3);
 
             var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
 
-            var arr = ExtractMarks(MyStudents);
+            var arr = MyStudents.ExtractWithTwoMarks(2);
 
-
-            MyStudents.GroupName("Math");
+            foreach (var student in arr)
+            {
+                Console.WriteLine($"{student.FirstName} {student.LastName}");
+            }
 
         }
 

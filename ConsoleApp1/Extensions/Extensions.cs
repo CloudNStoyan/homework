@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Extensions
@@ -33,6 +34,25 @@ namespace Extensions
                 .Select(s => $"{s.FirstName} {s.LastName}").ToArray();
 
             Console.WriteLine(String.Join(", ",arr2));
+        }
+
+        public static Program.Student[] ExtractWithTwoMarks(this Program.Student[] arrStudents, int mark)
+        {
+            return arrStudents.Where(s => ContainsTwoMarks(s.Marks, mark)).Select(s => s).ToArray();
+        }
+
+        private static bool ContainsTwoMarks(List<int> arr, int mark)
+        {
+            int count = 0;
+            for (int i = 0; i < arr.Count; i++)
+            {
+                if (arr[i] == mark)
+                {
+                    count++;
+                }
+            }
+
+            return count >= 2;
         }
     }
 }
