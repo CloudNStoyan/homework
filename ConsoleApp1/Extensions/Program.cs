@@ -10,10 +10,10 @@ using System.Timers;
 
 namespace Extensions
 {
-    class Program
+    public class Program
     {
 
-        class Group
+        public class Group
         {
             public int GroupNumber { get; private set; }
             public string DepartmentName { get; private set; }
@@ -25,7 +25,7 @@ namespace Extensions
             }
         }
 
-        class Student
+        public class Student
         {
             public string FirstName { get; private set; }
             public string LastName { get; private set; }
@@ -70,7 +70,7 @@ namespace Extensions
             var arr = ExtractMarks(MyStudents);
 
 
-            GroupedByGroupNumber(3,MyStudents);
+            MyStudents.GroupName("Math");
 
         }
 
