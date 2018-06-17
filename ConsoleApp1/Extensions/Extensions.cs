@@ -54,5 +54,10 @@ namespace Extensions
 
             return count >= 2;
         }
+
+        public static Program.Student[] StudentGroups(this Program.Student[] arrStudents)
+        {
+            return arrStudents.Where(s => s.GroupNumber.GroupNumber == 2).ToArray();
+        }
     }
 }

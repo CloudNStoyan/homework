@@ -67,7 +67,7 @@ namespace Extensions
 
             var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
 
-            var arr = MyStudents.ExtractWithTwoMarks(2);
+            var arr = MyStudents.StudentGroups();
 
             foreach (var student in arr)
             {
