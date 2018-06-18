@@ -491,6 +491,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiningClassesPart2", "Def
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "Extensions\ExtensionMethods.csproj", "{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPPrinciplesPart1", "OOPPrinciplesPart1\OOPPrinciplesPart1.csproj", "{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1473,6 +1475,10 @@ Global
 		{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDD6B6B1-2EE7-412F-A4D1-373FFB94B985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
