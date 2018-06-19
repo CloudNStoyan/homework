@@ -43,9 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="School.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Student.cs" />
     <Compile Include="Teachers.cs" />
   </ItemGroup>
   <ItemGroup>

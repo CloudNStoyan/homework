@@ -6,13 +6,29 @@ using System.Threading.Tasks;
 
 namespace OOPPrinciplesPart1
 {
-    class Teachers
+    class Teachers : Person
     {
-        public string[] Subjects { get; private set; }
+        public Discipline[] Subjects { get; private set; }
 
-        public Teachers(string[] subjects)
+        public Teachers(string name , int age,Discipline[] subjects) : base(name,age)
         {
             Subjects = subjects;
+        }
+    }
+
+    class Discipline
+    {
+        public string Name { get; private set; }
+
+        public int Lectures { get; private set; }
+
+        public int Exercises { get; private set; }
+
+        public Discipline(string name, int lectures, int exercises)
+        {
+            Name = name;
+            Lectures = lectures;
+            Exercises = exercises;
         }
     }
 }

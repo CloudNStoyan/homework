@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace OOPPrinciplesPart1
 {
-    class School : Classes
+    public class Person
     {
         public string Name { get; private set; }
 
-        public School(string schoolName,string className,Teachers[] teachers,Student[] students) : base(className,teachers,students)
+        public int Age { get; private set; }
+
+        public Person(string name, int age)
         {
-            Name = schoolName;
+            Name = name;
+            Age = age;
         }
-
-
     }
 }

@@ -10,12 +10,15 @@ namespace OOPPrinciplesPart1
     {
         public Teachers[] Teachers { get; private set; }
 
+        public Student[] Students { get; private set; }
+
         public string Name { get; private set; }
 
-        public Classes(string name,Teachers[] teachers)
+        public Classes(string className,Teachers[] teachers,Student[] students)
         {
+            Name = className;
             Teachers = teachers;
-            Name = name;
+            Students = students;
         }
     }
 }
