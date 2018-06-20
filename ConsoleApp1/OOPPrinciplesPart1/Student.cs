@@ -11,6 +11,8 @@ namespace OOPPrinciplesPart1
     {
         public int ClassNumber { get; private set; }
 
+        public List<string> StudentComments { get; private set; }
+
         public Student(string name,int age ,int classNumber) : base(name,age)
         {
             ClassNumber = classNumber;
@@ -19,6 +21,11 @@ namespace OOPPrinciplesPart1
         public static Student Default()
         {
             return new Student("None",-1,-1);
+        }
+
+        public void Add(string comment)
+        {
+            StudentComments.Add(comment);
         }
     }
 }

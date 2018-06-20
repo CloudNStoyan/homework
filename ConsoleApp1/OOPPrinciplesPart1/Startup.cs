@@ -21,6 +21,12 @@ namespace OOPPrinciplesPart1
 
             var a = school.Students.ByName("Peshao");
             Console.WriteLine(a.Name);
+
+            a.Add("Dwarfs");
+            pgeeTeachers[0].Add("String");
+            school.Add("string");
+
+            Console.WriteLine(school.SchoolComments[0]);
         }
     }
 }

@@ -12,10 +12,17 @@ namespace OOPPrinciplesPart1
 
         public int Age { get; private set; }
 
+        public List<string> PersonComments { get; private set; }
+
         public Person(string name, int age)
         {
             Name = name;
             Age = age;
+        }
+
+        public void Add(string comment)
+        {
+            PersonComments.Add(comment);
         }
     }
 }

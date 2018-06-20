@@ -10,10 +10,18 @@ namespace OOPPrinciplesPart1
     {
         public Discipline[] Subjects { get; private set; }
 
+        public List<string> TeacherComments { get; private set; }
+
         public Teachers(string name , int age,Discipline[] subjects) : base(name,age)
         {
             Subjects = subjects;
         }
+
+        public void Add(string comment)
+        {
+            TeacherComments.Add(comment);
+        }
+
     }
 
     class Discipline
@@ -24,11 +32,18 @@ namespace OOPPrinciplesPart1
 
         public int Exercises { get; private set; }
 
+        public List<string> DisciplineComments { get; private set; }
+
         public Discipline(string name, int lectures, int exercises)
         {
             Name = name;
             Lectures = lectures;
             Exercises = exercises;
+        }
+
+        public void Add(string comment)
+        {
+            DisciplineComments.Add(comment);
         }
     }
 }
