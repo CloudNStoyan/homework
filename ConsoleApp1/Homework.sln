@@ -493,6 +493,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "Extensi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPPrinciplesPart1", "OOPPrinciplesPart1\OOPPrinciplesPart1.csproj", "{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsAndWorkers", "StudentsAndWorkers\StudentsAndWorkers.csproj", "{68851132-01E5-4BD5-B427-1614983438E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1479,6 +1481,10 @@ Global
 		{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE41F0DA-07A8-4DFB-AED8-6EC3CE89AED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68851132-01E5-4BD5-B427-1614983438E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68851132-01E5-4BD5-B427-1614983438E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68851132-01E5-4BD5-B427-1614983438E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68851132-01E5-4BD5-B427-1614983438E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
