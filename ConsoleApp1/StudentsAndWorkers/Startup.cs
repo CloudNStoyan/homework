@@ -42,7 +42,26 @@ namespace StudentsAndWorkers
 
             workers = workers.OrderByDescending(w => w.MoneyPerHour()).ToList();
 
-            PrintWorkers(workers);
+
+            var merged = new List<Human>();
+
+            foreach (var st in students)
+            {
+                merged.Add(st);
+            }
+
+            foreach (var worker in workers)
+            {
+                merged.Add(worker);
+            }
+
+            merged = merged.OrderBy(h => h.FirstName).ThenBy(h => h.LastName).ToList();
+
+            foreach (var human in merged)
+            {
+                Console.WriteLine($"{human.FirstName} {human.LastName}");
+            }
+
         }
 
         static void PrintStudents(List<Student> list)
