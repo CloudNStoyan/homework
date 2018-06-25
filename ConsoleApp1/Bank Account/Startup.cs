@@ -10,9 +10,9 @@ namespace Bank_Account
     {
         static void Main(string[] args)
         {
-            Bank myAccount = new DepositAccount(Customer.Individuals,100,5);
-        
-            myAccount.Deposit(2);
+            DepositAccount myAccount = new DepositAccount(Customer.Individuals,100,5);
+
+            Console.WriteLine(myAccount.interestRate);
 
 
 

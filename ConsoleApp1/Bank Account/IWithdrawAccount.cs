@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-    public interface IAccount
+    interface IWithdrawAccount
     {
-        int CalculateInterestAmount(int months);
-        void Deposit(decimal money);
         void Withdraw(decimal money);
     }
 }
