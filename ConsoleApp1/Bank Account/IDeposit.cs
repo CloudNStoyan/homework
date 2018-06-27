@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-    interface IDepositAccount
+    interface IDeposit
     {
         void Deposit(decimal money);
     }

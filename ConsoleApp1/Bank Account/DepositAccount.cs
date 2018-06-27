@@ -6,22 +6,15 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-   public class DepositAccount : Account, IDepositAccount, IWithdrawAccount, IAccount
+   public class DepositAccount : BankAccount, IDeposit, IWithdraw, IBalance
    {
-       private static Customer customer;
-       private static Decimal money;
-       private static int rate;
 
-       public DepositAccount(Customer inputCustomer, decimal inputMoney, int inputRate) : base(customer,money,rate)
+       public DepositAccount(Customer customer, decimal money, int rate) : base(customer,money,rate)
        {
            if (money == Math.Abs(money) && money < 1000)
            {
-               rate = 0;
+               this.interestRate = 0;
            }
-
-           customer = inputCustomer;
-           money = inputMoney;
-           rate = inputRate;
        }
 
        public void Deposit(decimal money)
@@ -34,7 +27,12 @@ namespace Bank_Account
            this.balance -= money;
        }
 
-       public int CalculateInterestAmount(int months)
+       public Decimal Balance()
+       {
+           return this.balance;
+       }
+
+        public override int CalculateInterestAmount(int months)
        {
            return months * this.interestRate;
        }

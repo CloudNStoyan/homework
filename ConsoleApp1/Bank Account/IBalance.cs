@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-    interface IWithdrawAccount
+    interface IBalance
     {
-        void Withdraw(decimal money);
+        Decimal Balance();
     }
 }

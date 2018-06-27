@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-   public class MortgageAccount : Account , IDepositAccount , IAccount
+   public class MortgageAccount : BankAccount, IDeposit, IBalance
    {
        public MortgageAccount(Customer customer,Decimal money,int rate) : base(customer,money,rate)
        {
@@ -19,15 +19,39 @@ namespace Bank_Account
            this.balance += money;
        }
 
-       public int CalculateInterestAmount(int months)
+       public Decimal Balance()
        {
-           if (this.customerType == Customer.Individuals)
+           return this.balance;
+       }
+
+       public override  int CalculateInterestAmount(int months)
+       {
+           int amount = 0;
+           if (this.customerType == Customer.Companies)
            {
-               return (months - 3) * this.interestRate;
+               if (months > 12)
+               {
+                   amount += ((this.interestRate / 2) * 12) + ((this.interestRate / 2) * months);
+                   return amount;
+               }
+               else
+               {
+                   amount += (this.interestRate / 2) * months;
+                   return amount;
+               }
            }
            else
            {
-               return (months - 2) * this.interestRate;
+               if (months > 6)
+               {
+                   amount += ((this.interestRate / 2) * 6) + ((this.interestRate / 2) * months);
+                   return amount;
+               }
+               else
+               {
+                   amount += (this.interestRate / 2) * months;
+                   return amount;
+               }
            }
        }
     }
