@@ -7,10 +7,18 @@ using System.Threading.Tasks;
 namespace Shapes
 {
    public abstract class Shape
-    {
-        public static double CalculateSurface()
-        {
-            return 0;
-        }
-    }
+   {
+       protected double Width { get; private set; }
+       protected double Height { get; private set; }
+       protected Shape(double width, double height)
+       {
+           this.Width = width;
+           this.Height = height;
+       }
+
+       public virtual double CalculateSurface()
+       {
+           return Width * Height;
+       }
+   }
 }
