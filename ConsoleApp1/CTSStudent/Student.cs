@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -58,7 +60,47 @@ namespace CTSStudent
 
             return build.ToString().Trim();
         }
-        
+
+        public override bool Equals(object obj)
+        {
+            var secondStudent = (Student) obj;
+
+            return EqualProperties(secondStudent);
+
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public static bool operator ==(Student firstStudent,Student secondStudent)
+        {
+            return firstStudent.Equals(secondStudent);
+        }
+
+        public static bool operator !=(Student firstStudent, Student secondStudent)
+        {
+            return !firstStudent.Equals(secondStudent);
+        }
+
+        private bool EqualProperties(Student secondStudent)
+        {
+            if (this.FirstName == secondStudent.FirstName && this.MiddleName == secondStudent.MiddleName &&
+                this.LastName == secondStudent.LastName && this.SSN == secondStudent.SSN &&
+                this.PernamentAddres == secondStudent.PernamentAddres &&
+                this.MobilePhone == secondStudent.MobilePhone &&
+                this.EMail == secondStudent.EMail && this.Course == secondStudent.Course &&
+                this.Specialty == secondStudent.Specialty &&
+                this.University == secondStudent.University && this.Faculty == secondStudent.Faculty)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
     
 }
