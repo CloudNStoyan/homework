@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CTSStudent
 {
-    public class Student
+    public class Student : ICloneable
     {
         //first, middle and last name, SSN, permanent address, mobile phone e-mail, course, specialty, university, faculty.
         // Use an enumeration for the specialties, universities and faculties.
@@ -72,6 +72,18 @@ namespace CTSStudent
         public override int GetHashCode()
         {
             return base.GetHashCode();
+        }
+
+        object ICloneable.Clone()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Student Clone()
+        {
+            var clonedStudent = new Student(this.FirstName,this.MiddleName,this.LastName,this.SSN,this.PernamentAddres,this.MobilePhone,this.EMail,this.Course,this.Specialty,this.University,this.Faculty);
+
+            return clonedStudent;
         }
 
         public static bool operator ==(Student firstStudent,Student secondStudent)

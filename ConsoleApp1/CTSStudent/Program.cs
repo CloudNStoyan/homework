@@ -13,6 +13,9 @@ namespace CTSStudent
             Student myStudent = new Student("Stoyan","Antonov","Kolev","nz","Nqkva ulica 15","+356000332","stoqn.game@abv.bg","C# OOP",Specialty.Javascript,University.TelerikAcademy,Faculty.First);
             Student mySecondStudent = new Student("Stoyan", "Antonov", "Kolev", "nz", "Nqkva ulica 15", "+356000332", "stoqn.game@abv.bg", "C# OOP", Specialty.Javascript, University.TelerikAcademy, Faculty.First);
 
+            Student theThird = myStudent.Clone();
+
+            Console.WriteLine(theThird.FirstName);
 
             Console.WriteLine(myStudent != mySecondStudent);
         }
