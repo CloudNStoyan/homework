@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CTSStudent
 {
-    public class Student : ICloneable
+    public class Student : ICloneable , IComparable<Student>
     {
         //first, middle and last name, SSN, permanent address, mobile phone e-mail, course, specialty, university, faculty.
         // Use an enumeration for the specialties, universities and faculties.
@@ -40,6 +40,18 @@ namespace CTSStudent
             this.Specialty = specialty;
             this.University = university;
             this.Faculty = faculty;
+        }
+
+        public int CompareTo(Student other)
+        {
+            if (this.FirstName.CompareTo(other.FirstName) == 0)
+            {
+                return int.Parse(this.SSN).CompareTo(int.Parse(other.SSN));
+            }
+            else
+            {
+                return this.FirstName.CompareTo(other.FirstName);
+            }
         }
 
         public override string ToString()
@@ -85,6 +97,8 @@ namespace CTSStudent
 
             return clonedStudent;
         }
+
+
 
         public static bool operator ==(Student firstStudent,Student secondStudent)
         {
