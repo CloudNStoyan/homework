@@ -13,7 +13,8 @@ namespace CTSStudent
             var myself = new Person("Stoyan",3);
 
             Console.WriteLine(myself);
-            
+
+            BitArray64 myArr = new BitArray64(2,3,4,5);
         }
     }
 }
