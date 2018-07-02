@@ -10,11 +10,10 @@ namespace CTSStudent
     {
         static void Main(string[] args)
         {
-            var myself = new Person("Stoyan",3);
-
-            Console.WriteLine(myself);
-
             BitArray64 myArr = new BitArray64(2,3,4,5);
+            BitArray64 myOther = new BitArray64(2,3,4,5);
+
+            Console.WriteLine(myOther != myArr);
         }
     }
 }
