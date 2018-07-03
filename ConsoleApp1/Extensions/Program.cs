@@ -65,15 +65,22 @@ namespace Extensions
             Student Pesho = new Student("Pesho", "Grung", 294352, "+35984141", "nww@cmd.eu", new List<int>() { 2, 6, 5 }, 2);
             Student Jordan = new Student("Jordan", "Esnicht", 293305, "0214141", "erw@abv.bg", new List<int>() { 2, 5, 5 }, 3);
 
-            var MyStudents = new Student[] {Stoyan, Kaloqn, Jordan, Pesho, Tosho};
+            EventRaiser myTemp = new EventRaiser();
+            myTemp.RaiseCustomEvent += SayHi;
+            myTemp.RaiseCustomEvent += SayAnotherHi;
+            myTemp.RaiseIt();
 
-            var arr = MyStudents.StudentGroups();
 
-            foreach (var student in arr)
-            {
-                Console.WriteLine($"{student.FirstName} {student.LastName}");
-            }
+        }
 
+        static void SayHi(object sender, Event e)
+        {
+            Console.WriteLine("Hi!");
+        }
+
+        static void SayAnotherHi(object sender, Event e)
+        {
+            Console.WriteLine("Another Hi!");
         }
 
         static void GroupedByGroupNumber(int groupNum, Student[] arr)
@@ -82,7 +89,7 @@ namespace Extensions
                 .Select(student => $"{student.FirstName} {student.LastName}").ToArray();
 
             Console.WriteLine(String.Join(", ",arr2));
-        }
+        }   
 
         static string ExtractGroups(Student[] arr)
         {
