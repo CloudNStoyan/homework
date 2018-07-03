@@ -8,13 +8,15 @@ namespace RangeExceptions
 {
     public class InvalidRangeException<T>
     {
-        private string errorMessage;
-        private string errorCondition;
+        private string message;
+        private T start;
+        private T end;
 
-        public InvalidRangeException(string message,string condition)
+        public InvalidRangeException(string message,T start,T end)
         {
-            errorMessage = message;
-            errorCondition = condition;
+            this.message = message;
+            this.start = start;
+            this.end = end;
         }
     }
 }
