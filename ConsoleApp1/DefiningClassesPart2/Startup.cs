@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DefiningClassesPart2
 {
+        
     public struct Point3D
     {
         public int X;
@@ -122,12 +126,18 @@ namespace DefiningClassesPart2
             return $"{DateTime.Now.Month.ToString().PadLeft(2, '0')}-{DateTime.Now.Day.ToString().PadLeft(2, '0')}-{DateTime.Now.Hour.ToString().PadLeft(2, '0')}-{DateTime.Now.Minute.ToString().PadLeft(2,'0')}-{DateTime.Now.Second.ToString().PadLeft(2, '0')}";
         }
     }
-
+    [Version(2,11)]
     class Startup
     {
         static void Main(string[] args)
         {
-           var myMatrix = new GenericMatrix<int>();
+
+            var arr = typeof(Startup).GetCustomAttributes();
+            foreach (var o in arr)
+            {
+                var attribute = (Version) o;
+                Console.WriteLine(attribute.GetVersion);
+            }
 
         }
     }
