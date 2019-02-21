@@ -509,6 +509,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetClassPropertiesAndPrintT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzz", "FizzBuzz\FizzBuzz.csproj", "{CE5FBC83-C79B-4431-B4FD-E5E7ED1C5E8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempNote", "TempNote\TempNote.csproj", "{5376758F-A53C-4783-8717-8F75C9938BED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -1527,6 +1529,10 @@ Global
 		{CE5FBC83-C79B-4431-B4FD-E5E7ED1C5E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CE5FBC83-C79B-4431-B4FD-E5E7ED1C5E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CE5FBC83-C79B-4431-B4FD-E5E7ED1C5E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5376758F-A53C-4783-8717-8F75C9938BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5376758F-A53C-4783-8717-8F75C9938BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5376758F-A53C-4783-8717-8F75C9938BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5376758F-A53C-4783-8717-8F75C9938BED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
