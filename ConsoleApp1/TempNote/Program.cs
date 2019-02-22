@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -16,7 +17,14 @@ namespace TempNote
             while (true)
             {
                 string command = Console.ReadLine();
-                HandleCommand(command);
+                if (command != null)
+                {
+                    HandleCommand(command);
+                }
+                else
+                {
+                    Print("Command wasn't detected!");
+                }
             }
         }
 
@@ -28,7 +36,7 @@ namespace TempNote
 
             string[] splitCommnad = commandGiven.Split(' ');
 
-            string command = splitCommnad[0];
+            string command = splitCommnad[0].ToLower();
 
             string context = string.Join(" ", splitCommnad.Skip(1));
 
@@ -40,7 +48,8 @@ namespace TempNote
                     break;
                 case "view":
                     string note = ViewNote(context);
-                    Print(note);
+                    Print(note != string.Empty ? note : "No note found!");
+
                     break;
                 case "remove":
                     RemoveNote(context);
@@ -49,6 +58,12 @@ namespace TempNote
                 case "edit":
                     EditNote(context);
                     Print("Note edited!");
+                    break;
+                case "help":
+                    PrintHelp();
+                    break;
+                case "clear":
+                    Clear();
                     break;
                 default:
                     Print("Command wasn't detected!");
@@ -59,6 +74,14 @@ namespace TempNote
         private static void Print(string text)
         {
             Console.WriteLine(text);
+        }
+
+        private static void Print(string[] lines)
+        {
+            foreach (string line in lines)
+            {
+                Console.WriteLine(line);
+            }
         }
 
 
@@ -87,7 +110,42 @@ namespace TempNote
         private static string ViewNote(string context)
         {
             string key = context;
-            return Notes[key];
+
+            return Notes.ContainsKey(key) ? Notes[key] : string.Empty;
+        }
+
+        private static void PrintHelp()
+        {
+            string example = "EXAMPLE: ";
+
+            string addNoteHelp = "To create new note:";
+            string addNoteExample =
+                "add [name of the note (without spaces)] [value of the note (spaces may be used)]";
+            string addNoteRealExample = example + "add foo bar bar bar bar";
+
+            string viewNoteHelp = "To view already declared note:";
+            string viewNoteExample = "view [name of the note (without spaces)]";
+            string viewNoteRealExample = example + "view foo";
+
+            string editNoteHelp = "To edit already declared note:";
+            string editNoteExample =
+                "edit [name of the note (without spaces)] [new value of the note (spaces may be used)]";
+            string editNoteRealExample = example + "edit foo bar ? yep bars!";
+
+            string removeNoteHelp = "To remove already declared note:";
+            string removeNoteExample = "remove [name of the note (without spaces)]";
+            string removeNoteRealExample = example + "remove foo";
+
+            Print(new[]
+            {
+                addNoteHelp, addNoteExample, addNoteRealExample, viewNoteHelp, viewNoteExample, viewNoteRealExample,
+                editNoteHelp, editNoteExample, editNoteRealExample, removeNoteHelp, removeNoteExample, removeNoteRealExample
+            });
+        }
+
+        private static void Clear()
+        {
+            Console.Clear();
         }
     }
 }
