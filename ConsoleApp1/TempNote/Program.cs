@@ -11,9 +11,14 @@ namespace TempNote
     class Program
     {
         private static Dictionary<string, string> Notes = new Dictionary<string, string>();
+        private static Notes NoteService;
+        private static PrintService PrintService;
 
         static void Main(string[] args)
         {
+            NoteService = new Notes();
+            PrintService = new PrintService();
+
             while (true)
             {
                 string command = Console.ReadLine();
@@ -23,7 +28,7 @@ namespace TempNote
                 }
                 else
                 {
-                    Print("Command wasn't detected!");
+                    PrintService.Print("Command wasn't detected!");
                 }
             }
         }
@@ -40,108 +45,40 @@ namespace TempNote
 
             string context = string.Join(" ", splitCommnad.Skip(1));
 
+
+
             switch (command)
             {
                 case "add":
-                    AddNote(context);
-                    Print("Note added!");
+                    NoteService.AddNote(context);
+                    PrintService.Print("Note added!");
                     break;
                 case "view":
-                    string note = ViewNote(context);
-                    Print(note != string.Empty ? note : "No note found!");
+                    string note = NoteService.ViewNote(context);
+                    PrintService.Print(note != string.Empty ? note : "No note found!");
 
                     break;
                 case "remove":
-                    RemoveNote(context);
-                    Print("Note removed!");
+                    NoteService.RemoveNote(context);
+                    PrintService.Print("Note removed!");
                     break;
                 case "edit":
-                    EditNote(context);
-                    Print("Note edited!");
+                    NoteService.EditNote(context);
+                    PrintService.Print("Note edited!");
                     break;
                 case "help":
-                    PrintHelp();
+                    PrintService.PrintHelp();
                     break;
                 case "clear":
                     Clear();
                     break;
                 default:
-                    Print("Command wasn't detected!");
+                    PrintService.Print("Command wasn't detected!");
                     break;
             }
         }
 
-        private static void Print(string text)
-        {
-            Console.WriteLine(text);
-        }
-
-        private static void Print(string[] lines)
-        {
-            foreach (string line in lines)
-            {
-                Console.WriteLine(line);
-            }
-        }
-
-
-        private static void AddNote(string context)
-        {
-            string key = context.Split(' ')[0];
-            string value = string.Join(" ", context.Split(' ').Skip(1));
-
-            Notes.Add(key, value);
-        }
-
-        private static void RemoveNote(string context)
-        {
-            string key = context;
-            Notes.Remove(key);
-        }
-
-        private static void EditNote(string context)
-        {
-            string key = context.Split(' ')[0];
-            string newValue = string.Join(" ", context.Split(' ').Skip(1));
-
-            Notes[key] = newValue;
-        }
-
-        private static string ViewNote(string context)
-        {
-            string key = context;
-
-            return Notes.ContainsKey(key) ? Notes[key] : string.Empty;
-        }
-
-        private static void PrintHelp()
-        {
-            string example = "EXAMPLE: ";
-
-            string addNoteHelp = "To create new note:";
-            string addNoteExample =
-                "add [name of the note (without spaces)] [value of the note (spaces may be used)]";
-            string addNoteRealExample = example + "add foo bar bar bar bar";
-
-            string viewNoteHelp = "To view already declared note:";
-            string viewNoteExample = "view [name of the note (without spaces)]";
-            string viewNoteRealExample = example + "view foo";
-
-            string editNoteHelp = "To edit already declared note:";
-            string editNoteExample =
-                "edit [name of the note (without spaces)] [new value of the note (spaces may be used)]";
-            string editNoteRealExample = example + "edit foo bar ? yep bars!";
-
-            string removeNoteHelp = "To remove already declared note:";
-            string removeNoteExample = "remove [name of the note (without spaces)]";
-            string removeNoteRealExample = example + "remove foo";
-
-            Print(new[]
-            {
-                addNoteHelp, addNoteExample, addNoteRealExample, viewNoteHelp, viewNoteExample, viewNoteRealExample,
-                editNoteHelp, editNoteExample, editNoteRealExample, removeNoteHelp, removeNoteExample, removeNoteRealExample
-            });
-        }
+       
 
         private static void Clear()
         {
