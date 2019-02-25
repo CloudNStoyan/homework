@@ -70,19 +70,12 @@ namespace TempNote
                     PrintService.PrintHelp();
                     break;
                 case "clear":
-                    Clear();
+                    PrintService.Clear();
                     break;
                 default:
                     PrintService.Print("Command wasn't detected!");
                     break;
             }
-        }
-
-       
-
-        private static void Clear()
-        {
-            Console.Clear();
         }
     }
 }

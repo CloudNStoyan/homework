@@ -21,6 +21,11 @@ namespace TempNote
             }
         }
 
+	public void Clear()
+        {
+            Console.Clear();
+        }
+
         public void PrintHelp()
         {
             string example = "EXAMPLE: ";
