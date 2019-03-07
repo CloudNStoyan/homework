@@ -10,19 +10,44 @@ namespace BinarySearch
     {
         static void Main(string[] args)
         {
-            int[] nums = {7,1,5,3,9};
-            
-            int k = int.Parse(Console.ReadLine());
-            Array.Sort(nums);
-            int index = Array.BinarySearch(nums, k);
-            if (index < 0)
+            Console.Write("Array lenght: ");
+            int n = int.Parse(Console.ReadLine());
+            Console.Write("Looking for: ");
+            int x = int.Parse(Console.ReadLine());
+
+            int[] arr = new int[n];
+
+            for (int i = 0; i < n; i++)
             {
-                Console.WriteLine("There is no {0} number in the array!", k);
+                Console.Write("Array[{0}] = ", i);
+                arr[i] = int.Parse(Console.ReadLine());
             }
-            else
+
+            int middle = (arr.Length / 2) - 1;
+            int indexOfX = -1;
+            while (true)
             {
-                Console.WriteLine("There is {0} number in the sorted array at position {1}.",k,index);
+                if (arr[middle] == x)
+                {
+                    indexOfX = middle;
+                    break;
+                }
+
+                if (arr[middle] > x)
+                {
+                    middle = middle / 2;
+                }
+
+                if (arr[middle] < x)
+                {
+                    middle = middle + (middle / 2);
+                }
+
+
             }
+
+            Console.Clear();
+            Console.WriteLine("The index {0} contains the {1} number!", indexOfX, x);
         }
     }
 }
